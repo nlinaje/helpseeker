@@ -19,6 +19,7 @@ const template = /* html */`
                 <span class="character-avatar sm">{{ profileEmoji }}</span>
                 <span>{{ store.currentProfile?.name }}</span>
             </div>
+            <button class="btn-reward" @click="goToReward" aria-label="Belohnungsspiele">⭐</button>
         </header>
 
         <h1 class="page-title">Welche Aufgabe willst du üben?</h1>
@@ -94,6 +95,10 @@ export default {
             router.push('/')
         }
 
+        function goToReward() {
+            router.push('/reward')
+        }
+
         return {
             store,
             scenarios,
@@ -102,6 +107,7 @@ export default {
             categoryLabel,
             play,
             signOut,
+            goToReward,
         }
     }
 }

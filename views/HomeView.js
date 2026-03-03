@@ -46,6 +46,12 @@ const template = /* html */`
                 + Neues Profil
             </button>
         </template>
+
+        <div class="therapist-entry">
+            <button class="btn-therapist" @click="goToTherapist" aria-label="Therapeuten-Ansicht öffnen">
+                ⚕ Therapeuten-Ansicht
+            </button>
+        </div>
     </div>
 </div>
 `
@@ -76,6 +82,10 @@ export default {
             router.push('/profile/new')
         }
 
+        function goToTherapist() {
+            router.push('/therapist')
+        }
+
         function selectProfile(profile) {
             store.currentProfile = profile
             router.push('/scenarios')
@@ -101,6 +111,7 @@ export default {
             store,
             characterEmoji,
             goToCreate,
+            goToTherapist,
             selectProfile,
             modelChipClass: {
                 get loaded()  { return store.modelLoaded },

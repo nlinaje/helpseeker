@@ -771,3 +771,382 @@ h2.section-title {
 @media (min-width: 600px) {
     .character-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ── Therapist entry button (home screen) ───────────────────────────────── */
+.therapist-entry {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.btn-therapist {
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    border-radius: var(--radius-full);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-therapist:hover,
+.btn-therapist:active {
+    background: rgba(255,255,255,0.25);
+}
+
+/* ── Therapist overview ─────────────────────────────────────────────────── */
+.therapist-profiles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.therapist-profile-card {
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.therapist-profile-card:active {
+    transform: scale(0.98);
+}
+
+.therapist-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.therapist-profile-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.therapist-profile-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.therapist-profile-since {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.therapist-detail-arrow {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+.therapist-summary-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.therapist-summary-stat {
+    text-align: center;
+}
+
+.therapist-summary-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.therapist-summary-label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+}
+
+.therapist-coverage-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.therapist-coverage-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.therapist-coverage-fraction {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.therapist-progress-track {
+    height: 8px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.therapist-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), #7c3aed);
+    border-radius: var(--radius-full);
+    transition: width 0.4s ease;
+}
+
+.therapist-last-active {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-align: right;
+}
+
+/* ── Therapist child detail ──────────────────────────────────────────────── */
+.therapist-child-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.therapist-child-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: white;
+}
+
+.therapist-child-since {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.75);
+}
+
+.therapist-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.therapist-stat-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 14px 8px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+}
+
+.therapist-stat-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.therapist-stat-label {
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+}
+
+.therapist-section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+/* ── Activity chart ──────────────────────────────────────────────────────── */
+.activity-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 96px;
+}
+
+.activity-bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: default;
+}
+
+.activity-bar-count {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    min-height: 12px;
+}
+
+.activity-bar-fill {
+    width: 100%;
+    background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
+    border-radius: 3px 3px 0 0;
+    min-height: 2px;
+    transition: height 0.3s ease;
+}
+
+.activity-bar-label {
+    font-size: 0.55rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ── Category coverage chips ─────────────────────────────────────────────── */
+.category-coverage-row {
+    margin-bottom: 14px;
+}
+
+.category-coverage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.category-coverage-count {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.scenario-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.scenario-chip {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background: var(--color-border);
+    border: 1.5px solid rgba(0,0,0,0.06);
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.scenario-chip.done {
+    background: #6ee7b7;
+    border-color: #059669;
+}
+
+.scenario-chip.mastered {
+    background: #059669;
+    border-color: #065f46;
+}
+
+.chip-legend {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.chip-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ── Mode split bar ──────────────────────────────────────────────────────── */
+.mode-split-bar {
+    display: flex;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 36px;
+    margin-bottom: 8px;
+}
+
+.mode-split-choice {
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mode-split-speech {
+    background: #059669;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mode-split-pct {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    text-align: right;
+}
+
+/* ── Recent attempts list ───────────────────────────────────────────────── */
+.attempts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.attempt-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.attempt-row:last-child {
+    border-bottom: none;
+}
+
+.attempt-date {
+    color: var(--color-text-secondary);
+    min-width: 36px;
+    flex-shrink: 0;
+}
+
+.attempt-title {
+    flex: 1;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attempt-cat-badge {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.attempt-mode {
+    flex-shrink: 0;
+}
+
+.attempt-score {
+    color: var(--color-success);
+    font-weight: 700;
+    min-width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+}

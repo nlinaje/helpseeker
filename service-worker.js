@@ -1,7 +1,7 @@
 // Network-first strategy: always tries to get fresh content,
 // falls back to cache when offline. Bump CACHE_NAME to force full refresh.
 
-const CACHE_NAME = 'helpseeker-v3'
+const CACHE_NAME = 'helpseeker-v4'
 
 const APP_SHELL = [
     './',
@@ -21,6 +21,8 @@ const APP_SHELL = [
     './views/ScenarioListView.js',
     './views/ScenarioPlayView.js',
     './views/CelebrationView.js',
+    './views/TherapistOverviewView.js',
+    './views/TherapistChildView.js',
     './services/db.js',
     './services/speech.js',
     './services/matcher.js',

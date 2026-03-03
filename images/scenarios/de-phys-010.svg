@@ -1,0 +1,43 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#f5f3ff" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#ddd6fe"/>
+
+  <!-- Long table -->
+  <rect x="30" y="138" width="270" height="12" fill="#92400e" rx="3"/>
+  <rect x="50"  y="150" width="11" height="30" fill="#92400e" rx="2"/>
+  <rect x="269" y="150" width="11" height="30" fill="#92400e" rx="2"/>
+
+  <!-- Scissors far end of table (unreachable) -->
+  <!-- Scissors body -->
+  <g transform="translate(260,95) rotate(30)">
+    <ellipse cx="0"   cy="-18" rx="9"  ry="6"  fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <ellipse cx="0"   cy="18"  rx="9"  ry="6"  fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <rect    x="-3"   cy="-12" width="6" height="30" fill="#6b7280" rx="2"/>
+    <circle  cx="0"   cy="0"   r="4"   fill="#374151"/>
+  </g>
+  <!-- Dashed line showing distance / unreachable -->
+  <line x1="175" y1="130" x2="252" y2="120" stroke="#6d28d9" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+
+  <!-- Child stretched across table, arm extending far -->
+  <circle cx="86" cy="88" r="20" fill="#fbbf24"/>
+  <circle cx="79" cy="84" r="3"  fill="#374151"/>
+  <circle cx="93" cy="84" r="3"  fill="#374151"/>
+  <path d="M 80 97 Q 86 94 92 97" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Body leaning over table -->
+  <rect x="74" y="108" width="24" height="40" fill="#059669" rx="10"/>
+
+  <!-- Right arm fully stretched toward scissors (but too short) -->
+  <line x1="98"  y1="110" x2="170" y2="124" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="173" cy="125" r="8" fill="#fbbf24"/>
+  <!-- Gap indicator -->
+  <line x1="182" y1="120" x2="250" y2="113" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- Left arm on table for support -->
+  <line x1="74"  y1="120" x2="50"  y2="136" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="47" cy="138" r="7"  fill="#fbbf24"/>
+
+  <!-- Legs on tiptoe -->
+  <line x1="80"  y1="148" x2="73"  y2="183" stroke="#065f46" stroke-width="9" stroke-linecap="round"/>
+  <line x1="94"  y1="148" x2="101" y2="183" stroke="#065f46" stroke-width="9" stroke-linecap="round"/>
+</svg>

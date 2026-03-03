@@ -1,0 +1,51 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#fff7ed" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#fed7aa"/>
+
+  <!-- Energy/excitement lines radiating outward -->
+  <line x1="160" y1="90" x2="100" y2="40"  stroke="#f59e0b" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="220" y2="40"  stroke="#f59e0b" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="60"  y2="100" stroke="#f59e0b" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="260" y2="100" stroke="#f59e0b" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="120" y2="160" stroke="#f59e0b" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="200" y2="160" stroke="#f59e0b" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Floating holiday/excitement symbols -->
+  <text x="42"  y="60"  font-size="22" fill="#f59e0b" opacity="0.8">🏖</text>
+  <text x="250" y="58"  font-size="20" fill="#f59e0b" opacity="0.8">🎉</text>
+  <text x="88"  y="32"  font-size="16" fill="#d97706" opacity="0.6">⭐</text>
+  <text x="220" y="34"  font-size="16" fill="#d97706" opacity="0.6">⭐</text>
+  <text x="52"  y="140" font-size="14" fill="#f59e0b" opacity="0.5">✨</text>
+  <text x="258" y="138" font-size="14" fill="#f59e0b" opacity="0.5">✨</text>
+
+  <!-- Child buzzing with energy, can't sit still -->
+  <!-- Motion blur / duplicate position hint (drawn slightly offset) -->
+  <circle cx="154" cy="98" r="22" fill="#fbbf24" opacity="0.2"/>
+  <circle cx="166" cy="98" r="22" fill="#fbbf24" opacity="0.2"/>
+
+  <!-- Main child position -->
+  <circle cx="160" cy="96" r="22" fill="#fbbf24"/>
+  <!-- Very wide excited eyes -->
+  <circle cx="152" cy="91" r="4.5" fill="#374151"/>
+  <circle cx="168" cy="91" r="4.5" fill="#374151"/>
+  <circle cx="153" cy="90" r="1.5" fill="white"/>
+  <circle cx="169" cy="90" r="1.5" fill="white"/>
+  <!-- Big grin -->
+  <path d="M 150 104 Q 160 112 170 104" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Rosy excited cheeks -->
+  <circle cx="148" cy="102" r="7" fill="#fca5a5" opacity="0.5"/>
+  <circle cx="172" cy="102" r="7" fill="#fca5a5" opacity="0.5"/>
+
+  <!-- Body (bouncing pose - slightly up) -->
+  <rect x="148" y="118" width="24" height="42" fill="#f59e0b" rx="10"/>
+
+  <!-- Arms up/out with excitement -->
+  <line x1="148" y1="124" x2="120" y2="100" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="117" cy="97" r="8"  fill="#fbbf24"/>
+  <line x1="172" y1="124" x2="200" y2="100" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="203" cy="97" r="8"  fill="#fbbf24"/>
+
+  <!-- Legs (on tiptoe, excited) -->
+  <line x1="154" y1="160" x2="146" y2="183" stroke="#d97706" stroke-width="9" stroke-linecap="round"/>
+  <line x1="168" y1="160" x2="176" y2="183" stroke="#d97706" stroke-width="9" stroke-linecap="round"/>
+</svg>

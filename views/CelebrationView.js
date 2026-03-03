@@ -2,6 +2,7 @@ import { computed } from '../vue.js'
 import { useRouter } from '../vue-router.js'
 import { store } from '../store.js'
 import { characterEmoji } from '../characters.js'
+import { starsForAttempt } from '../services/rewards.js'
 
 // Randomly placed falling stars
 function starStyle(n) {
@@ -40,13 +41,26 @@ const template = /* html */`
             {{ Math.round(score * 100) }}% Übereinstimmung
         </div>
 
-        <button
-            class="btn btn-celebration"
-            @click="goToScenarios"
-            aria-label="Weiter zu den Aufgaben"
-        >
-            Weiter →
-        </button>
+        <div class="celebration-stars" aria-label="Sterne verdient">
+            +{{ starsEarned }} ⭐
+        </div>
+
+        <div class="celebration-buttons">
+            <button
+                class="btn btn-celebration"
+                @click="goToScenarios"
+                aria-label="Weiter zu den Aufgaben"
+            >
+                Weiter →
+            </button>
+            <button
+                class="btn-reward-link"
+                @click="goToReward"
+                aria-label="Belohnungsspiele öffnen"
+            >
+                ⭐ Belohnung ansehen
+            </button>
+        </div>
     </div>
 </div>
 `
@@ -68,15 +82,24 @@ export default {
                 : null
         })
 
+        const starsEarned = computed(() => starsForAttempt(store.lastAttempt))
+
         function goToScenarios() {
             store.lastAttempt = null
             router.push('/scenarios')
         }
 
+        function goToReward() {
+            store.lastAttempt = null
+            router.push('/reward')
+        }
+
         return {
             companionEmoji,
             score,
+            starsEarned,
             goToScenarios,
+            goToReward,
             starStyle,
         }
     }

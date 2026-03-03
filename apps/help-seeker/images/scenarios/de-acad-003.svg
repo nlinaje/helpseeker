@@ -1,0 +1,41 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#fffbeb" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#fde68a"/>
+
+  <!-- Desk -->
+  <rect x="60" y="148" width="210" height="11" fill="#92400e" rx="3"/>
+  <rect x="80"  y="159" width="11" height="22" fill="#92400e" rx="2"/>
+  <rect x="249" y="159" width="11" height="22" fill="#92400e" rx="2"/>
+
+  <!-- Paper with partially written text -->
+  <rect x="140" y="82" width="130" height="68" fill="white" rx="5" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="152" y1="98"  x2="258" y2="98"  stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="152" y1="110" x2="258" y2="110" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="152" y1="122" x2="258" y2="122" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Written text (first part OK) -->
+  <text x="155" y="96"  font-size="9" fill="#374151" font-family="monospace">Ich gehe in die</text>
+  <!-- Difficult word with underline + big ? -->
+  <text x="155" y="108" font-size="9" fill="#374151" font-family="monospace">S_h__e?</text>
+  <line x1="155" y1="109" x2="210" y2="109" stroke="#dc2626" stroke-width="1.5"/>
+
+  <!-- Question mark balloon -->
+  <circle cx="252" cy="72" r="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="252" y="80" font-size="22" text-anchor="middle" fill="#d97706" font-weight="bold">?</text>
+
+  <!-- Child looking at paper -->
+  <circle cx="92" cy="98" r="20" fill="#fbbf24"/>
+  <path d="M 84 94 Q 87 91 90 94" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 95 94 Q 98 91 101 94" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 85 107 Q 92 103 99 107" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Body -->
+  <rect x="80" y="118" width="24" height="32" fill="#059669" rx="10"/>
+
+  <!-- Arms on desk, one holding pencil -->
+  <line x1="80"  y1="127" x2="60"  y2="146" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="57" cy="148" r="7"  fill="#fbbf24"/>
+  <line x1="104" y1="127" x2="138" y2="140" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <!-- Pencil in right hand -->
+  <rect x="136" y="134" width="5" height="20" fill="#fbbf24" rx="2" transform="rotate(-15 139 144)"/>
+  <polygon points="136,154 141,154 138.5,162" fill="#f87171" transform="rotate(-15 138 154)"/>
+</svg>

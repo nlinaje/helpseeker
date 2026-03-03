@@ -1,0 +1,46 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#f0fdf4" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#bbf7d0"/>
+
+  <!-- Corridor floor/wall -->
+  <rect x="0" y="150" width="320" height="33" fill="#dcfce7"/>
+  <!-- Perspective lines for corridor -->
+  <line x1="0"   y1="150" x2="160" y2="80"  stroke="#a7f3d0" stroke-width="1" opacity="0.5"/>
+  <line x1="320" y1="150" x2="160" y2="80"  stroke="#a7f3d0" stroke-width="1" opacity="0.5"/>
+
+  <!-- Multiple doors along corridor -->
+  <!-- Door 1 -->
+  <rect x="30"  y="75" width="52" height="75" fill="#fde68a" rx="3" stroke="#d97706" stroke-width="2"/>
+  <circle cx="75" cy="112" r="4" fill="#d97706"/>
+  <text x="56"  y="118" font-size="9" text-anchor="middle" fill="#92400e">Klasse 3a</text>
+  <!-- Door 2 -->
+  <rect x="100" y="75" width="52" height="75" fill="#fde68a" rx="3" stroke="#d97706" stroke-width="2"/>
+  <circle cx="145" cy="112" r="4" fill="#d97706"/>
+  <text x="126" y="118" font-size="9" text-anchor="middle" fill="#92400e">Klasse 3b</text>
+  <!-- Door 3 -->
+  <rect x="170" y="75" width="52" height="75" fill="#fde68a" rx="3" stroke="#d97706" stroke-width="2"/>
+  <circle cx="215" cy="112" r="4" fill="#d97706"/>
+  <text x="196" y="118" font-size="9" text-anchor="middle" fill="#92400e">Klasse 3c</text>
+  <!-- Door 4 (partial) -->
+  <rect x="240" y="75" width="52" height="75" fill="#fde68a" rx="3" stroke="#d97706" stroke-width="2"/>
+  <circle cx="285" cy="112" r="4" fill="#d97706"/>
+
+  <!-- Child standing in middle, confused -->
+  <circle cx="160" cy="130" r="18" fill="#fbbf24"/>
+  <path d="M 153 126 Q 156 123 159 126" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 162 126 Q 165 123 168 126" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 154 138 Q 160 134 166 138" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Body -->
+  <rect x="149" y="148" width="22" height="32" fill="#dc2626" rx="9"/>
+
+  <!-- Arms spread (confused/lost gesture) -->
+  <line x1="149" y1="156" x2="130" y2="170" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="127" cy="172" r="7"  fill="#fbbf24"/>
+  <line x1="171" y1="156" x2="190" y2="170" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="193" cy="172" r="7"  fill="#fbbf24"/>
+
+  <!-- Floating question marks -->
+  <text x="140" y="110" font-size="20" fill="#6d28d9" opacity="0.7" font-weight="bold">?</text>
+  <text x="170" y="108" font-size="16" fill="#6d28d9" opacity="0.5" font-weight="bold">?</text>
+</svg>

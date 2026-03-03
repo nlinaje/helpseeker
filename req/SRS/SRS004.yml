@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: ''
+level: 1.3
+links:
+- SRD001: ZVCk9b1AphliR8LInMBBNKSPTrkt3pfohCcVmn5aZbA=
+normative: true
+ref: ''
+reviewed: 3b21qSJvkHO01r7GKuMC4ZI_WwOwoai_TI1iqQSRrVw=
+text: |
+  In choice mode the app shall present three phrase options per scenario.
+  Selecting the correct phrase advances to the celebration screen.
+  Selecting an incorrect phrase shows gentle corrective feedback and
+  allows the child to try again.

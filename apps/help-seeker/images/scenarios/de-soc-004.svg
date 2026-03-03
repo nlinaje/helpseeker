@@ -1,0 +1,44 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#f0fdf4" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#bbf7d0"/>
+
+  <!-- Child being pointed at (right side, looking sad) -->
+  <circle cx="230" cy="90" r="21" fill="#fbbf24"/>
+  <circle cx="223" cy="86" r="3"  fill="#374151"/>
+  <circle cx="237" cy="86" r="3"  fill="#374151"/>
+  <!-- Sad/hurt expression -->
+  <path d="M 224 103 Q 230 99 236 103" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Tear -->
+  <ellipse cx="222" cy="105" rx="3" ry="4" fill="#93c5fd" opacity="0.9"/>
+  <!-- Body -->
+  <rect x="218" y="111" width="24" height="50" fill="#059669" rx="10"/>
+  <!-- Arms (defensive/sad, crossed) -->
+  <line x1="218" y1="122" x2="200" y2="135" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="197" cy="138" r="7" fill="#fbbf24"/>
+  <line x1="242" y1="120" x2="256" y2="134" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="259" cy="137" r="7" fill="#fbbf24"/>
+  <!-- Legs -->
+  <line x1="224" y1="161" x2="216" y2="183" stroke="#065f46" stroke-width="9" stroke-linecap="round"/>
+  <line x1="238" y1="161" x2="246" y2="183" stroke="#065f46" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Mean child (left side, pointing finger) -->
+  <circle cx="80"  cy="88" r="18" fill="#86efac"/>
+  <circle cx="74"  cy="85" r="2.5" fill="#374151"/>
+  <circle cx="86"  cy="85" r="2.5" fill="#374151"/>
+  <!-- Mean expression (smirk) -->
+  <path d="M 75 96 Q 83 100 89 96" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Body -->
+  <rect x="69" y="106" width="22" height="46" fill="#dc2626" rx="9"/>
+  <!-- Arm pointing at other child -->
+  <line x1="91" y1="114" x2="196" y2="118" stroke="#86efac" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="199" cy="118" r="7" fill="#86efac"/>
+  <!-- Other arm -->
+  <line x1="69"  y1="116" x2="52"  y2="132" stroke="#86efac" stroke-width="8" stroke-linecap="round"/>
+  <!-- Legs -->
+  <line x1="75"  y1="152" x2="68"  y2="183" stroke="#9f1239" stroke-width="8" stroke-linecap="round"/>
+  <line x1="87"  y1="152" x2="94"  y2="183" stroke="#9f1239" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Hurt words bubble (abstract, showing mean words) -->
+  <rect x="110" y="60" width="88" height="26" fill="#fee2e2" rx="8" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="154" y="78" font-size="11" text-anchor="middle" fill="#dc2626" font-weight="bold">Das ist gemein!</text>
+</svg>

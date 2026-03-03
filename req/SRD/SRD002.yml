@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links: []
+normative: true
+ref: ''
+reviewed: peqKeBzbuqO9Kakj9kGXUweF3JzHbASSnwxJ0WvkJC0=
+text: |
+  The application works entirely offline after initial load, protecting
+  child privacy — no audio, personal data, or usage information ever
+  leaves the device.

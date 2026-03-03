@@ -1,0 +1,52 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#fff7ed" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#fed7aa"/>
+
+  <!-- Many tasks floating around child (overwhelming) -->
+  <!-- Task bubbles -->
+  <!-- Homework -->
+  <rect x="18"  y="18"  width="64" height="36" fill="#fde68a" rx="8" stroke="#d97706" stroke-width="1.5"/>
+  <text x="50"  y="33"  font-size="8"  text-anchor="middle" fill="#92400e" font-weight="bold">Hausaufgaben</text>
+  <text x="50"  y="46"  font-size="11" text-anchor="middle">📝</text>
+  <!-- Sport -->
+  <rect x="238" y="14"  width="64" height="36" fill="#dcfce7" rx="8" stroke="#059669" stroke-width="1.5"/>
+  <text x="270" y="29"  font-size="8"  text-anchor="middle" fill="#065f46" font-weight="bold">Sport</text>
+  <text x="270" y="42"  font-size="11" text-anchor="middle">⚽</text>
+  <!-- Test -->
+  <rect x="14"  y="130" width="68" height="36" fill="#fee2e2" rx="8" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48"  y="145" font-size="8"  text-anchor="middle" fill="#9f1239" font-weight="bold">Prüfung</text>
+  <text x="48"  y="158" font-size="11" text-anchor="middle">📋</text>
+  <!-- Project -->
+  <rect x="238" y="130" width="64" height="36" fill="#ede9fe" rx="8" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="270" y="145" font-size="8"  text-anchor="middle" fill="#4c1d95" font-weight="bold">Referat</text>
+  <text x="270" y="158" font-size="11" text-anchor="middle">🎤</text>
+  <!-- Chores -->
+  <rect x="116" y="10"  width="88" height="28" fill="#dbeafe" rx="8" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="160" y="22"  font-size="8"  text-anchor="middle" fill="#1e3a8a">Aufräumen &amp; Lesen</text>
+  <text x="160" y="32"  font-size="11" text-anchor="middle">🧹📚</text>
+
+  <!-- Arrows pointing at child from all directions -->
+  <line x1="82"  y1="42"  x2="130" y2="90"  stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <line x1="238" y1="42"  x2="190" y2="90"  stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <line x1="82"  y1="148" x2="130" y2="130" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <line x1="238" y1="148" x2="190" y2="130" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+
+  <!-- Child in middle, overwhelmed -->
+  <circle cx="160" cy="110" r="22" fill="#fbbf24"/>
+  <!-- Overwhelmed eyes (wide, stressed) -->
+  <path d="M 151 105 Q 154 102 157 105" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 163 105 Q 166 102 169 105" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 153 118 Q 160 114 167 118" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Stress lines -->
+  <line x1="148" y1="97" x2="144" y2="92" stroke="#374151" stroke-width="1.5" opacity="0.6"/>
+  <line x1="172" y1="97" x2="176" y2="92" stroke="#374151" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Body -->
+  <rect x="148" y="132" width="24" height="40" fill="#d97706" rx="10"/>
+
+  <!-- Hands on head (overwhelmed) -->
+  <line x1="148" y1="136" x2="136" y2="112" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="133" cy="109" r="8" fill="#fbbf24"/>
+  <line x1="172" y1="136" x2="184" y2="112" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="187" cy="109" r="8" fill="#fbbf24"/>
+</svg>

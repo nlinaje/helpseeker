@@ -1,0 +1,49 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#fefce8" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#fef08a"/>
+
+  <!-- Dark shadowy background suggesting anxiety -->
+  <ellipse cx="160" cy="170" rx="120" ry="30" fill="#1f2937" opacity="0.08"/>
+
+  <!-- Exam paper looming large -->
+  <rect x="180" y="30" width="110" height="80" fill="white" rx="5" stroke="#fbbf24" stroke-width="2" opacity="0.9"/>
+  <!-- "PRÜFUNG" text -->
+  <text x="235" y="62"  font-size="13" text-anchor="middle" fill="#374151" font-weight="bold">PRÜFUNG</text>
+  <line x1="192" y1="74" x2="278" y2="74" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="192" y1="84" x2="278" y2="84" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="192" y1="94" x2="278" y2="94" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Red exclamation -->
+  <text x="290" y="50" font-size="24" fill="#dc2626" opacity="0.8" font-weight="bold">!</text>
+
+  <!-- Child trembling / scared -->
+  <!-- Shaking lines around body -->
+  <path d="M 72 90 Q 68 100 72 110" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M 68 95 Q 64 105 68 115" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M 148 90 Q 152 100 148 110" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <!-- Child head (wide, scared eyes) -->
+  <circle cx="110" cy="100" r="23" fill="#fbbf24"/>
+  <!-- Wide open scared eyes -->
+  <circle cx="102" cy="96"  r="5"  fill="#374151"/>
+  <circle cx="118" cy="96"  r="5"  fill="#374151"/>
+  <circle cx="103" cy="95"  r="2"  fill="white"/>
+  <circle cx="119" cy="95"  r="2"  fill="white"/>
+  <!-- Nervous/scared mouth (small O) -->
+  <ellipse cx="110" cy="113" rx="5" ry="4" fill="#374151"/>
+  <!-- Sweat drops -->
+  <ellipse cx="96"  cy="90" rx="4" ry="5" fill="#93c5fd" opacity="0.8"/>
+  <ellipse cx="125" cy="88" rx="3" ry="4" fill="#93c5fd" opacity="0.7"/>
+
+  <!-- Body (slight tremor shown by slightly crooked) -->
+  <rect x="98"  y="123" width="24" height="46" fill="#7c3aed" rx="10"/>
+
+  <!-- Arms wrapped around self (scared) -->
+  <path d="M 98 136 Q 80 145 82 158" stroke="#fbbf24" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="82" cy="162" r="7" fill="#fbbf24"/>
+  <path d="M 122 136 Q 140 145 138 158" stroke="#fbbf24" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="138" cy="162" r="7" fill="#fbbf24"/>
+
+  <!-- Legs -->
+  <line x1="104" y1="169" x2="96"  y2="183" stroke="#4c1d95" stroke-width="9" stroke-linecap="round"/>
+  <line x1="118" y1="169" x2="126" y2="183" stroke="#4c1d95" stroke-width="9" stroke-linecap="round"/>
+</svg>

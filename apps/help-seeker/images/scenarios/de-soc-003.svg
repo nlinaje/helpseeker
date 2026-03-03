@@ -1,0 +1,38 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#f0fdf4" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#bbf7d0"/>
+
+  <!-- Child 1 (left, turned away — back shown) -->
+  <!-- Head (seen from behind) -->
+  <circle cx="96" cy="88" r="20" fill="#fbbf24"/>
+  <!-- Body (turned right → facing right, back to viewer) -->
+  <rect x="84" y="108" width="24" height="50" fill="#6d28d9" rx="10"/>
+  <!-- Arms crossed / at sides -->
+  <line x1="84"  y1="120" x2="64"  y2="138" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="61" cy="141" r="7"  fill="#fbbf24"/>
+  <line x1="108" y1="118" x2="120" y2="138" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="122" cy="141" r="7" fill="#fbbf24"/>
+  <!-- Legs -->
+  <line x1="90"  y1="158" x2="82"  y2="183" stroke="#4c1d95" stroke-width="9" stroke-linecap="round"/>
+  <line x1="104" y1="158" x2="112" y2="183" stroke="#4c1d95" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Child 2 (right, also turned away) -->
+  <circle cx="224" cy="88" r="20" fill="#86efac"/>
+  <rect x="212" y="108" width="24" height="50" fill="#dc2626" rx="10"/>
+  <line x1="212" y1="120" x2="198" y2="138" stroke="#86efac" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="195" cy="141" r="7" fill="#86efac"/>
+  <line x1="236" y1="118" x2="254" y2="136" stroke="#86efac" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="257" cy="139" r="7" fill="#86efac"/>
+  <line x1="218" y1="158" x2="210" y2="183" stroke="#9f1239" stroke-width="9" stroke-linecap="round"/>
+  <line x1="232" y1="158" x2="240" y2="183" stroke="#9f1239" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Lightning bolt between them (argument) -->
+  <path d="M 138 60 L 148 90 L 158 75 L 165 110" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 138 60 L 148 90 L 158 75 L 165 110" stroke="#fef08a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Sad cloud above child 1 -->
+  <circle cx="80"  cy="55" r="8"  fill="#bfdbfe" opacity="0.8"/>
+  <circle cx="93"  cy="48" r="11" fill="#bfdbfe" opacity="0.8"/>
+  <circle cx="108" cy="52" r="8"  fill="#bfdbfe" opacity="0.8"/>
+  <text x="94" y="55" font-size="14" text-anchor="middle">😢</text>
+</svg>

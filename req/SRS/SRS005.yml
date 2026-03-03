@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+level: 1.4
+links:
+- SRD001: ZVCk9b1AphliR8LInMBBNKSPTrkt3pfohCcVmn5aZbA=
+- SRD002: peqKeBzbuqO9Kakj9kGXUweF3JzHbASSnwxJ0WvkJC0=
+normative: true
+ref: ''
+reviewed: VWUZp4DXPVmOGz2BCqC9VgqIDNkghPlBDvmg6nYY-MA=
+text: |
+  In speech mode the app shall record the child's voice and transcribe
+  it offline using Whisper (whisper-tiny). A Sørensen-Dice word-overlap
+  score >= 60% against the target phrase constitutes a successful
+  attempt. The transcription and score shall be displayed to the child.

@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- SRS002: dI3c-BLHyichGY2JZmDnmyBFrqLWT0_T5whtCjQhVYo=
+normative: true
+ref: ''
+reviewed: bsTTtP1r3eC0mtQgou137Ufia7RksCMul-pEsR-yz8E=
+text: |
+  Create a new child profile "Lena" with a robot companion. Reload the
+  app. Verify "Lena" appears on the home screen and is selectable.

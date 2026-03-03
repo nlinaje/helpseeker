@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links:
+- SRS003: RY-kBdy_z2QDZC4pWsZlDTgOJQDh4UamXLCV_JcrZ4g=
+- SRS004: gj-a605IfbWBjJYlH3y3YpruOPbhtGoPT74mG0QkXLc=
+normative: true
+ref: ''
+reviewed: ZGV5uXyma__KmZ1c1dhG6yhLzjV8HzBzmt8H8Lvx-js=
+text: |
+  Select profile "Lena". Open a difficulty-1 scenario. Switch to choice
+  mode. Tap the correct phrase. Verify the celebration screen appears
+  and the attempt is recorded in progress history.

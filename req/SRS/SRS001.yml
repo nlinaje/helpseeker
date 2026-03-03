@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- SRD002: peqKeBzbuqO9Kakj9kGXUweF3JzHbASSnwxJ0WvkJC0=
+normative: true
+ref: ''
+reviewed: i02MdIqNC2dn6QZbW1NZdmoDHQQXzFpAdZrmJ4ezseQ=
+text: |
+  The app shall be installable as a PWA (manifest + service worker) and
+  shall function fully offline after the Whisper model has been
+  downloaded once. All user data is stored in IndexedDB on-device.

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#fffbeb" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#fde68a"/>
+
+  <!-- Desk -->
+  <rect x="60" y="148" width="210" height="11" fill="#92400e" rx="3"/>
+
+  <!-- Completely blank paper on desk -->
+  <rect x="140" y="82" width="120" height="68" fill="white" rx="5" stroke="#e5e7eb" stroke-width="1.5"/>
+  <!-- Only faint ruled lines, no writing -->
+  <line x1="152" y1="98"  x2="248" y2="98"  stroke="#f3f4f6" stroke-width="1"/>
+  <line x1="152" y1="110" x2="248" y2="110" stroke="#f3f4f6" stroke-width="1"/>
+  <line x1="152" y1="122" x2="248" y2="122" stroke="#f3f4f6" stroke-width="1"/>
+  <line x1="152" y1="134" x2="248" y2="134" stroke="#f3f4f6" stroke-width="1"/>
+  <!-- Blinking cursor indicator (nothing written) -->
+  <rect x="154" y="94" width="2" height="10" fill="#6b7280" opacity="0.5"/>
+
+  <!-- Pencil lying unused on desk -->
+  <rect x="265" y="94" width="6" height="50" fill="#fbbf24" rx="3" transform="rotate(15 268 119)"/>
+  <polygon points="265,144 271,144 268,156" fill="#f87171" transform="rotate(15 268 144)"/>
+
+  <!-- Empty thought bubble above child (can't think what to write) -->
+  <circle cx="80"  cy="88" r="4"  fill="#e5e7eb" opacity="0.8"/>
+  <circle cx="90"  cy="76" r="7"  fill="#e5e7eb" opacity="0.8"/>
+  <circle cx="108" cy="64" r="14" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <!-- Nothing inside thought bubble -->
+  <text x="108" y="70" font-size="18" text-anchor="middle" fill="#d1d5db">…</text>
+
+  <!-- Child staring at blank paper -->
+  <circle cx="96" cy="108" r="20" fill="#fbbf24"/>
+  <circle cx="89" cy="104" r="3"  fill="#374151"/>
+  <circle cx="103" cy="104" r="3" fill="#374151"/>
+  <path d="M 90 116 Q 96 113 102 116" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Chin on hand (resting, thinking) -->
+
+  <!-- Body -->
+  <rect x="84" y="128" width="24" height="22" fill="#6d28d9" rx="10"/>
+
+  <!-- Arm propping up head -->
+  <line x1="108" y1="130" x2="126" y2="145" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="129" cy="147" r="7" fill="#fbbf24"/>
+  <line x1="84"  y1="132" x2="66"  y2="148" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="63" cy="150" r="7"  fill="#fbbf24"/>
+</svg>

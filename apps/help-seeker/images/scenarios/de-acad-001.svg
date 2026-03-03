@@ -1,0 +1,49 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="320" height="200" fill="#f5f3ff" rx="12"/>
+  <!-- Floor -->
+  <rect x="0" y="183" width="320" height="17" fill="#ddd6fe"/>
+
+  <!-- Desk surface -->
+  <rect x="30" y="138" width="270" height="12" fill="#92400e" rx="3"/>
+  <!-- Desk legs -->
+  <rect x="50"  y="150" width="11" height="33" fill="#92400e" rx="2"/>
+  <rect x="269" y="150" width="11" height="33" fill="#92400e" rx="2"/>
+
+  <!-- Paper on desk -->
+  <rect x="140" y="88" width="130" height="52" fill="white" rx="5" stroke="#c4b5fd" stroke-width="1.5"/>
+  <!-- Ruled lines -->
+  <line x1="152" y1="108" x2="258" y2="108" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="152" y1="122" x2="258" y2="122" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Math problem -->
+  <text x="205" y="106" font-size="20" text-anchor="middle" fill="#1f2937" font-family="monospace" font-weight="bold">5 + 7 = ?</text>
+
+  <!-- Pencil (resting on paper, angled) -->
+  <rect x="258" y="82" width="7" height="52" fill="#fbbf24" rx="3" transform="rotate(20 261 108)"/>
+  <polygon points="258,130 265,130 261,144"  fill="#f87171"  transform="rotate(20 261 130)"/>
+
+  <!-- Floating question marks -->
+  <text x="68"  y="52"  font-size="30" fill="#7c3aed" opacity="0.65" font-weight="bold">?</text>
+  <text x="118" y="82"  font-size="20" fill="#a78bfa" opacity="0.55" font-weight="bold">?</text>
+  <text x="268" y="72"  font-size="24" fill="#6d28d9" opacity="0.55" font-weight="bold">?</text>
+
+  <!-- Child at desk (upper body only — seated behind desk) -->
+  <!-- Head -->
+  <circle cx="82" cy="103" r="21" fill="#fbbf24"/>
+  <!-- Worried/puzzled eyes (tilted eyebrows) -->
+  <path d="M 74 97 Q 77 94 80 97" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 85 97 Q 88 94 91 97" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Slight frown -->
+  <path d="M 75 111 Q 82 107 89 111" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Neck + shoulders (visible above desk) -->
+  <rect x="70" y="124" width="24" height="26" fill="#059669" rx="10"/>
+
+  <!-- Left arm on desk -->
+  <line x1="70"  y1="132" x2="44"  y2="138" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="41" cy="138" r="7" fill="#fbbf24"/>
+
+  <!-- Right arm pointing at paper -->
+  <line x1="94"  y1="132" x2="140" y2="136" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="143" cy="136" r="7" fill="#fbbf24"/>
+</svg>

@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links:
+- SRD001: ZVCk9b1AphliR8LInMBBNKSPTrkt3pfohCcVmn5aZbA=
+normative: true
+ref: ''
+reviewed: KAJ27PoVAYE2Yxr49kMxx4YE0La8PDlRewh42jywRcQ=
+text: |
+  The app shall support creating one or more named child profiles, each
+  with a chosen companion character (animal, robot, fantasy, or
+  abstract). Profiles are persisted in IndexedDB and selectable from
+  the home screen.

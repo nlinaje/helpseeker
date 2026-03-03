@@ -1,0 +1,40 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="200" fill="#f5f3ff" rx="12"/>
+  <rect x="0" y="183" width="320" height="17" fill="#ddd6fe"/>
+
+  <!-- Heavy box -->
+  <rect x="148" y="118" width="90" height="65" fill="#d97706" rx="4"/>
+  <rect x="153" y="123" width="80" height="55" fill="#b45309" rx="2"/>
+  <line x1="193" y1="123" x2="193" y2="183" stroke="#92400e" stroke-width="2"/>
+  <line x1="153" y1="150" x2="233" y2="150" stroke="#92400e" stroke-width="2"/>
+  <text x="193" y="143" font-size="13" text-anchor="middle" fill="#fef3c7" font-weight="bold">25 kg</text>
+  <!-- Weight symbol -->
+  <text x="193" y="163" font-size="18" text-anchor="middle">📦</text>
+
+  <!-- Strain marks -->
+  <line x1="136" y1="115" x2="126" y2="108" stroke="#dc2626" stroke-width="2.5" opacity="0.6" stroke-linecap="round"/>
+  <line x1="133" y1="127" x2="122" y2="126" stroke="#dc2626" stroke-width="2.5" opacity="0.6" stroke-linecap="round"/>
+  <line x1="137" y1="137" x2="126" y2="140" stroke="#dc2626" stroke-width="2.5" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Child straining to lift (hunched forward) -->
+  <circle cx="84" cy="92" r="20" fill="#fbbf24"/>
+  <circle cx="77" cy="88" r="3" fill="#374151"/>
+  <circle cx="91" cy="88" r="3" fill="#374151"/>
+  <!-- Strained frown -->
+  <path d="M 78 100 Q 84 97 90 100" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Sweat drop -->
+  <ellipse cx="72" cy="84" rx="4" ry="5" fill="#93c5fd" opacity="0.8"/>
+
+  <!-- Body leaning forward -->
+  <rect x="72" y="112" width="24" height="42" fill="#6d28d9" rx="10"/>
+
+  <!-- Arms reaching to box sides -->
+  <line x1="72"  y1="120" x2="148" y2="148" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="151" cy="150" r="8" fill="#fbbf24"/>
+  <line x1="96"  y1="120" x2="148" y2="138" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="151" cy="137" r="8" fill="#fbbf24"/>
+
+  <!-- Legs slightly bent -->
+  <line x1="78"  y1="154" x2="70"  y2="183" stroke="#4c1d95" stroke-width="9" stroke-linecap="round"/>
+  <line x1="92"  y1="154" x2="100" y2="183" stroke="#4c1d95" stroke-width="9" stroke-linecap="round"/>
+</svg>

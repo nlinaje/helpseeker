@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: ''
+level: 1.3
+links:
+- SRS001: w__g6T3WP3C1vdMAuWohPqn5aBiJWkMMaG0yuaqymOA=
+normative: true
+ref: ''
+reviewed: JBR6ksZK964yGaKvK_5BUNAOV5iYMlEdkEaBC9dMez0=
+text: |
+  Load the app and the Whisper model with network available. Disable
+  network (airplane mode). Reload the page. Verify all screens load,
+  profiles are visible, and a scenario can be completed in both modes.

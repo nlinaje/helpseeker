@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: ''
+level: 1.2
+links:
+- SRD001: ZVCk9b1AphliR8LInMBBNKSPTrkt3pfohCcVmn5aZbA=
+normative: true
+ref: ''
+reviewed: o_4-5WJkxkbYK4uVdIpy6Be5ANn-6KbhboguMJxs_8s=
+text: |
+  The app shall present the active child with a list of help-seeking
+  scenarios grouped by difficulty level (1-5). Each scenario displays
+  its category, a short description, and a difficulty indicator.

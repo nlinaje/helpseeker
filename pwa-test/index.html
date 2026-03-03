@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4F46E5">
+    <title>HelpSeeker PWA Test</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #4F46E5;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background: #4F46E5;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+        }
+
+        button:hover {
+            background: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .record-btn {
+            background: #ef4444;
+            font-size: 1.2rem;
+        }
+
+        .record-btn.recording {
+            background: #dc2626;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        .status.info {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .status.success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status.error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status.loading {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .transcript {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            min-height: 60px;
+        }
+
+        .transcript .timing {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .progress-bar.active {
+            display: block;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4F46E5, #7c3aed);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .language-select, .model-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin: 10px 0;
+            background: white;
+        }
+
+        .select-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 8px;
+            display: block;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .install-btn {
+            background: #10b981;
+            display: none;
+        }
+
+        .install-btn.visible {
+            display: block;
+        }
+
+        /* Phrase scores table */
+        .scores-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .scores-table th {
+            background: #f3f4f6;
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            color: #374151;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .scores-table td {
+            padding: 9px 8px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: middle;
+        }
+
+        .scores-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .scores-table tr.match-yes td {
+            background: #f0fdf4;
+        }
+
+        .scores-table tr.match-no td {
+            background: #fafafa;
+        }
+
+        .score-bar-wrap {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .score-bar {
+            flex: 1;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
+        .score-bar-fill.high  { background: #10b981; }
+        .score-bar-fill.mid   { background: #f59e0b; }
+        .score-bar-fill.low   { background: #ef4444; }
+
+        .score-pct {
+            min-width: 36px;
+            text-align: right;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .lang-de { background: #dbeafe; color: #1e40af; }
+        .lang-es { background: #fce7f3; color: #9d174d; }
+        .lang-en { background: #d1fae5; color: #065f46; }
+
+        .scores-placeholder {
+            color: #9ca3af;
+            font-style: italic;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .card { padding: 20px; }
+            .scores-table { font-size: 0.82rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>&#127897;&#65039; HelpSeeker PWA Test</h1>
+
+        <div class="card">
+            <h2>1. Setup</h2>
+            <div id="setupStatus" class="status info">Loading library... (internet required for first time)</div>
+
+            <label class="select-label" for="modelSelect">Model:</label>
+            <select id="modelSelect" class="model-select">
+                <option value="Xenova/whisper-tiny">whisper-tiny (~39 MB) — faster</option>
+                <option value="Xenova/whisper-base">whisper-base (~150 MB) — more accurate</option>
+            </select>
+
+            <button id="loadModelBtn" onclick="loadModel()">&#128229; Load Whisper Model</button>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="info-box">
+                <strong>Note:</strong> Downloads the AI model to your device. Works completely offline after loading. Each model is cached separately in the browser.
+            </div>
+
+            <label class="select-label" for="language">Language:</label>
+            <select id="language" class="language-select">
+                <option value="german">German (Deutsch)</option>
+                <option value="english">English</option>
+                <option value="spanish">Spanish (Español)</option>
+            </select>
+
+            <button id="installBtn" class="install-btn" onclick="installPWA()">&#128241; Install App</button>
+        </div>
+
+        <div class="card">
+            <h2>2. Test Speech Recognition</h2>
+            <div id="recStatus" class="status info">Load model first, then tap to record</div>
+            <button id="recordBtn" class="record-btn" onclick="toggleRecording()" disabled>
+                &#127908; Hold to Record
+            </button>
+            <div class="transcript" id="transcript">
+                <em>Transcription will appear here...</em>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Phrase Scores</h2>
+            <div id="scoresContainer">
+                <p class="scores-placeholder">Record a phrase to see match scores.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ── State ────────────────────────────────────────────────────────────
+        let transcriber = null;
+        let loadedModelId = null;
+        let isRecording = false;
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let mimeType = '';
+        let deferredPrompt = null;
+        let pipeline = null;
+
+        // ── Target phrases ───────────────────────────────────────────────────
+        const TARGET_PHRASES = [
+            { text: 'Ich brauche Hilfe',              lang: 'de' },
+            { text: 'Kannst du mir helfen',            lang: 'de' },
+            { text: 'Ich verstehe das nicht',          lang: 'de' },
+            { text: 'Ich schaffe das nicht alleine',   lang: 'de' },
+            { text: 'Kannst du mir das erklaeren',     lang: 'de' },
+            { text: 'Necesito ayuda',                  lang: 'es' },
+            { text: 'Puedes ayudarme',                 lang: 'es' },
+            { text: 'No entiendo',                     lang: 'es' },
+            { text: 'I need help',                     lang: 'en' },
+            { text: 'Can you help me',                 lang: 'en' },
+            { text: 'I don\'t understand',             lang: 'en' },
+        ];
+
+        const MATCH_THRESHOLD = 0.60; // Sørensen–Dice ≥ 60%
+
+        // ── Fuzzy matching (Sørensen–Dice on words) ──────────────────────────
+        function normalise(s) {
+            return s.toLowerCase().replace(/[^a-z0-9\u00c0-\u024f\s]/g, '').trim();
+        }
+
+        function diceScore(a, b) {
+            const wordsA = normalise(a).split(/\s+/).filter(Boolean);
+            const wordsB = normalise(b).split(/\s+/).filter(Boolean);
+            if (wordsA.length === 0 && wordsB.length === 0) return 1;
+            if (wordsA.length === 0 || wordsB.length === 0) return 0;
+            const setA = new Set(wordsA);
+            const setB = new Set(wordsB);
+            let intersection = 0;
+            for (const w of setA) { if (setB.has(w)) intersection++; }
+            return (2 * intersection) / (setA.size + setB.size);
+        }
+
+        function scoreAllPhrases(transcript) {
+            return TARGET_PHRASES.map(p => ({
+                ...p,
+                score: diceScore(transcript, p.text),
+            }));
+        }
+
+        // ── Scores table rendering ───────────────────────────────────────────
+        function renderScores(transcript) {
+            const scores = scoreAllPhrases(transcript);
+            scores.sort((a, b) => b.score - a.score);
+
+            const langLabel = { de: 'DE', es: 'ES', en: 'EN' };
+            const langClass = { de: 'lang-de', es: 'lang-es', en: 'lang-en' };
+
+            let rows = '';
+            for (const item of scores) {
+                const pct = Math.round(item.score * 100);
+                const matched = item.score >= MATCH_THRESHOLD;
+                const barClass = pct >= 60 ? 'high' : pct >= 35 ? 'mid' : 'low';
+                rows += `
+                    <tr class="${matched ? 'match-yes' : 'match-no'}">
+                        <td>${escapeHtml(item.text)}</td>
+                        <td><span class="lang-badge ${langClass[item.lang]}">${langLabel[item.lang]}</span></td>
+                        <td>
+                            <div class="score-bar-wrap">
+                                <div class="score-bar">
+                                    <div class="score-bar-fill ${barClass}" style="width:${pct}%"></div>
+                                </div>
+                                <span class="score-pct">${pct}%</span>
+                            </div>
+                        </td>
+                        <td>${matched ? '&#9989;' : '&#10060;'}</td>
+                    </tr>`;
+            }
+
+            document.getElementById('scoresContainer').innerHTML = `
+                <table class="scores-table">
+                    <thead>
+                        <tr>
+                            <th>Phrase</th>
+                            <th>Lang</th>
+                            <th>Score</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>${rows}</tbody>
+                </table>`;
+        }
+
+        function escapeHtml(s) {
+            return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        // ── Service Worker ───────────────────────────────────────────────────
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed', err));
+        }
+
+        // ── Load Transformers.js ─────────────────────────────────────────────
+        async function loadTransformers() {
+            try {
+                const module = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
+                pipeline = module.pipeline;
+                console.log('Transformers.js loaded');
+                document.getElementById('setupStatus').textContent = 'Library loaded. Ready to download model.';
+            } catch (err) {
+                console.error('Failed to load Transformers.js:', err);
+                const s = document.getElementById('setupStatus');
+                s.className = 'status error';
+                s.textContent = 'Failed to load library. Please check internet connection.';
+            }
+        }
+
+        loadTransformers();
+
+        // ── PWA install ──────────────────────────────────────────────────────
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('installBtn').classList.add('visible');
+        });
+
+        async function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    document.getElementById('installBtn').style.display = 'none';
+                }
+                deferredPrompt = null;
+            }
+        }
+
+        // ── Load model ───────────────────────────────────────────────────────
+        async function loadModel() {
+            const btn = document.getElementById('loadModelBtn');
+            const status = document.getElementById('setupStatus');
+            const progressBar = document.getElementById('progressBar');
+            const progressFill = document.getElementById('progressFill');
+            const modelId = document.getElementById('modelSelect').value;
+
+            if (!pipeline) {
+                status.className = 'status error';
+                status.textContent = 'Library not loaded yet. Please wait and try again.';
+                return;
+            }
+
+            // Skip reload if the same model is already loaded
+            if (transcriber && loadedModelId === modelId) {
+                status.className = 'status success';
+                status.textContent = 'Model already loaded: ' + modelId;
+                return;
+            }
+
+            btn.disabled = true;
+            transcriber = null;
+            loadedModelId = null;
+            document.getElementById('recordBtn').disabled = true;
+
+            const sizeHint = modelId.includes('base') ? '~150 MB' : '~39 MB';
+            status.className = 'status loading';
+            status.textContent = `Downloading ${modelId} (${sizeHint})...`;
+            progressFill.style.width = '0%';
+            progressBar.classList.add('active');
+
+            try {
+                transcriber = await pipeline(
+                    'automatic-speech-recognition',
+                    modelId,
+                    {
+                        progress_callback: (progress) => {
+                            if (progress.status === 'progress') {
+                                const percent = Math.round(progress.progress * 100);
+                                progressFill.style.width = percent + '%';
+                            }
+                        }
+                    }
+                );
+
+                loadedModelId = modelId;
+                progressFill.style.width = '100%';
+                status.className = 'status success';
+                status.textContent = 'Model loaded: ' + modelId;
+                document.getElementById('recordBtn').disabled = false;
+
+                setTimeout(() => progressBar.classList.remove('active'), 500);
+
+            } catch (error) {
+                status.className = 'status error';
+                status.textContent = 'Error loading model: ' + error.message;
+                btn.disabled = false;
+                progressBar.classList.remove('active');
+                console.error(error);
+                return;
+            }
+
+            btn.disabled = false;
+        }
+
+        // ── Recording ────────────────────────────────────────────────────────
+        async function toggleRecording() {
+            const btn = document.getElementById('recordBtn');
+            const status = document.getElementById('recStatus');
+
+            if (!isRecording) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+                    // Bug fix 1: detect supported MIME type for Safari/iOS compatibility
+                    mimeType = ['audio/webm;codecs=opus', 'audio/mp4', 'audio/ogg;codecs=opus']
+                        .find(t => MediaRecorder.isTypeSupported(t)) || '';
+
+                    mediaRecorder = new MediaRecorder(stream, mimeType ? { mimeType } : {});
+                    audioChunks = [];
+
+                    mediaRecorder.ondataavailable = (event) => {
+                        audioChunks.push(event.data);
+                    };
+
+                    mediaRecorder.onstop = async () => {
+                        const audioBlob = new Blob(audioChunks, { type: mimeType || 'audio/webm' });
+                        await transcribeAudio(audioBlob);
+                    };
+
+                    mediaRecorder.start();
+                    isRecording = true;
+                    btn.classList.add('recording');
+                    btn.textContent = '&#128308; Recording... (tap to stop)';
+                    status.className = 'status loading';
+                    status.textContent = 'Recording... Speak now!';
+
+                } catch (err) {
+                    status.className = 'status error';
+                    status.textContent = 'Microphone access denied. Please allow microphone access.';
+                    console.error(err);
+                }
+
+            } else {
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+                isRecording = false;
+                btn.classList.remove('recording');
+                btn.textContent = '&#127908; Hold to Record';
+                status.className = 'status loading';
+                status.textContent = 'Transcribing...';
+                btn.disabled = true;
+            }
+        }
+
+        // ── Resample to 16 kHz using OfflineAudioContext ─────────────────────
+        // Transformers.js v2 does not reliably resample a raw Float32Array even
+        // when sampling_rate is passed. We do it ourselves with the browser's
+        // built-in resampler so Whisper always receives 16 kHz audio.
+        async function resampleTo16k(audioBuffer) {
+            const TARGET_RATE = 16000;
+            if (audioBuffer.sampleRate === TARGET_RATE) {
+                return audioBuffer.getChannelData(0);
+            }
+            const frameCount = Math.ceil(audioBuffer.duration * TARGET_RATE);
+            const offlineCtx = new OfflineAudioContext(1, frameCount, TARGET_RATE);
+            const source = offlineCtx.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(offlineCtx.destination);
+            source.start(0);
+            const resampled = await offlineCtx.startRendering();
+            return resampled.getChannelData(0);
+        }
+
+        // ── Transcription ────────────────────────────────────────────────────
+        async function transcribeAudio(audioBlob) {
+            const status = document.getElementById('recStatus');
+            const transcriptDiv = document.getElementById('transcript');
+
+            try {
+                const arrayBuffer = await audioBlob.arrayBuffer();
+
+                // Bug fix 3: create a fresh AudioContext per call (avoids iOS suspended-context issue)
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioContext.state === 'suspended') {
+                    await audioContext.resume();
+                }
+
+                const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+                audioContext.close();
+
+                // Resample to 16 kHz before passing to Whisper
+                const audioData = await resampleTo16k(audioBuffer);
+                const language = document.getElementById('language').value;
+
+                const t0 = performance.now();
+
+                const result = await transcriber(audioData, {
+                    language: language,
+                    task: 'transcribe',
+                    sampling_rate: 16000,
+                });
+
+                const elapsed = Math.round(performance.now() - t0);
+                const text = result.text.trim();
+
+                transcriptDiv.innerHTML = escapeHtml(text || '(no speech detected)')
+                    + `<span class="timing">&#9201; ${elapsed.toLocaleString()} ms &nbsp;|&nbsp; model: ${loadedModelId}</span>`;
+
+                renderScores(text);
+
+                status.className = 'status success';
+                status.textContent = 'Transcription complete!';
+                document.getElementById('recordBtn').disabled = false;
+
+            } catch (error) {
+                status.className = 'status error';
+                status.textContent = 'Transcription failed: ' + error.message;
+                document.getElementById('recordBtn').disabled = false;
+                console.error(error);
+            }
+        }
+
+        // ── Global exports (for inline onclick handlers) ─────────────────────
+        window.loadModel = loadModel;
+        window.toggleRecording = toggleRecording;
+        window.installPWA = installPWA;
+    </script>
+</body>
+</html>

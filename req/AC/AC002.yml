@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links:
+- SRS005: KfzHaQpf55ZdoQsxyWchKyWrXPoYNzWnIWuqs_0GS_E=
+normative: true
+ref: ''
+reviewed: OfxjgAKOdF-D7jVOvhHXGpxDK9WEnx-f8xzyFVw7TNM=
+text: |
+  whisper-tiny scores >= 60% Sørensen-Dice for all five target German
+  help-seeking phrases ("Ich brauche Hilfe", "Kannst du mir helfen",
+  "Ich verstehe das nicht", "Ich schaffe das nicht alleine", "Kannst du
+  mir das erklären") when spoken clearly by an adult on iOS 17+
+  hardware.

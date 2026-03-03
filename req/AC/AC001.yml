@@ -1,0 +1,16 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- SRS001: w__g6T3WP3C1vdMAuWohPqn5aBiJWkMMaG0yuaqymOA=
+- SRS002: dI3c-BLHyichGY2JZmDnmyBFrqLWT0_T5whtCjQhVYo=
+- SRS003: RY-kBdy_z2QDZC4pWsZlDTgOJQDh4UamXLCV_JcrZ4g=
+- SRS004: gj-a605IfbWBjJYlH3y3YpruOPbhtGoPT74mG0QkXLc=
+normative: true
+ref: ''
+reviewed: 6aKHBJpmj-vI9roDsWTDcM48md7Rei6SrKYknvirLGU=
+text: |
+  The full core loop (home → create profile → scenario list → play in
+  choice mode → celebrate → back to list) is completable end-to-end on
+  iPad Safari in offline mode without errors.

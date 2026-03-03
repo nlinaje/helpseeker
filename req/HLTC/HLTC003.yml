@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: ''
+level: 1.2
+links:
+- SRS005: KfzHaQpf55ZdoQsxyWchKyWrXPoYNzWnIWuqs_0GS_E=
+normative: true
+ref: ''
+reviewed: 94L66PGChT8HrTN0N_37CfTdKO-_GU0DhPgsaqkezis=
+text: |
+  With Whisper model loaded and network disabled, open a German
+  difficulty-1 scenario in speech mode. Speak "Ich brauche Hilfe".
+  Verify transcript appears, score >= 60%, and celebration screen
+  appears.

@@ -1,0 +1,7 @@
+# TLS certs for local dev server — never commit private keys
+pwa-test/cert.pem
+pwa-test/key.pem
+
+# Python
+__pycache__/
+*.pyc

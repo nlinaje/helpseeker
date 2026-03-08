@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <rect width="320" height="200" fill="#eff6ff"/>
+  <circle cx="160" cy="92" r="66" fill="#dbeafe"/>
+  <text x="160" y="92" font-size="62" text-anchor="middle" dominant-baseline="central">😓</text>
+  <text x="160" y="176" font-size="13" text-anchor="middle" fill="#6b7280" font-family="sans-serif">Aufgabe schwer</text>
+</svg>

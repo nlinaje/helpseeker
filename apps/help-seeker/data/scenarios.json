@@ -11,8 +11,17 @@
             "image": "images/scenarios/de-phys-001.svg",
             "description": "Dein Lieblingsbuch liegt ganz oben im Regal — du kommst nicht dran.",
             "targetPhrase": "Ich brauche Hilfe",
-            "choices": ["Ich brauche Hilfe", "Das ist egal", "Ich gehe weg"],
-            "hint": "Du brauchst Hilfe von {{character_name}}!"
+            "choices": [
+                "Ich brauche Hilfe",
+                "Das ist egal",
+                "Ich gehe weg"
+            ],
+            "hint": "Du brauchst Hilfe von {{character_name}}!",
+            "images": [
+                "images/scenarios/de-phys-001-1.jpg",
+                "images/scenarios/de-phys-001-2.jpg",
+                "images/scenarios/de-phys-001-3.jpg"
+            ]
         },
         {
             "id": "de-phys-002",
@@ -24,8 +33,17 @@
             "image": "images/scenarios/de-phys-002.svg",
             "description": "Dein Stift ist unter den Schrank gerollt. Du kommst nicht dran. {{character_name}} steht daneben.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Das brauche ich nicht", "Ich probiere weiter"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Das brauche ich nicht",
+                "Ich probiere weiter"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-phys-002-1.jpg",
+                "images/scenarios/de-phys-002-2.jpg",
+                "images/scenarios/de-phys-002-3.jpg"
+            ]
         },
         {
             "id": "de-phys-003",
@@ -37,8 +55,17 @@
             "image": "images/scenarios/de-phys-003.svg",
             "description": "Die große Kiste ist viel zu schwer für dich. Du kannst sie nicht alleine tragen. {{character_name}} steht daneben.",
             "targetPhrase": "Ich brauche Hilfe",
-            "choices": ["Ich brauche Hilfe", "Ich lasse sie stehen", "Das schaffe ich allein"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Ich brauche Hilfe",
+                "Ich lasse sie stehen",
+                "Das schaffe ich allein"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-phys-003-1.jpg",
+                "images/scenarios/de-phys-003-2.jpg",
+                "images/scenarios/de-phys-003-3.jpg"
+            ]
         },
         {
             "id": "de-phys-004",
@@ -50,8 +77,17 @@
             "image": "images/scenarios/de-phys-004.svg",
             "description": "Die Tür lässt sich nicht öffnen. Du ziehst und drückst, aber sie klemmt. {{character_name}} kommt den Flur entlang.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Ich warte hier", "Das ist egal"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Ich warte hier",
+                "Das ist egal"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-phys-004-1.jpg",
+                "images/scenarios/de-phys-004-2.jpg",
+                "images/scenarios/de-phys-004-3.jpg"
+            ]
         },
         {
             "id": "de-phys-005",
@@ -63,8 +99,16 @@
             "image": "images/scenarios/de-phys-005.svg",
             "description": "Dein Kopf tut sehr weh. Du kannst dich nicht konzentrieren. {{character_name}} fragt, ob alles in Ordnung ist.",
             "targetPhrase": "Mir ist nicht gut",
-            "choices": ["Mir ist nicht gut", "Alles super", "Ich schlafe gleich"],
-            "hint": "Sag {{character_name}}, wie es dir geht!"
+            "choices": [
+                "Mir ist nicht gut",
+                "Alles super",
+                "Ich schlafe gleich"
+            ],
+            "hint": "Sag {{character_name}}, wie es dir geht!",
+            "images": [
+                "images/scenarios/de-phys-005-1.jpg",
+                "images/scenarios/de-phys-005-2.jpg"
+            ]
         },
         {
             "id": "de-phys-006",
@@ -76,8 +120,17 @@
             "image": "images/scenarios/de-phys-006.svg",
             "description": "Du bist hingefallen und hast dir das Knie aufgeschlagen. Es tut weh und blutet ein bisschen. {{character_name}} kommt zu dir.",
             "targetPhrase": "Ich habe mich verletzt",
-            "choices": ["Ich habe mich verletzt", "Das ist nichts", "Ich gehe allein"],
-            "hint": "Sag {{character_name}}, dass du dich verletzt hast!"
+            "choices": [
+                "Ich habe mich verletzt",
+                "Das ist nichts",
+                "Ich gehe allein"
+            ],
+            "hint": "Sag {{character_name}}, dass du dich verletzt hast!",
+            "images": [
+                "images/scenarios/de-phys-006-1.jpg",
+                "images/scenarios/de-phys-006-2.jpg",
+                "images/scenarios/de-phys-006-3.jpg"
+            ]
         },
         {
             "id": "de-phys-007",
@@ -89,8 +142,17 @@
             "image": "images/scenarios/de-phys-007.svg",
             "description": "Der Reißverschluss deines Rucksacks klemmt. Du bekommst ihn nicht auf. {{character_name}} sieht, dass du kämpfst.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Ich brauche keinen Rucksack", "Ich warte bis morgen"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Ich brauche keinen Rucksack",
+                "Ich warte bis morgen"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-phys-007-1.jpg",
+                "images/scenarios/de-phys-007-2.jpg",
+                "images/scenarios/de-phys-007-3.jpg"
+            ]
         },
         {
             "id": "de-phys-008",
@@ -102,8 +164,16 @@
             "image": "images/scenarios/de-phys-008.svg",
             "description": "Dein Bauch tut weh. Du weißt nicht warum. {{character_name}} schaut dich besorgt an.",
             "targetPhrase": "Mir ist nicht gut",
-            "choices": ["Mir ist nicht gut", "Alles in Ordnung", "Ich esse weiter"],
-            "hint": "Sag {{character_name}}, wie es dir geht!"
+            "choices": [
+                "Mir ist nicht gut",
+                "Alles in Ordnung",
+                "Ich esse weiter"
+            ],
+            "hint": "Sag {{character_name}}, wie es dir geht!",
+            "images": [
+                "images/scenarios/de-phys-008-1.jpg",
+                "images/scenarios/de-phys-008-2.jpg"
+            ]
         },
         {
             "id": "de-phys-009",
@@ -115,8 +185,17 @@
             "image": "images/scenarios/de-phys-009.svg",
             "description": "Du frierst sehr, aber deine Jacke ist zugeknotet und du kommst nicht rein. {{character_name}} steht daneben.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Ich friere nicht", "Ich brauche keine Jacke"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Ich friere nicht",
+                "Ich brauche keine Jacke"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-phys-009-1.jpg",
+                "images/scenarios/de-phys-009-2.jpg",
+                "images/scenarios/de-phys-009-3.jpg"
+            ]
         },
         {
             "id": "de-phys-010",
@@ -128,8 +207,17 @@
             "image": "images/scenarios/de-phys-010.svg",
             "description": "Du hast großen Durst, aber die Wasserflasche lässt sich nicht aufschrauben. {{character_name}} sitzt neben dir.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Ich brauche kein Wasser", "Ich habe keinen Durst"],
-            "hint": "Bitte {{character_name}}, die Flasche zu öffnen!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Ich brauche kein Wasser",
+                "Ich habe keinen Durst"
+            ],
+            "hint": "Bitte {{character_name}}, die Flasche zu öffnen!",
+            "images": [
+                "images/scenarios/de-phys-010-1.jpg",
+                "images/scenarios/de-phys-010-2.jpg",
+                "images/scenarios/de-phys-010-3.jpg"
+            ]
         },
         {
             "id": "de-phys-011",
@@ -141,8 +229,16 @@
             "image": "images/scenarios/de-phys-011.svg",
             "description": "Dir ist schlecht und du möchtest dich gleich übergeben. {{character_name}} ist in der Nähe.",
             "targetPhrase": "Mir ist schlecht",
-            "choices": ["Mir ist schlecht", "Alles gut", "Ich esse weiter"],
-            "hint": "Sag {{character_name}}, wie es dir geht!"
+            "choices": [
+                "Mir ist schlecht",
+                "Alles gut",
+                "Ich esse weiter"
+            ],
+            "hint": "Sag {{character_name}}, wie es dir geht!",
+            "images": [
+                "images/scenarios/de-phys-011-1.jpg",
+                "images/scenarios/de-phys-011-2.jpg"
+            ]
         },
         {
             "id": "de-phys-012",
@@ -154,8 +250,16 @@
             "image": "images/scenarios/de-phys-012.svg",
             "description": "Dir dreht sich alles. Du kannst kaum gerade stehen. {{character_name}} kommt zu dir.",
             "targetPhrase": "Mir ist schwindelig",
-            "choices": ["Mir ist schwindelig", "Ich bin nur müde", "Das wird gleich besser"],
-            "hint": "Sag {{character_name}}, dass dir schwindelig ist!"
+            "choices": [
+                "Mir ist schwindelig",
+                "Ich bin nur müde",
+                "Das wird gleich besser"
+            ],
+            "hint": "Sag {{character_name}}, dass dir schwindelig ist!",
+            "images": [
+                "images/scenarios/de-phys-012-1.jpg",
+                "images/scenarios/de-phys-012-2.jpg"
+            ]
         },
         {
             "id": "de-phys-013",
@@ -167,8 +271,16 @@
             "image": "images/scenarios/de-phys-013.svg",
             "description": "Du bist so müde und erschöpft, dass du kaum noch mitmachen kannst. {{character_name}} fragt dich etwas.",
             "targetPhrase": "Ich brauche eine Pause",
-            "choices": ["Ich brauche eine Pause", "Ich mache weiter", "Das ist normal"],
-            "hint": "Bitte {{character_name}} um eine Pause!"
+            "choices": [
+                "Ich brauche eine Pause",
+                "Ich mache weiter",
+                "Das ist normal"
+            ],
+            "hint": "Bitte {{character_name}} um eine Pause!",
+            "images": [
+                "images/scenarios/de-phys-013-1.jpg",
+                "images/scenarios/de-phys-013-2.jpg"
+            ]
         },
         {
             "id": "de-phys-014",
@@ -180,8 +292,16 @@
             "image": "images/scenarios/de-phys-014.svg",
             "description": "Ein Zahn schmerzt sehr stark. Du kannst kaum essen oder sprechen. {{character_name}} schaut dich an.",
             "targetPhrase": "Mein Zahn tut weh",
-            "choices": ["Mein Zahn tut weh", "Alles gut", "Ich esse einfach nicht"],
-            "hint": "Sag {{character_name}}, was dir weh tut!"
+            "choices": [
+                "Mein Zahn tut weh",
+                "Alles gut",
+                "Ich esse einfach nicht"
+            ],
+            "hint": "Sag {{character_name}}, was dir weh tut!",
+            "images": [
+                "images/scenarios/de-phys-014-1.jpg",
+                "images/scenarios/de-phys-014-2.jpg"
+            ]
         },
         {
             "id": "de-phys-015",
@@ -193,8 +313,16 @@
             "image": "images/scenarios/de-phys-015.svg",
             "description": "Dein Ohr tut sehr weh. Du kannst kaum zuhören. {{character_name}} spricht mit dir.",
             "targetPhrase": "Mein Ohr tut weh",
-            "choices": ["Mein Ohr tut weh", "Ich kann dich hören", "Kein Problem"],
-            "hint": "Sag {{character_name}}, was dir weh tut!"
+            "choices": [
+                "Mein Ohr tut weh",
+                "Ich kann dich hören",
+                "Kein Problem"
+            ],
+            "hint": "Sag {{character_name}}, was dir weh tut!",
+            "images": [
+                "images/scenarios/de-phys-015-1.jpg",
+                "images/scenarios/de-phys-015-2.jpg"
+            ]
         },
         {
             "id": "de-phys-016",
@@ -206,8 +334,17 @@
             "image": "images/scenarios/de-phys-016.svg",
             "description": "Eine Biene hat dich gestochen. Es brennt und schwillt an. {{character_name}} kommt zu dir.",
             "targetPhrase": "Ich wurde gestochen",
-            "choices": ["Ich wurde gestochen", "Das ist nichts", "Ich warte einfach"],
-            "hint": "Sag {{character_name}}, dass du gestochen wurdest!"
+            "choices": [
+                "Ich wurde gestochen",
+                "Das ist nichts",
+                "Ich warte einfach"
+            ],
+            "hint": "Sag {{character_name}}, dass du gestochen wurdest!",
+            "images": [
+                "images/scenarios/de-phys-016-1.jpg",
+                "images/scenarios/de-phys-016-2.jpg",
+                "images/scenarios/de-phys-016-3.jpg"
+            ]
         },
         {
             "id": "de-phys-017",
@@ -219,8 +356,16 @@
             "image": "images/scenarios/de-phys-017.svg",
             "description": "Du musst die ganze Zeit niesen und deine Nase läuft. Du brauchst ein Taschentuch. {{character_name}} steht daneben.",
             "targetPhrase": "Hast du ein Taschentuch",
-            "choices": ["Hast du ein Taschentuch", "Ich brauche keins", "Das geht von allein"],
-            "hint": "Frag {{character_name}} nach einem Taschentuch!"
+            "choices": [
+                "Hast du ein Taschentuch",
+                "Ich brauche keins",
+                "Das geht von allein"
+            ],
+            "hint": "Frag {{character_name}} nach einem Taschentuch!",
+            "images": [
+                "images/scenarios/de-phys-017-1.jpg",
+                "images/scenarios/de-phys-017-2.jpg"
+            ]
         },
         {
             "id": "de-phys-018",
@@ -232,8 +377,17 @@
             "image": "images/scenarios/de-phys-018.svg",
             "description": "Du hast dich am Finger geschnitten und es blutet. Du brauchst ein Pflaster. {{character_name}} ist in der Nähe.",
             "targetPhrase": "Ich brauche ein Pflaster",
-            "choices": ["Ich brauche ein Pflaster", "Das hört alleine auf", "Das ist nicht schlimm"],
-            "hint": "Sag {{character_name}}, dass du ein Pflaster brauchst!"
+            "choices": [
+                "Ich brauche ein Pflaster",
+                "Das hört alleine auf",
+                "Das ist nicht schlimm"
+            ],
+            "hint": "Sag {{character_name}}, dass du ein Pflaster brauchst!",
+            "images": [
+                "images/scenarios/de-phys-018-1.jpg",
+                "images/scenarios/de-phys-018-2.jpg",
+                "images/scenarios/de-phys-018-3.jpg"
+            ]
         },
         {
             "id": "de-phys-019",
@@ -245,8 +399,16 @@
             "image": "images/scenarios/de-phys-019.svg",
             "description": "Dein Bein hat einen Krampf. Du kannst kaum laufen. {{character_name}} kommt sofort zu dir.",
             "targetPhrase": "Mein Bein tut weh",
-            "choices": ["Mein Bein tut weh", "Das geht vorbei", "Ich laufe weiter"],
-            "hint": "Sag {{character_name}}, dass dein Bein wehtut!"
+            "choices": [
+                "Mein Bein tut weh",
+                "Das geht vorbei",
+                "Ich laufe weiter"
+            ],
+            "hint": "Sag {{character_name}}, dass dein Bein wehtut!",
+            "images": [
+                "images/scenarios/de-phys-019-1.jpg",
+                "images/scenarios/de-phys-019-2.jpg"
+            ]
         },
         {
             "id": "de-phys-020",
@@ -258,8 +420,16 @@
             "image": "images/scenarios/de-phys-020.svg",
             "description": "Deine Nase fängt plötzlich an zu bluten. Du weißt nicht was du tun sollst. {{character_name}} steht dabei.",
             "targetPhrase": "Meine Nase blutet",
-            "choices": ["Meine Nase blutet", "Das ist normal", "Ich wische es weg"],
-            "hint": "Sag {{character_name}}, dass deine Nase blutet!"
+            "choices": [
+                "Meine Nase blutet",
+                "Das ist normal",
+                "Ich wische es weg"
+            ],
+            "hint": "Sag {{character_name}}, dass deine Nase blutet!",
+            "images": [
+                "images/scenarios/de-phys-020-1.jpg",
+                "images/scenarios/de-phys-020-2.jpg"
+            ]
         },
         {
             "id": "de-phys-021",
@@ -271,8 +441,16 @@
             "image": "images/scenarios/de-phys-021.svg",
             "description": "Dein Auge juckt und brennt. Du kannst kaum sehen. {{character_name}} fragt dich, ob du okay bist.",
             "targetPhrase": "Mein Auge tut weh",
-            "choices": ["Mein Auge tut weh", "Alles in Ordnung", "Ich reibe es weg"],
-            "hint": "Sag {{character_name}}, dass dein Auge wehtut!"
+            "choices": [
+                "Mein Auge tut weh",
+                "Alles in Ordnung",
+                "Ich reibe es weg"
+            ],
+            "hint": "Sag {{character_name}}, dass dein Auge wehtut!",
+            "images": [
+                "images/scenarios/de-phys-021-1.jpg",
+                "images/scenarios/de-phys-021-2.jpg"
+            ]
         },
         {
             "id": "de-phys-022",
@@ -284,8 +462,16 @@
             "image": "images/scenarios/de-phys-022.svg",
             "description": "Du hast großen Hunger. Dein Bauch knurrt schon. {{character_name}} fragt dich, was los ist.",
             "targetPhrase": "Ich habe Hunger",
-            "choices": ["Ich habe Hunger", "Ich esse nicht", "Alles gut"],
-            "hint": "Sag {{character_name}}, dass du Hunger hast!"
+            "choices": [
+                "Ich habe Hunger",
+                "Ich esse nicht",
+                "Alles gut"
+            ],
+            "hint": "Sag {{character_name}}, dass du Hunger hast!",
+            "images": [
+                "images/scenarios/de-phys-022-1.jpg",
+                "images/scenarios/de-phys-022-2.jpg"
+            ]
         },
         {
             "id": "de-phys-023",
@@ -297,8 +483,16 @@
             "image": "images/scenarios/de-phys-023.svg",
             "description": "Du hast sehr großen Durst. Dein Mund ist ganz trocken.",
             "targetPhrase": "Ich habe Durst",
-            "choices": ["Ich habe Durst", "Kein Problem", "Ich brauche nichts"],
-            "hint": "Sag {{character_name}}, dass du Durst hast!"
+            "choices": [
+                "Ich habe Durst",
+                "Kein Problem",
+                "Ich brauche nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass du Durst hast!",
+            "images": [
+                "images/scenarios/de-phys-023-1.jpg",
+                "images/scenarios/de-phys-023-2.jpg"
+            ]
         },
         {
             "id": "de-phys-024",
@@ -310,8 +504,16 @@
             "image": "images/scenarios/de-phys-024.svg",
             "description": "Dir ist sehr kalt. Du zitterst und möchtest eine Jacke. {{character_name}} fragt dich etwas.",
             "targetPhrase": "Mir ist kalt",
-            "choices": ["Mir ist kalt", "Mir ist warm", "Alles super"],
-            "hint": "Sag {{character_name}}, dass dir kalt ist!"
+            "choices": [
+                "Mir ist kalt",
+                "Mir ist warm",
+                "Alles super"
+            ],
+            "hint": "Sag {{character_name}}, dass dir kalt ist!",
+            "images": [
+                "images/scenarios/de-phys-024-1.jpg",
+                "images/scenarios/de-phys-024-2.jpg"
+            ]
         },
         {
             "id": "de-phys-025",
@@ -323,8 +525,16 @@
             "image": "images/scenarios/de-phys-025.svg",
             "description": "Dir ist sehr warm. Du schwitzt und möchtest ein Fenster öffnen.",
             "targetPhrase": "Mir ist zu warm",
-            "choices": ["Mir ist zu warm", "Mir ist kalt", "Alles passt"],
-            "hint": "Sag {{character_name}}, dass dir zu warm ist!"
+            "choices": [
+                "Mir ist zu warm",
+                "Mir ist kalt",
+                "Alles passt"
+            ],
+            "hint": "Sag {{character_name}}, dass dir zu warm ist!",
+            "images": [
+                "images/scenarios/de-phys-025-1.jpg",
+                "images/scenarios/de-phys-025-2.jpg"
+            ]
         },
         {
             "id": "de-phys-026",
@@ -336,8 +546,16 @@
             "image": "images/scenarios/de-phys-026.svg",
             "description": "Du schwitzt sehr stark und brauchst ein Handtuch oder ein Glas Wasser. {{character_name}} kommt zu dir.",
             "targetPhrase": "Ich brauche Wasser",
-            "choices": ["Ich brauche Wasser", "Alles gut", "Ich brauche nichts"],
-            "hint": "Sag {{character_name}}, was du brauchst!"
+            "choices": [
+                "Ich brauche Wasser",
+                "Alles gut",
+                "Ich brauche nichts"
+            ],
+            "hint": "Sag {{character_name}}, was du brauchst!",
+            "images": [
+                "images/scenarios/de-phys-026-1.jpg",
+                "images/scenarios/de-phys-026-2.jpg"
+            ]
         },
         {
             "id": "de-phys-027",
@@ -349,8 +567,17 @@
             "image": "images/scenarios/de-phys-027.svg",
             "description": "Du bekommst plötzlich rote Flecken und juckst überall. Du hast vielleicht eine Allergie. {{character_name}} schaut besorgt.",
             "targetPhrase": "Ich brauche Hilfe",
-            "choices": ["Ich brauche Hilfe", "Das geht vorbei", "Das ist normal"],
-            "hint": "Sag {{character_name}}, dass du Hilfe brauchst!"
+            "choices": [
+                "Ich brauche Hilfe",
+                "Das geht vorbei",
+                "Das ist normal"
+            ],
+            "hint": "Sag {{character_name}}, dass du Hilfe brauchst!",
+            "images": [
+                "images/scenarios/de-phys-027-1.jpg",
+                "images/scenarios/de-phys-027-2.jpg",
+                "images/scenarios/de-phys-027-3.jpg"
+            ]
         },
         {
             "id": "de-phys-028",
@@ -362,8 +589,17 @@
             "image": "images/scenarios/de-phys-028.svg",
             "description": "Du bist umgeknickt. Dein Knöchel schwillt an und schmerzt sehr. {{character_name}} kommt sofort.",
             "targetPhrase": "Ich habe mich verletzt",
-            "choices": ["Ich habe mich verletzt", "Das ist nicht schlimm", "Ich laufe weiter"],
-            "hint": "Sag {{character_name}}, dass du dich verletzt hast!"
+            "choices": [
+                "Ich habe mich verletzt",
+                "Das ist nicht schlimm",
+                "Ich laufe weiter"
+            ],
+            "hint": "Sag {{character_name}}, dass du dich verletzt hast!",
+            "images": [
+                "images/scenarios/de-phys-028-1.jpg",
+                "images/scenarios/de-phys-028-2.jpg",
+                "images/scenarios/de-phys-028-3.jpg"
+            ]
         },
         {
             "id": "de-phys-029",
@@ -375,8 +611,16 @@
             "image": "images/scenarios/de-phys-029.svg",
             "description": "Du bekommst plötzlich schlecht Luft. Du kannst nicht richtig atmen. {{character_name}} ist sofort bei dir.",
             "targetPhrase": "Ich kann nicht gut atmen",
-            "choices": ["Ich kann nicht gut atmen", "Alles in Ordnung", "Ich versuche es weiter"],
-            "hint": "Sag {{character_name}}, dass du schlecht atmen kannst!"
+            "choices": [
+                "Ich kann nicht gut atmen",
+                "Alles in Ordnung",
+                "Ich versuche es weiter"
+            ],
+            "hint": "Sag {{character_name}}, dass du schlecht atmen kannst!",
+            "images": [
+                "images/scenarios/de-phys-029-1.jpg",
+                "images/scenarios/de-phys-029-2.jpg"
+            ]
         },
         {
             "id": "de-phys-030",
@@ -388,8 +632,17 @@
             "image": "images/scenarios/de-phys-030.svg",
             "description": "Du warst zu lange in der Sonne. Dein Kopf schmerzt und dir ist heiß. {{character_name}} kommt zu dir.",
             "targetPhrase": "Mir ist nicht gut",
-            "choices": ["Mir ist nicht gut", "Die Sonne macht nichts", "Alles super"],
-            "hint": "Sag {{character_name}}, wie es dir geht!"
+            "choices": [
+                "Mir ist nicht gut",
+                "Die Sonne macht nichts",
+                "Alles super"
+            ],
+            "hint": "Sag {{character_name}}, wie es dir geht!",
+            "images": [
+                "images/scenarios/de-phys-030-1.jpg",
+                "images/scenarios/de-phys-030-2.jpg",
+                "images/scenarios/de-phys-030-3.jpg"
+            ]
         },
         {
             "id": "de-acad-001",
@@ -401,8 +654,16 @@
             "image": "images/scenarios/de-acad-001.svg",
             "description": "Du verstehst die Aufgabe nicht. Du weißt nicht, was du tun sollst.",
             "targetPhrase": "Ich verstehe das nicht",
-            "choices": ["Ich verstehe das nicht", "Das ist einfach", "Ich mache es selbst"],
-            "hint": "Sag {{character_name}}, dass du Hilfe brauchst!"
+            "choices": [
+                "Ich verstehe das nicht",
+                "Das ist einfach",
+                "Ich mache es selbst"
+            ],
+            "hint": "Sag {{character_name}}, dass du Hilfe brauchst!",
+            "images": [
+                "images/scenarios/de-acad-001-1.jpg",
+                "images/scenarios/de-acad-001-2.jpg"
+            ]
         },
         {
             "id": "de-acad-002",
@@ -414,8 +675,16 @@
             "image": "images/scenarios/de-acad-002.svg",
             "description": "Du hast etwas falsch geschrieben, aber du hast keinen Radiergummi. {{character_name}} sitzt neben dir.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Das ist egal", "Ich lasse es so"],
-            "hint": "Bitte {{character_name}} um einen Radiergummi!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Das ist egal",
+                "Ich lasse es so"
+            ],
+            "hint": "Bitte {{character_name}} um einen Radiergummi!",
+            "images": [
+                "images/scenarios/de-acad-002-1.jpg",
+                "images/scenarios/de-acad-002-2.jpg"
+            ]
         },
         {
             "id": "de-acad-003",
@@ -427,8 +696,16 @@
             "image": "images/scenarios/de-acad-003.svg",
             "description": "Du sollst eine Linie zeichnen, hast aber kein Lineal. {{character_name}} hat eins auf dem Tisch liegen.",
             "targetPhrase": "Kann ich dein Lineal haben",
-            "choices": ["Kann ich dein Lineal haben", "Ich zeichne ohne Lineal", "Das brauche ich nicht"],
-            "hint": "Frag {{character_name}} nach dem Lineal!"
+            "choices": [
+                "Kann ich dein Lineal haben",
+                "Ich zeichne ohne Lineal",
+                "Das brauche ich nicht"
+            ],
+            "hint": "Frag {{character_name}} nach dem Lineal!",
+            "images": [
+                "images/scenarios/de-acad-003-1.jpg",
+                "images/scenarios/de-acad-003-2.jpg"
+            ]
         },
         {
             "id": "de-acad-004",
@@ -440,8 +717,16 @@
             "image": "images/scenarios/de-acad-004.svg",
             "description": "Du sollst etwas ausmalen, aber deine Buntstifte sind zu Hause. {{character_name}} hat viele Farben.",
             "targetPhrase": "Kann ich deine Farben benutzen",
-            "choices": ["Kann ich deine Farben benutzen", "Ich male nicht", "Das geht nicht"],
-            "hint": "Frag {{character_name}}, ob du die Farben benutzen darfst!"
+            "choices": [
+                "Kann ich deine Farben benutzen",
+                "Ich male nicht",
+                "Das geht nicht"
+            ],
+            "hint": "Frag {{character_name}}, ob du die Farben benutzen darfst!",
+            "images": [
+                "images/scenarios/de-acad-004-1.jpg",
+                "images/scenarios/de-acad-004-2.jpg"
+            ]
         },
         {
             "id": "de-acad-005",
@@ -453,8 +738,16 @@
             "image": "images/scenarios/de-acad-005.svg",
             "description": "Du sollst etwas ausschneiden, hast aber keine Schere. {{character_name}} sitzt neben dir.",
             "targetPhrase": "Hast du eine Schere",
-            "choices": ["Hast du eine Schere", "Ich reise es ab", "Das geht nicht"],
-            "hint": "Frag {{character_name}} nach der Schere!"
+            "choices": [
+                "Hast du eine Schere",
+                "Ich reise es ab",
+                "Das geht nicht"
+            ],
+            "hint": "Frag {{character_name}} nach der Schere!",
+            "images": [
+                "images/scenarios/de-acad-005-1.jpg",
+                "images/scenarios/de-acad-005-2.jpg"
+            ]
         },
         {
             "id": "de-acad-006",
@@ -466,8 +759,17 @@
             "image": "images/scenarios/de-acad-006.svg",
             "description": "Dein Schulbuch hat gerissene Seiten und du kannst die Aufgabe nicht lesen. {{character_name}} steht daneben.",
             "targetPhrase": "Kann ich dein Buch haben",
-            "choices": ["Kann ich dein Buch haben", "Ich mache die Aufgabe nicht", "Das ist egal"],
-            "hint": "Bitte {{character_name}} um das Buch!"
+            "choices": [
+                "Kann ich dein Buch haben",
+                "Ich mache die Aufgabe nicht",
+                "Das ist egal"
+            ],
+            "hint": "Bitte {{character_name}} um das Buch!",
+            "images": [
+                "images/scenarios/de-acad-006-1.jpg",
+                "images/scenarios/de-acad-006-2.jpg",
+                "images/scenarios/de-acad-006-3.jpg"
+            ]
         },
         {
             "id": "de-acad-007",
@@ -479,8 +781,16 @@
             "image": "images/scenarios/de-acad-007.svg",
             "description": "Du sollst etwas einkleben, hast aber keinen Kleber. {{character_name}} hat einen auf dem Tisch.",
             "targetPhrase": "Kann ich den Kleber benutzen",
-            "choices": ["Kann ich den Kleber benutzen", "Ich klebe es mit Wasser", "Das geht ohne Kleber"],
-            "hint": "Frag {{character_name}} nach dem Kleber!"
+            "choices": [
+                "Kann ich den Kleber benutzen",
+                "Ich klebe es mit Wasser",
+                "Das geht ohne Kleber"
+            ],
+            "hint": "Frag {{character_name}} nach dem Kleber!",
+            "images": [
+                "images/scenarios/de-acad-007-1.jpg",
+                "images/scenarios/de-acad-007-2.jpg"
+            ]
         },
         {
             "id": "de-acad-008",
@@ -492,8 +802,17 @@
             "image": "images/scenarios/de-acad-008.svg",
             "description": "Du hast eine Matheaufgabe gelöst, aber das Ergebnis ist falsch. Du weißt nicht warum. {{character_name}} kann gut rechnen.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Ich gebe es falsch ab", "Das ist egal"],
-            "hint": "Bitte {{character_name}} um Hilfe bei der Matheaufgabe!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Ich gebe es falsch ab",
+                "Das ist egal"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe bei der Matheaufgabe!",
+            "images": [
+                "images/scenarios/de-acad-008-1.jpg",
+                "images/scenarios/de-acad-008-2.jpg",
+                "images/scenarios/de-acad-008-3.jpg"
+            ]
         },
         {
             "id": "de-acad-009",
@@ -505,8 +824,17 @@
             "image": "images/scenarios/de-acad-009.svg",
             "description": "Du sollst vor der Klasse sprechen, aber du weißt nicht mehr, was du sagen wolltest. {{character_name}} sitzt neben dir.",
             "targetPhrase": "Kannst du mir helfen",
-            "choices": ["Kannst du mir helfen", "Ich sage nichts", "Das schaffe ich allein"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Kannst du mir helfen",
+                "Ich sage nichts",
+                "Das schaffe ich allein"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-acad-009-1.jpg",
+                "images/scenarios/de-acad-009-2.jpg",
+                "images/scenarios/de-acad-009-3.jpg"
+            ]
         },
         {
             "id": "de-acad-010",
@@ -518,8 +846,17 @@
             "image": "images/scenarios/de-acad-010.svg",
             "description": "Das Schul-Tablet hat sich aufgehängt. Du kannst nicht weiterarbeiten. {{character_name}} steht in der Nähe.",
             "targetPhrase": "Das Tablet funktioniert nicht",
-            "choices": ["Das Tablet funktioniert nicht", "Ich warte einfach", "Das ist normal"],
-            "hint": "Sag {{character_name}}, was mit dem Tablet ist!"
+            "choices": [
+                "Das Tablet funktioniert nicht",
+                "Ich warte einfach",
+                "Das ist normal"
+            ],
+            "hint": "Sag {{character_name}}, was mit dem Tablet ist!",
+            "images": [
+                "images/scenarios/de-acad-010-1.jpg",
+                "images/scenarios/de-acad-010-2.jpg",
+                "images/scenarios/de-acad-010-3.jpg"
+            ]
         },
         {
             "id": "de-acad-011",
@@ -531,8 +868,16 @@
             "image": "images/scenarios/de-acad-011.svg",
             "description": "Die Anleitung für die Aufgabe ist schwer zu verstehen. Du weißt nicht wo du anfangen sollst. {{character_name}} schaut zu dir.",
             "targetPhrase": "Ich verstehe die Anleitung nicht",
-            "choices": ["Ich verstehe die Anleitung nicht", "Ich mache einfach irgendetwas", "Das ist einfach"],
-            "hint": "Sag {{character_name}}, dass du die Anleitung nicht verstehst!"
+            "choices": [
+                "Ich verstehe die Anleitung nicht",
+                "Ich mache einfach irgendetwas",
+                "Das ist einfach"
+            ],
+            "hint": "Sag {{character_name}}, dass du die Anleitung nicht verstehst!",
+            "images": [
+                "images/scenarios/de-acad-011-1.jpg",
+                "images/scenarios/de-acad-011-2.jpg"
+            ]
         },
         {
             "id": "de-acad-012",
@@ -544,8 +889,16 @@
             "image": "images/scenarios/de-acad-012.svg",
             "description": "Du hast dein Schulbuch zu Hause vergessen. Du brauchst es jetzt für die Aufgabe. {{character_name}} hat sein Buch dabei.",
             "targetPhrase": "Ich habe mein Buch vergessen",
-            "choices": ["Ich habe mein Buch vergessen", "Ich brauche kein Buch", "Das ist kein Problem"],
-            "hint": "Sag {{character_name}}, dass du dein Buch vergessen hast!"
+            "choices": [
+                "Ich habe mein Buch vergessen",
+                "Ich brauche kein Buch",
+                "Das ist kein Problem"
+            ],
+            "hint": "Sag {{character_name}}, dass du dein Buch vergessen hast!",
+            "images": [
+                "images/scenarios/de-acad-012-1.jpg",
+                "images/scenarios/de-acad-012-2.jpg"
+            ]
         },
         {
             "id": "de-acad-013",
@@ -557,8 +910,16 @@
             "image": "images/scenarios/de-acad-013.svg",
             "description": "Dein Stift hat keine Mine mehr. Du kannst nicht schreiben. {{character_name}} hat einen Ersatzstift.",
             "targetPhrase": "Mein Stift ist leer",
-            "choices": ["Mein Stift ist leer", "Ich schreibe mit dem Finger", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, dass dein Stift leer ist!"
+            "choices": [
+                "Mein Stift ist leer",
+                "Ich schreibe mit dem Finger",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass dein Stift leer ist!",
+            "images": [
+                "images/scenarios/de-acad-013-1.jpg",
+                "images/scenarios/de-acad-013-2.jpg"
+            ]
         },
         {
             "id": "de-acad-014",
@@ -570,8 +931,17 @@
             "image": "images/scenarios/de-acad-014.svg",
             "description": "Dein Computer startet nicht. Du kannst deine Aufgabe nicht abgeben. {{character_name}} kommt vorbei.",
             "targetPhrase": "Mein Computer funktioniert nicht",
-            "choices": ["Mein Computer funktioniert nicht", "Ich warte bis morgen", "Das ist normal"],
-            "hint": "Sag {{character_name}}, was mit dem Computer ist!"
+            "choices": [
+                "Mein Computer funktioniert nicht",
+                "Ich warte bis morgen",
+                "Das ist normal"
+            ],
+            "hint": "Sag {{character_name}}, was mit dem Computer ist!",
+            "images": [
+                "images/scenarios/de-acad-014-1.jpg",
+                "images/scenarios/de-acad-014-2.jpg",
+                "images/scenarios/de-acad-014-3.jpg"
+            ]
         },
         {
             "id": "de-acad-015",
@@ -583,8 +953,16 @@
             "image": "images/scenarios/de-acad-015.svg",
             "description": "Du hast kein Papier mehr und sollst noch etwas aufschreiben. {{character_name}} hat einen Stapel Papier.",
             "targetPhrase": "Hast du ein Blatt Papier",
-            "choices": ["Hast du ein Blatt Papier", "Ich schreibe in die Luft", "Ich brauche kein Papier"],
-            "hint": "Frag {{character_name}} nach einem Blatt Papier!"
+            "choices": [
+                "Hast du ein Blatt Papier",
+                "Ich schreibe in die Luft",
+                "Ich brauche kein Papier"
+            ],
+            "hint": "Frag {{character_name}} nach einem Blatt Papier!",
+            "images": [
+                "images/scenarios/de-acad-015-1.jpg",
+                "images/scenarios/de-acad-015-2.jpg"
+            ]
         },
         {
             "id": "de-acad-016",
@@ -596,8 +974,16 @@
             "image": "images/scenarios/de-acad-016.svg",
             "description": "Die Aufgabe ist sehr schwer für dich. Du hast alles versucht, schaffst es aber nicht. {{character_name}} könnte helfen.",
             "targetPhrase": "Ich brauche Hilfe",
-            "choices": ["Ich brauche Hilfe", "Ich schaffe das allein", "Ich gebe auf"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Ich brauche Hilfe",
+                "Ich schaffe das allein",
+                "Ich gebe auf"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-acad-016-1.jpg",
+                "images/scenarios/de-acad-016-2.jpg"
+            ]
         },
         {
             "id": "de-acad-017",
@@ -609,8 +995,16 @@
             "image": "images/scenarios/de-acad-017.svg",
             "description": "Du musst dringend auf die Toilette, aber der Unterricht läuft. {{character_name}} ist die Lehrkraft.",
             "targetPhrase": "Darf ich zur Toilette",
-            "choices": ["Darf ich zur Toilette", "Ich halte es aus", "Ich gehe einfach"],
-            "hint": "Frag {{character_name}}, ob du zur Toilette darfst!"
+            "choices": [
+                "Darf ich zur Toilette",
+                "Ich halte es aus",
+                "Ich gehe einfach"
+            ],
+            "hint": "Frag {{character_name}}, ob du zur Toilette darfst!",
+            "images": [
+                "images/scenarios/de-acad-017-1.jpg",
+                "images/scenarios/de-acad-017-2.jpg"
+            ]
         },
         {
             "id": "de-acad-018",
@@ -622,8 +1016,16 @@
             "image": "images/scenarios/de-acad-018.svg",
             "description": "Die Zeit für den Test läuft ab, aber du bist noch nicht fertig. Du brauchst mehr Zeit. {{character_name}} beaufsichtigt den Test.",
             "targetPhrase": "Ich brauche mehr Zeit",
-            "choices": ["Ich brauche mehr Zeit", "Ich gebe leer ab", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, dass du mehr Zeit brauchst!"
+            "choices": [
+                "Ich brauche mehr Zeit",
+                "Ich gebe leer ab",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass du mehr Zeit brauchst!",
+            "images": [
+                "images/scenarios/de-acad-018-1.jpg",
+                "images/scenarios/de-acad-018-2.jpg"
+            ]
         },
         {
             "id": "de-acad-019",
@@ -635,8 +1037,17 @@
             "image": "images/scenarios/de-acad-019.svg",
             "description": "Dein Taschenrechner zeigt falsche Zahlen. Du brauchst ihn für die Matheaufgabe. {{character_name}} steht daneben.",
             "targetPhrase": "Mein Rechner funktioniert nicht",
-            "choices": ["Mein Rechner funktioniert nicht", "Ich rechne im Kopf", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, dass der Rechner kaputt ist!"
+            "choices": [
+                "Mein Rechner funktioniert nicht",
+                "Ich rechne im Kopf",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass der Rechner kaputt ist!",
+            "images": [
+                "images/scenarios/de-acad-019-1.jpg",
+                "images/scenarios/de-acad-019-2.jpg",
+                "images/scenarios/de-acad-019-3.jpg"
+            ]
         },
         {
             "id": "de-acad-020",
@@ -648,8 +1059,16 @@
             "image": "images/scenarios/de-acad-020.svg",
             "description": "Du liest einen Text und verstehst ein Wort nicht. Es ist ein wichtiges Wort. {{character_name}} kennt viele Wörter.",
             "targetPhrase": "Was bedeutet dieses Wort",
-            "choices": ["Was bedeutet dieses Wort", "Ich überspringe das Wort", "Das ist egal"],
-            "hint": "Frag {{character_name}}, was das Wort bedeutet!"
+            "choices": [
+                "Was bedeutet dieses Wort",
+                "Ich überspringe das Wort",
+                "Das ist egal"
+            ],
+            "hint": "Frag {{character_name}}, was das Wort bedeutet!",
+            "images": [
+                "images/scenarios/de-acad-020-1.jpg",
+                "images/scenarios/de-acad-020-2.jpg"
+            ]
         },
         {
             "id": "de-acad-021",
@@ -661,8 +1080,17 @@
             "image": "images/scenarios/de-acad-021.svg",
             "description": "Der Drucker hat kein Papier mehr. Du musst deine Arbeit drucken. {{character_name}} weiß, wo das Papier ist.",
             "targetPhrase": "Der Drucker hat kein Papier mehr",
-            "choices": ["Der Drucker hat kein Papier mehr", "Ich warte", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, dass der Drucker leer ist!"
+            "choices": [
+                "Der Drucker hat kein Papier mehr",
+                "Ich warte",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass der Drucker leer ist!",
+            "images": [
+                "images/scenarios/de-acad-021-1.jpg",
+                "images/scenarios/de-acad-021-2.jpg",
+                "images/scenarios/de-acad-021-3.jpg"
+            ]
         },
         {
             "id": "de-acad-022",
@@ -674,8 +1102,17 @@
             "image": "images/scenarios/de-acad-022.svg",
             "description": "Du sollst jetzt präsentieren, aber du hast deine Notizen vergessen. Du weißt nicht mehr was du sagen wolltest. {{character_name}} wartet.",
             "targetPhrase": "Ich habe meine Notizen vergessen",
-            "choices": ["Ich habe meine Notizen vergessen", "Ich sage einfach nichts", "Ich erfinde etwas"],
-            "hint": "Sag {{character_name}}, was passiert ist!"
+            "choices": [
+                "Ich habe meine Notizen vergessen",
+                "Ich sage einfach nichts",
+                "Ich erfinde etwas"
+            ],
+            "hint": "Sag {{character_name}}, was passiert ist!",
+            "images": [
+                "images/scenarios/de-acad-022-1.jpg",
+                "images/scenarios/de-acad-022-2.jpg",
+                "images/scenarios/de-acad-022-3.jpg"
+            ]
         },
         {
             "id": "de-acad-023",
@@ -687,8 +1124,16 @@
             "image": "images/scenarios/de-acad-023.svg",
             "description": "Du hast deine Hausaufgaben vergessen und sollst sie jetzt abgeben. {{character_name}} fragt danach.",
             "targetPhrase": "Ich habe die Hausaufgaben vergessen",
-            "choices": ["Ich habe die Hausaufgaben vergessen", "Ich lüge", "Ich laufe weg"],
-            "hint": "Sag {{character_name}} die Wahrheit!"
+            "choices": [
+                "Ich habe die Hausaufgaben vergessen",
+                "Ich lüge",
+                "Ich laufe weg"
+            ],
+            "hint": "Sag {{character_name}} die Wahrheit!",
+            "images": [
+                "images/scenarios/de-acad-023-1.jpg",
+                "images/scenarios/de-acad-023-2.jpg"
+            ]
         },
         {
             "id": "de-acad-024",
@@ -700,8 +1145,17 @@
             "image": "images/scenarios/de-acad-024.svg",
             "description": "Bei der Gruppenarbeit machen alle etwas anderes. Niemand hört auf den anderen. {{character_name}} ist in deiner Gruppe.",
             "targetPhrase": "Können wir das zusammen besprechen",
-            "choices": ["Können wir das zusammen besprechen", "Ich mache es allein", "Ich sage nichts"],
-            "hint": "Schlage {{character_name}} vor, das gemeinsam zu besprechen!"
+            "choices": [
+                "Können wir das zusammen besprechen",
+                "Ich mache es allein",
+                "Ich sage nichts"
+            ],
+            "hint": "Schlage {{character_name}} vor, das gemeinsam zu besprechen!",
+            "images": [
+                "images/scenarios/de-acad-024-1.jpg",
+                "images/scenarios/de-acad-024-2.jpg",
+                "images/scenarios/de-acad-024-3.jpg"
+            ]
         },
         {
             "id": "de-acad-025",
@@ -713,8 +1167,16 @@
             "image": "images/scenarios/de-acad-025.svg",
             "description": "Du hast das Schulbuch verloren. Du weißt nicht wo es ist. {{character_name}} könnte dir helfen es zu suchen.",
             "targetPhrase": "Ich habe mein Buch verloren",
-            "choices": ["Ich habe mein Buch verloren", "Ich sage nichts", "Das taucht schon auf"],
-            "hint": "Sag {{character_name}}, dass du dein Buch verloren hast!"
+            "choices": [
+                "Ich habe mein Buch verloren",
+                "Ich sage nichts",
+                "Das taucht schon auf"
+            ],
+            "hint": "Sag {{character_name}}, dass du dein Buch verloren hast!",
+            "images": [
+                "images/scenarios/de-acad-025-1.jpg",
+                "images/scenarios/de-acad-025-2.jpg"
+            ]
         },
         {
             "id": "de-acad-026",
@@ -726,8 +1188,17 @@
             "image": "images/scenarios/de-acad-026.svg",
             "description": "Beim Experiment passiert etwas Unerwartetes. Du weißt nicht ob das normal ist. {{character_name}} ist die Lehrkraft.",
             "targetPhrase": "Ist das normal",
-            "choices": ["Ist das normal", "Ich mache weiter", "Ich breche ab"],
-            "hint": "Frag {{character_name}}, ob das normal ist!"
+            "choices": [
+                "Ist das normal",
+                "Ich mache weiter",
+                "Ich breche ab"
+            ],
+            "hint": "Frag {{character_name}}, ob das normal ist!",
+            "images": [
+                "images/scenarios/de-acad-026-1.jpg",
+                "images/scenarios/de-acad-026-2.jpg",
+                "images/scenarios/de-acad-026-3.jpg"
+            ]
         },
         {
             "id": "de-acad-027",
@@ -739,8 +1210,17 @@
             "image": "images/scenarios/de-acad-027.svg",
             "description": "Es ist so laut, dass du dich nicht konzentrieren kannst. Du kannst die Aufgabe so nicht lösen. {{character_name}} sitzt neben dir.",
             "targetPhrase": "Es ist zu laut",
-            "choices": ["Es ist zu laut", "Ich lerne so", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, dass es zu laut ist!"
+            "choices": [
+                "Es ist zu laut",
+                "Ich lerne so",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass es zu laut ist!",
+            "images": [
+                "images/scenarios/de-acad-027-1.jpg",
+                "images/scenarios/de-acad-027-2.jpg",
+                "images/scenarios/de-acad-027-3.jpg"
+            ]
         },
         {
             "id": "de-acad-028",
@@ -752,8 +1232,17 @@
             "image": "images/scenarios/de-acad-028.svg",
             "description": "Dein Stuhl wackelt und du könntest herunterfallen. Du brauchst einen anderen Stuhl. {{character_name}} ist in der Nähe.",
             "targetPhrase": "Mein Stuhl ist kaputt",
-            "choices": ["Mein Stuhl ist kaputt", "Ich sitze trotzdem", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, dass dein Stuhl kaputt ist!"
+            "choices": [
+                "Mein Stuhl ist kaputt",
+                "Ich sitze trotzdem",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass dein Stuhl kaputt ist!",
+            "images": [
+                "images/scenarios/de-acad-028-1.jpg",
+                "images/scenarios/de-acad-028-2.jpg",
+                "images/scenarios/de-acad-028-3.jpg"
+            ]
         },
         {
             "id": "de-acad-029",
@@ -765,8 +1254,17 @@
             "image": "images/scenarios/de-acad-029.svg",
             "description": "Du kannst die Tafel von deinem Platz aus nicht sehen. Du siehst zu weit weg. {{character_name}} ist die Lehrkraft.",
             "targetPhrase": "Ich kann die Tafel nicht sehen",
-            "choices": ["Ich kann die Tafel nicht sehen", "Ich schreibe das falsche auf", "Ich frage den Nachbarn"],
-            "hint": "Sag {{character_name}}, dass du die Tafel nicht siehst!"
+            "choices": [
+                "Ich kann die Tafel nicht sehen",
+                "Ich schreibe das falsche auf",
+                "Ich frage den Nachbarn"
+            ],
+            "hint": "Sag {{character_name}}, dass du die Tafel nicht siehst!",
+            "images": [
+                "images/scenarios/de-acad-029-1.jpg",
+                "images/scenarios/de-acad-029-2.jpg",
+                "images/scenarios/de-acad-029-3.jpg"
+            ]
         },
         {
             "id": "de-acad-030",
@@ -778,8 +1276,16 @@
             "image": "images/scenarios/de-acad-030.svg",
             "description": "Du hast so viel Angst vor dem Test, dass du dich gar nicht mehr erinnerst, was du gelernt hast. {{character_name}} fragt dich, wie es dir geht.",
             "targetPhrase": "Ich habe Angst vor dem Test",
-            "choices": ["Ich habe Angst vor dem Test", "Alles gut", "Ich mache den Test nicht"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich habe Angst vor dem Test",
+                "Alles gut",
+                "Ich mache den Test nicht"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-acad-030-1.jpg",
+                "images/scenarios/de-acad-030-2.jpg"
+            ]
         },
         {
             "id": "de-soc-001",
@@ -791,8 +1297,17 @@
             "image": "images/scenarios/de-soc-001.svg",
             "description": "Alle spielen ein Spiel, das du nicht kennst. Du möchtest mitspielen. {{character_name}} steht dabei.",
             "targetPhrase": "Kann ich mitspielen",
-            "choices": ["Kann ich mitspielen", "Ich schaue nur zu", "Ich gehe weg"],
-            "hint": "Frag {{character_name}}, ob du mitspielen darfst!"
+            "choices": [
+                "Kann ich mitspielen",
+                "Ich schaue nur zu",
+                "Ich gehe weg"
+            ],
+            "hint": "Frag {{character_name}}, ob du mitspielen darfst!",
+            "images": [
+                "images/scenarios/de-soc-001-1.jpg",
+                "images/scenarios/de-soc-001-2.jpg",
+                "images/scenarios/de-soc-001-3.jpg"
+            ]
         },
         {
             "id": "de-soc-002",
@@ -804,8 +1319,17 @@
             "image": "images/scenarios/de-soc-002.svg",
             "description": "Du verstehst die Spielregeln nicht richtig. Du machst immer Fehler. {{character_name}} kennt die Regeln gut.",
             "targetPhrase": "Kannst du mir die Regeln erklären",
-            "choices": ["Kannst du mir die Regeln erklären", "Ich rate einfach", "Ich höre auf zu spielen"],
-            "hint": "Bitte {{character_name}}, dir die Regeln zu erklären!"
+            "choices": [
+                "Kannst du mir die Regeln erklären",
+                "Ich rate einfach",
+                "Ich höre auf zu spielen"
+            ],
+            "hint": "Bitte {{character_name}}, dir die Regeln zu erklären!",
+            "images": [
+                "images/scenarios/de-soc-002-1.jpg",
+                "images/scenarios/de-soc-002-2.jpg",
+                "images/scenarios/de-soc-002-3.jpg"
+            ]
         },
         {
             "id": "de-soc-003",
@@ -817,8 +1341,17 @@
             "image": "images/scenarios/de-soc-003.svg",
             "description": "Alle Plätze am Tisch sind besetzt. Du möchtest auch sitzen. {{character_name}} sitzt am Tisch.",
             "targetPhrase": "Ist hier noch Platz",
-            "choices": ["Ist hier noch Platz", "Ich stehe", "Ich gehe woanders hin"],
-            "hint": "Frag {{character_name}}, ob noch Platz ist!"
+            "choices": [
+                "Ist hier noch Platz",
+                "Ich stehe",
+                "Ich gehe woanders hin"
+            ],
+            "hint": "Frag {{character_name}}, ob noch Platz ist!",
+            "images": [
+                "images/scenarios/de-soc-003-1.jpg",
+                "images/scenarios/de-soc-003-2.jpg",
+                "images/scenarios/de-soc-003-3.jpg"
+            ]
         },
         {
             "id": "de-soc-004",
@@ -830,8 +1363,17 @@
             "image": "images/scenarios/de-soc-004.svg",
             "description": "Zwei Freunde streiten sich. Du möchtest helfen, aber weißt nicht wie. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Kannst du helfen",
-            "choices": ["Kannst du helfen", "Ich schaue zu", "Ich gehe weg"],
-            "hint": "Bitte {{character_name}} um Hilfe!"
+            "choices": [
+                "Kannst du helfen",
+                "Ich schaue zu",
+                "Ich gehe weg"
+            ],
+            "hint": "Bitte {{character_name}} um Hilfe!",
+            "images": [
+                "images/scenarios/de-soc-004-1.jpg",
+                "images/scenarios/de-soc-004-2.jpg",
+                "images/scenarios/de-soc-004-3.jpg"
+            ]
         },
         {
             "id": "de-soc-005",
@@ -843,8 +1385,16 @@
             "image": "images/scenarios/de-soc-005.svg",
             "description": "Du weißt nicht mehr wo du bist. Du hast dich verirrt. {{character_name}} steht in der Nähe.",
             "targetPhrase": "Ich habe mich verlaufen",
-            "choices": ["Ich habe mich verlaufen", "Ich finde den Weg selbst", "Ich warte hier"],
-            "hint": "Sag {{character_name}}, dass du dich verlaufen hast!"
+            "choices": [
+                "Ich habe mich verlaufen",
+                "Ich finde den Weg selbst",
+                "Ich warte hier"
+            ],
+            "hint": "Sag {{character_name}}, dass du dich verlaufen hast!",
+            "images": [
+                "images/scenarios/de-soc-005-1.jpg",
+                "images/scenarios/de-soc-005-2.jpg"
+            ]
         },
         {
             "id": "de-soc-006",
@@ -856,8 +1406,17 @@
             "image": "images/scenarios/de-soc-006.svg",
             "description": "Jemand ärgert dich immer wieder. Du willst, dass es aufhört. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Jemand ärgert mich",
-            "choices": ["Jemand ärgert mich", "Ich ärgere zurück", "Ich sage nichts"],
-            "hint": "Sag {{character_name}}, dass jemand dich ärgert!"
+            "choices": [
+                "Jemand ärgert mich",
+                "Ich ärgere zurück",
+                "Ich sage nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass jemand dich ärgert!",
+            "images": [
+                "images/scenarios/de-soc-006-1.jpg",
+                "images/scenarios/de-soc-006-2.jpg",
+                "images/scenarios/de-soc-006-3.jpg"
+            ]
         },
         {
             "id": "de-soc-007",
@@ -869,8 +1428,17 @@
             "image": "images/scenarios/de-soc-007.svg",
             "description": "Dein Freund sieht sehr traurig aus. Du möchtest helfen, weißt aber nicht wie. {{character_name}} ist in der Nähe.",
             "targetPhrase": "Wie kann ich helfen",
-            "choices": ["Wie kann ich helfen", "Das geht mich nichts an", "Ich lache ihn aus"],
-            "hint": "Frag {{character_name}}, wie du helfen kannst!"
+            "choices": [
+                "Wie kann ich helfen",
+                "Das geht mich nichts an",
+                "Ich lache ihn aus"
+            ],
+            "hint": "Frag {{character_name}}, wie du helfen kannst!",
+            "images": [
+                "images/scenarios/de-soc-007-1.jpg",
+                "images/scenarios/de-soc-007-2.jpg",
+                "images/scenarios/de-soc-007-3.jpg"
+            ]
         },
         {
             "id": "de-soc-008",
@@ -882,8 +1450,17 @@
             "image": "images/scenarios/de-soc-008.svg",
             "description": "Andere Kinder sagen gemeine Dinge über dich. Du fühlst dich sehr schlecht. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Die anderen sind gemein zu mir",
-            "choices": ["Die anderen sind gemein zu mir", "Ich sage nichts", "Ich sage gemeine Dinge zurück"],
-            "hint": "Sag {{character_name}}, was passiert!"
+            "choices": [
+                "Die anderen sind gemein zu mir",
+                "Ich sage nichts",
+                "Ich sage gemeine Dinge zurück"
+            ],
+            "hint": "Sag {{character_name}}, was passiert!",
+            "images": [
+                "images/scenarios/de-soc-008-1.jpg",
+                "images/scenarios/de-soc-008-2.jpg",
+                "images/scenarios/de-soc-008-3.jpg"
+            ]
         },
         {
             "id": "de-soc-009",
@@ -895,8 +1472,17 @@
             "image": "images/scenarios/de-soc-009.svg",
             "description": "Du hast versehentlich etwas von einem Freund kaputt gemacht. Du weißt nicht was du sagen sollst. {{character_name}} kommt zu dir.",
             "targetPhrase": "Es tut mir leid",
-            "choices": ["Es tut mir leid", "Das war nicht ich", "Ich laufe weg"],
-            "hint": "Sag {{character_name}}, dass es dir leid tut!"
+            "choices": [
+                "Es tut mir leid",
+                "Das war nicht ich",
+                "Ich laufe weg"
+            ],
+            "hint": "Sag {{character_name}}, dass es dir leid tut!",
+            "images": [
+                "images/scenarios/de-soc-009-1.jpg",
+                "images/scenarios/de-soc-009-2.jpg",
+                "images/scenarios/de-soc-009-3.jpg"
+            ]
         },
         {
             "id": "de-soc-010",
@@ -908,8 +1494,17 @@
             "image": "images/scenarios/de-soc-010.svg",
             "description": "Jemand hat etwas Ungerechtes getan und du bist betroffen. Du weißt nicht was du tun sollst. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Das ist nicht fair",
-            "choices": ["Das ist nicht fair", "Ich sage nichts", "Ich mache das Gleiche"],
-            "hint": "Sag {{character_name}}, was passiert ist!"
+            "choices": [
+                "Das ist nicht fair",
+                "Ich sage nichts",
+                "Ich mache das Gleiche"
+            ],
+            "hint": "Sag {{character_name}}, was passiert ist!",
+            "images": [
+                "images/scenarios/de-soc-010-1.jpg",
+                "images/scenarios/de-soc-010-2.jpg",
+                "images/scenarios/de-soc-010-3.jpg"
+            ]
         },
         {
             "id": "de-soc-011",
@@ -921,8 +1516,17 @@
             "image": "images/scenarios/de-soc-011.svg",
             "description": "Die anderen spielen ohne dich. Niemand hat dich eingeladen. Du möchtest mitspielen. {{character_name}} ist dabei.",
             "targetPhrase": "Darf ich mitspielen",
-            "choices": ["Darf ich mitspielen", "Ich schaue zu", "Ich gehe weg"],
-            "hint": "Frag {{character_name}}, ob du mitspielen darfst!"
+            "choices": [
+                "Darf ich mitspielen",
+                "Ich schaue zu",
+                "Ich gehe weg"
+            ],
+            "hint": "Frag {{character_name}}, ob du mitspielen darfst!",
+            "images": [
+                "images/scenarios/de-soc-011-1.jpg",
+                "images/scenarios/de-soc-011-2.jpg",
+                "images/scenarios/de-soc-011-3.jpg"
+            ]
         },
         {
             "id": "de-soc-012",
@@ -934,8 +1538,16 @@
             "image": "images/scenarios/de-soc-012.svg",
             "description": "Jemand sitzt auf deinem Platz. Du weißt nicht was du sagen sollst. {{character_name}} ist die Person auf deinem Platz.",
             "targetPhrase": "Das ist mein Platz",
-            "choices": ["Das ist mein Platz", "Ich stehe einfach", "Ich setze mich woanders hin"],
-            "hint": "Sag {{character_name}}, dass das dein Platz ist!"
+            "choices": [
+                "Das ist mein Platz",
+                "Ich stehe einfach",
+                "Ich setze mich woanders hin"
+            ],
+            "hint": "Sag {{character_name}}, dass das dein Platz ist!",
+            "images": [
+                "images/scenarios/de-soc-012-1.jpg",
+                "images/scenarios/de-soc-012-2.jpg"
+            ]
         },
         {
             "id": "de-soc-013",
@@ -947,8 +1559,17 @@
             "image": "images/scenarios/de-soc-013.svg",
             "description": "Jemand ärgert deinen besten Freund und macht ihn traurig. Du willst helfen. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Jemand ärgert meinen Freund",
-            "choices": ["Jemand ärgert meinen Freund", "Das geht mich nichts an", "Ich ärgere zurück"],
-            "hint": "Sag {{character_name}}, was passiert!"
+            "choices": [
+                "Jemand ärgert meinen Freund",
+                "Das geht mich nichts an",
+                "Ich ärgere zurück"
+            ],
+            "hint": "Sag {{character_name}}, was passiert!",
+            "images": [
+                "images/scenarios/de-soc-013-1.jpg",
+                "images/scenarios/de-soc-013-2.jpg",
+                "images/scenarios/de-soc-013-3.jpg"
+            ]
         },
         {
             "id": "de-soc-014",
@@ -960,8 +1581,17 @@
             "image": "images/scenarios/de-soc-014.svg",
             "description": "Auf einem Ausflug hast du deine Gruppe verloren. Du weißt nicht mehr wo alle sind. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Ich habe meine Gruppe verloren",
-            "choices": ["Ich habe meine Gruppe verloren", "Ich suche allein", "Ich warte irgendwo"],
-            "hint": "Sag {{character_name}}, dass du deine Gruppe verloren hast!"
+            "choices": [
+                "Ich habe meine Gruppe verloren",
+                "Ich suche allein",
+                "Ich warte irgendwo"
+            ],
+            "hint": "Sag {{character_name}}, dass du deine Gruppe verloren hast!",
+            "images": [
+                "images/scenarios/de-soc-014-1.jpg",
+                "images/scenarios/de-soc-014-2.jpg",
+                "images/scenarios/de-soc-014-3.jpg"
+            ]
         },
         {
             "id": "de-soc-015",
@@ -973,8 +1603,16 @@
             "image": "images/scenarios/de-soc-015.svg",
             "description": "Du hast jemandem etwas geliehen, aber er gibt es nicht zurück. Du brauchst es aber. {{character_name}} ist die Person.",
             "targetPhrase": "Ich brauche meine Sache zurück",
-            "choices": ["Ich brauche meine Sache zurück", "Ich sage nichts", "Ich nehme es einfach"],
-            "hint": "Sag {{character_name}}, dass du deine Sache zurückbrauchst!"
+            "choices": [
+                "Ich brauche meine Sache zurück",
+                "Ich sage nichts",
+                "Ich nehme es einfach"
+            ],
+            "hint": "Sag {{character_name}}, dass du deine Sache zurückbrauchst!",
+            "images": [
+                "images/scenarios/de-soc-015-1.jpg",
+                "images/scenarios/de-soc-015-2.jpg"
+            ]
         },
         {
             "id": "de-soc-016",
@@ -986,8 +1624,16 @@
             "image": "images/scenarios/de-soc-016.svg",
             "description": "Du wartest schon sehr lange. Alle anderen wurden schon bedient. Du bist immer noch dran. {{character_name}} ist zuständig.",
             "targetPhrase": "Ich warte schon lange",
-            "choices": ["Ich warte schon lange", "Ich sage nichts", "Ich gehe weg"],
-            "hint": "Sag {{character_name}}, dass du schon lange wartest!"
+            "choices": [
+                "Ich warte schon lange",
+                "Ich sage nichts",
+                "Ich gehe weg"
+            ],
+            "hint": "Sag {{character_name}}, dass du schon lange wartest!",
+            "images": [
+                "images/scenarios/de-soc-016-1.jpg",
+                "images/scenarios/de-soc-016-2.jpg"
+            ]
         },
         {
             "id": "de-soc-017",
@@ -999,8 +1645,17 @@
             "image": "images/scenarios/de-soc-017.svg",
             "description": "Du und dein Freund habt euch falsch verstanden. Jetzt ist er böse auf dich, aber du weißt nicht warum. {{character_name}} könnte helfen.",
             "targetPhrase": "Ich glaube es gibt ein Missverständnis",
-            "choices": ["Ich glaube es gibt ein Missverständnis", "Das ist seine Schuld", "Ich sage nichts"],
-            "hint": "Sag {{character_name}}, was passiert ist!"
+            "choices": [
+                "Ich glaube es gibt ein Missverständnis",
+                "Das ist seine Schuld",
+                "Ich sage nichts"
+            ],
+            "hint": "Sag {{character_name}}, was passiert ist!",
+            "images": [
+                "images/scenarios/de-soc-017-1.jpg",
+                "images/scenarios/de-soc-017-2.jpg",
+                "images/scenarios/de-soc-017-3.jpg"
+            ]
         },
         {
             "id": "de-soc-018",
@@ -1012,8 +1667,16 @@
             "image": "images/scenarios/de-soc-018.svg",
             "description": "Du hast dich mit einem Mitschüler gestritten. Jetzt redet ihr nicht mehr. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Wir haben uns gestritten",
-            "choices": ["Wir haben uns gestritten", "Alles gut", "Das geht niemanden etwas an"],
-            "hint": "Sag {{character_name}}, dass ihr euch gestritten habt!"
+            "choices": [
+                "Wir haben uns gestritten",
+                "Alles gut",
+                "Das geht niemanden etwas an"
+            ],
+            "hint": "Sag {{character_name}}, dass ihr euch gestritten habt!",
+            "images": [
+                "images/scenarios/de-soc-018-1.jpg",
+                "images/scenarios/de-soc-018-2.jpg"
+            ]
         },
         {
             "id": "de-soc-019",
@@ -1025,8 +1688,17 @@
             "image": "images/scenarios/de-soc-019.svg",
             "description": "Ein neues Kind kommt in eure Gruppe und wirkt verloren. Du möchtest helfen, bist aber schüchtern. {{character_name}} schaut zu.",
             "targetPhrase": "Kann ich dir helfen",
-            "choices": ["Kann ich dir helfen", "Das geht mich nichts an", "Ich schaue weg"],
-            "hint": "Frag {{character_name}}, ob du helfen kannst!"
+            "choices": [
+                "Kann ich dir helfen",
+                "Das geht mich nichts an",
+                "Ich schaue weg"
+            ],
+            "hint": "Frag {{character_name}}, ob du helfen kannst!",
+            "images": [
+                "images/scenarios/de-soc-019-1.jpg",
+                "images/scenarios/de-soc-019-2.jpg",
+                "images/scenarios/de-soc-019-3.jpg"
+            ]
         },
         {
             "id": "de-soc-020",
@@ -1038,8 +1710,17 @@
             "image": "images/scenarios/de-soc-020.svg",
             "description": "Du sagst etwas, aber niemand hört dir zu. Das macht dich traurig. {{character_name}} steht in der Nähe.",
             "targetPhrase": "Bitte hör mir zu",
-            "choices": ["Bitte hör mir zu", "Ich sage nichts mehr", "Ich schreie"],
-            "hint": "Bitte {{character_name}}, dir zuzuhören!"
+            "choices": [
+                "Bitte hör mir zu",
+                "Ich sage nichts mehr",
+                "Ich schreie"
+            ],
+            "hint": "Bitte {{character_name}}, dir zuzuhören!",
+            "images": [
+                "images/scenarios/de-soc-020-1.jpg",
+                "images/scenarios/de-soc-020-2.jpg",
+                "images/scenarios/de-soc-020-3.jpg"
+            ]
         },
         {
             "id": "de-soc-021",
@@ -1051,8 +1732,17 @@
             "image": "images/scenarios/de-soc-021.svg",
             "description": "Du hast versehentlich jemanden gestoßen und er ist hingefallen. Du weißt nicht was du tun sollst. {{character_name}} ist die Person.",
             "targetPhrase": "Es tut mir leid, bist du okay",
-            "choices": ["Es tut mir leid, bist du okay", "Das war nicht so schlimm", "Ich laufe weg"],
-            "hint": "Entschuldige dich bei {{character_name}}!"
+            "choices": [
+                "Es tut mir leid, bist du okay",
+                "Das war nicht so schlimm",
+                "Ich laufe weg"
+            ],
+            "hint": "Entschuldige dich bei {{character_name}}!",
+            "images": [
+                "images/scenarios/de-soc-021-1.jpg",
+                "images/scenarios/de-soc-021-2.jpg",
+                "images/scenarios/de-soc-021-3.jpg"
+            ]
         },
         {
             "id": "de-soc-022",
@@ -1064,8 +1754,17 @@
             "image": "images/scenarios/de-soc-022.svg",
             "description": "Du hast etwas Falsches gesagt und deinen Freund verletzt. Du möchtest dich entschuldigen. {{character_name}} ist der Freund.",
             "targetPhrase": "Es tut mir wirklich leid",
-            "choices": ["Es tut mir wirklich leid", "Das war doch nicht so schlimm", "Ich sage nichts"],
-            "hint": "Entschuldige dich bei {{character_name}}!"
+            "choices": [
+                "Es tut mir wirklich leid",
+                "Das war doch nicht so schlimm",
+                "Ich sage nichts"
+            ],
+            "hint": "Entschuldige dich bei {{character_name}}!",
+            "images": [
+                "images/scenarios/de-soc-022-1.jpg",
+                "images/scenarios/de-soc-022-2.jpg",
+                "images/scenarios/de-soc-022-3.jpg"
+            ]
         },
         {
             "id": "de-soc-023",
@@ -1077,8 +1776,17 @@
             "image": "images/scenarios/de-soc-023.svg",
             "description": "Jemand sagt, du hast etwas getan, das du nicht getan hast. Das ist nicht fair. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Das stimmt nicht, ich war das nicht",
-            "choices": ["Das stimmt nicht, ich war das nicht", "Ich sage nichts", "Ich werde wütend"],
-            "hint": "Sag {{character_name}}, dass du das nicht warst!"
+            "choices": [
+                "Das stimmt nicht, ich war das nicht",
+                "Ich sage nichts",
+                "Ich werde wütend"
+            ],
+            "hint": "Sag {{character_name}}, dass du das nicht warst!",
+            "images": [
+                "images/scenarios/de-soc-023-1.jpg",
+                "images/scenarios/de-soc-023-2.jpg",
+                "images/scenarios/de-soc-023-3.jpg"
+            ]
         },
         {
             "id": "de-soc-024",
@@ -1090,8 +1798,17 @@
             "image": "images/scenarios/de-soc-024.svg",
             "description": "Alle haben schon Essenspartner, aber du sitzt allein. Das macht dich traurig. {{character_name}} geht vorbei.",
             "targetPhrase": "Darf ich bei euch sitzen",
-            "choices": ["Darf ich bei euch sitzen", "Ich esse allein", "Ich esse nicht"],
-            "hint": "Frag {{character_name}}, ob du dazusitzen darfst!"
+            "choices": [
+                "Darf ich bei euch sitzen",
+                "Ich esse allein",
+                "Ich esse nicht"
+            ],
+            "hint": "Frag {{character_name}}, ob du dazusitzen darfst!",
+            "images": [
+                "images/scenarios/de-soc-024-1.jpg",
+                "images/scenarios/de-soc-024-2.jpg",
+                "images/scenarios/de-soc-024-3.jpg"
+            ]
         },
         {
             "id": "de-soc-025",
@@ -1103,8 +1820,17 @@
             "image": "images/scenarios/de-soc-025.svg",
             "description": "Du hast etwas gefunden, das jemand verloren hat. Du weißt nicht wem es gehört. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Ich habe etwas gefunden",
-            "choices": ["Ich habe etwas gefunden", "Ich behalte es", "Ich lasse es liegen"],
-            "hint": "Sag {{character_name}}, was du gefunden hast!"
+            "choices": [
+                "Ich habe etwas gefunden",
+                "Ich behalte es",
+                "Ich lasse es liegen"
+            ],
+            "hint": "Sag {{character_name}}, was du gefunden hast!",
+            "images": [
+                "images/scenarios/de-soc-025-1.jpg",
+                "images/scenarios/de-soc-025-2.jpg",
+                "images/scenarios/de-soc-025-3.jpg"
+            ]
         },
         {
             "id": "de-soc-026",
@@ -1116,8 +1842,16 @@
             "image": "images/scenarios/de-soc-026.svg",
             "description": "Du hast dich mit einem Freund gestritten. Es tut dir leid und du möchtest wieder Freunde sein. {{character_name}} ist der Freund.",
             "targetPhrase": "Können wir wieder Freunde sein",
-            "choices": ["Können wir wieder Freunde sein", "Ich warte bis er kommt", "Das ist vorbei"],
-            "hint": "Frag {{character_name}}, ob ihr wieder Freunde sein könnt!"
+            "choices": [
+                "Können wir wieder Freunde sein",
+                "Ich warte bis er kommt",
+                "Das ist vorbei"
+            ],
+            "hint": "Frag {{character_name}}, ob ihr wieder Freunde sein könnt!",
+            "images": [
+                "images/scenarios/de-soc-026-1.jpg",
+                "images/scenarios/de-soc-026-2.jpg"
+            ]
         },
         {
             "id": "de-soc-027",
@@ -1129,8 +1863,17 @@
             "image": "images/scenarios/de-soc-027.svg",
             "description": "Jemand erzählt Dinge über dich, die nicht stimmen. Alle glauben es. {{character_name}} ist ein Erwachsener.",
             "targetPhrase": "Das ist nicht wahr",
-            "choices": ["Das ist nicht wahr", "Ich sage nichts", "Ich erzähle auch Gerüchte"],
-            "hint": "Sag {{character_name}}, dass das Gerücht nicht stimmt!"
+            "choices": [
+                "Das ist nicht wahr",
+                "Ich sage nichts",
+                "Ich erzähle auch Gerüchte"
+            ],
+            "hint": "Sag {{character_name}}, dass das Gerücht nicht stimmt!",
+            "images": [
+                "images/scenarios/de-soc-027-1.jpg",
+                "images/scenarios/de-soc-027-2.jpg",
+                "images/scenarios/de-soc-027-3.jpg"
+            ]
         },
         {
             "id": "de-soc-028",
@@ -1142,8 +1885,17 @@
             "image": "images/scenarios/de-soc-028.svg",
             "description": "Du möchtest mit einem Kind befreundet sein, weißt aber nicht wie du anfangen sollst. {{character_name}} ist das Kind.",
             "targetPhrase": "Willst du mit mir spielen",
-            "choices": ["Willst du mit mir spielen", "Ich schaue nur zu", "Ich gehe wieder weg"],
-            "hint": "Frag {{character_name}}, ob ihr zusammen spielen wollt!"
+            "choices": [
+                "Willst du mit mir spielen",
+                "Ich schaue nur zu",
+                "Ich gehe wieder weg"
+            ],
+            "hint": "Frag {{character_name}}, ob ihr zusammen spielen wollt!",
+            "images": [
+                "images/scenarios/de-soc-028-1.jpg",
+                "images/scenarios/de-soc-028-2.jpg",
+                "images/scenarios/de-soc-028-3.jpg"
+            ]
         },
         {
             "id": "de-soc-029",
@@ -1155,8 +1907,17 @@
             "image": "images/scenarios/de-soc-029.svg",
             "description": "Beim Spielen streitet ihr euch um die Regeln. Alle denken, sie haben Recht. {{character_name}} spielt mit.",
             "targetPhrase": "Lass uns die Regeln gemeinsam klären",
-            "choices": ["Lass uns die Regeln gemeinsam klären", "Ich mache meine eigenen Regeln", "Ich höre auf zu spielen"],
-            "hint": "Schlage {{character_name}} vor, die Regeln gemeinsam zu klären!"
+            "choices": [
+                "Lass uns die Regeln gemeinsam klären",
+                "Ich mache meine eigenen Regeln",
+                "Ich höre auf zu spielen"
+            ],
+            "hint": "Schlage {{character_name}} vor, die Regeln gemeinsam zu klären!",
+            "images": [
+                "images/scenarios/de-soc-029-1.jpg",
+                "images/scenarios/de-soc-029-2.jpg",
+                "images/scenarios/de-soc-029-3.jpg"
+            ]
         },
         {
             "id": "de-soc-030",
@@ -1168,8 +1929,17 @@
             "image": "images/scenarios/de-soc-030.svg",
             "description": "Du siehst, dass {{character_name}} etwas schwer tragen muss. Du möchtest helfen.",
             "targetPhrase": "Kann ich dir helfen",
-            "choices": ["Kann ich dir helfen", "Das schafft er allein", "Ich schaue zu"],
-            "hint": "Biete {{character_name}} deine Hilfe an!"
+            "choices": [
+                "Kann ich dir helfen",
+                "Das schafft er allein",
+                "Ich schaue zu"
+            ],
+            "hint": "Biete {{character_name}} deine Hilfe an!",
+            "images": [
+                "images/scenarios/de-soc-030-1.jpg",
+                "images/scenarios/de-soc-030-2.jpg",
+                "images/scenarios/de-soc-030-3.jpg"
+            ]
         },
         {
             "id": "de-emot-001",
@@ -1181,8 +1951,16 @@
             "image": "images/scenarios/de-emot-001.svg",
             "description": "Du bist sehr traurig und weißt nicht warum. Tränen laufen deine Wangen runter. {{character_name}} kommt zu dir.",
             "targetPhrase": "Ich bin traurig",
-            "choices": ["Ich bin traurig", "Alles gut", "Ich weine nicht"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin traurig",
+                "Alles gut",
+                "Ich weine nicht"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-001-1.jpg",
+                "images/scenarios/de-emot-001-2.jpg"
+            ]
         },
         {
             "id": "de-emot-002",
@@ -1194,8 +1972,16 @@
             "image": "images/scenarios/de-emot-002.svg",
             "description": "Du bist sehr wütend. Du weißt nicht was du mit deiner Wut machen sollst. {{character_name}} fragt dich, was los ist.",
             "targetPhrase": "Ich bin wütend",
-            "choices": ["Ich bin wütend", "Alles ist gut", "Ich bin glücklich"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin wütend",
+                "Alles ist gut",
+                "Ich bin glücklich"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-002-1.jpg",
+                "images/scenarios/de-emot-002-2.jpg"
+            ]
         },
         {
             "id": "de-emot-003",
@@ -1207,8 +1993,17 @@
             "image": "images/scenarios/de-emot-003.svg",
             "description": "Du hast Angst vor dem Dunkeln und traust dich nicht ins Zimmer. {{character_name}} fragt, warum du draußen bleibst.",
             "targetPhrase": "Ich habe Angst",
-            "choices": ["Ich habe Angst", "Ich habe keine Angst", "Das ist nicht schlimm"],
-            "hint": "Sag {{character_name}}, dass du Angst hast!"
+            "choices": [
+                "Ich habe Angst",
+                "Ich habe keine Angst",
+                "Das ist nicht schlimm"
+            ],
+            "hint": "Sag {{character_name}}, dass du Angst hast!",
+            "images": [
+                "images/scenarios/de-emot-003-1.jpg",
+                "images/scenarios/de-emot-003-2.jpg",
+                "images/scenarios/de-emot-003-3.jpg"
+            ]
         },
         {
             "id": "de-emot-004",
@@ -1220,8 +2015,17 @@
             "image": "images/scenarios/de-emot-004.svg",
             "description": "Du hast das Gefühl, dass dich niemand versteht. Das macht dich sehr traurig. {{character_name}} fragt wie es dir geht.",
             "targetPhrase": "Ich fühle mich allein",
-            "choices": ["Ich fühle mich allein", "Alles super", "Ich brauche niemanden"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich fühle mich allein",
+                "Alles super",
+                "Ich brauche niemanden"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-004-1.jpg",
+                "images/scenarios/de-emot-004-2.jpg",
+                "images/scenarios/de-emot-004-3.jpg"
+            ]
         },
         {
             "id": "de-emot-005",
@@ -1233,8 +2037,16 @@
             "image": "images/scenarios/de-emot-005.svg",
             "description": "Du bist so aufgeregt, dass du nicht stillsitzen kannst. {{character_name}} fragt, was mit dir los ist.",
             "targetPhrase": "Ich bin so aufgeregt",
-            "choices": ["Ich bin so aufgeregt", "Ich bin müde", "Alles normal"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin so aufgeregt",
+                "Ich bin müde",
+                "Alles normal"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-005-1.jpg",
+                "images/scenarios/de-emot-005-2.jpg"
+            ]
         },
         {
             "id": "de-emot-006",
@@ -1246,8 +2058,16 @@
             "image": "images/scenarios/de-emot-006.svg",
             "description": "Du hast so viel zu tun, dass du nicht weißt wo du anfangen sollst. Du fühlst dich überwältigt. {{character_name}} fragt nach.",
             "targetPhrase": "Ich bin gestresst",
-            "choices": ["Ich bin gestresst", "Alles einfach", "Kein Problem"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin gestresst",
+                "Alles einfach",
+                "Kein Problem"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-006-1.jpg",
+                "images/scenarios/de-emot-006-2.jpg"
+            ]
         },
         {
             "id": "de-emot-007",
@@ -1259,8 +2079,16 @@
             "image": "images/scenarios/de-emot-007.svg",
             "description": "Du bist so glücklich, dass du es mit jemandem teilen möchtest. {{character_name}} kommt vorbei.",
             "targetPhrase": "Ich bin so glücklich",
-            "choices": ["Ich bin so glücklich", "Alles normal", "Ich bin traurig"],
-            "hint": "Teile deine Freude mit {{character_name}}!"
+            "choices": [
+                "Ich bin so glücklich",
+                "Alles normal",
+                "Ich bin traurig"
+            ],
+            "hint": "Teile deine Freude mit {{character_name}}!",
+            "images": [
+                "images/scenarios/de-emot-007-1.jpg",
+                "images/scenarios/de-emot-007-2.jpg"
+            ]
         },
         {
             "id": "de-emot-008",
@@ -1272,8 +2100,16 @@
             "image": "images/scenarios/de-emot-008.svg",
             "description": "Du hast etwas immer wieder versucht, aber es klappt nie. Du bist sehr frustriert. {{character_name}} fragt, was los ist.",
             "targetPhrase": "Ich bin frustriert",
-            "choices": ["Ich bin frustriert", "Alles gut", "Ich gebe auf"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin frustriert",
+                "Alles gut",
+                "Ich gebe auf"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-008-1.jpg",
+                "images/scenarios/de-emot-008-2.jpg"
+            ]
         },
         {
             "id": "de-emot-009",
@@ -1285,8 +2121,17 @@
             "image": "images/scenarios/de-emot-009.svg",
             "description": "Dein Freund hat etwas Tolles bekommen, das du auch haben möchtest. Du fühlst dich komisch dabei. {{character_name}} fragt dich.",
             "targetPhrase": "Ich fühle mich eifersüchtig",
-            "choices": ["Ich fühle mich eifersüchtig", "Alles gut", "Ich bin glücklich für ihn"],
-            "hint": "Sag {{character_name}}, wie du dich wirklich fühlst!"
+            "choices": [
+                "Ich fühle mich eifersüchtig",
+                "Alles gut",
+                "Ich bin glücklich für ihn"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich wirklich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-009-1.jpg",
+                "images/scenarios/de-emot-009-2.jpg",
+                "images/scenarios/de-emot-009-3.jpg"
+            ]
         },
         {
             "id": "de-emot-010",
@@ -1298,8 +2143,17 @@
             "image": "images/scenarios/de-emot-010.svg",
             "description": "Alles passiert auf einmal und du weißt nicht mehr was du tun sollst. Du bist komplett überwältigt. {{character_name}} kommt zu dir.",
             "targetPhrase": "Ich brauche eine Pause",
-            "choices": ["Ich brauche eine Pause", "Ich schaffe das alles", "Das ist nichts"],
-            "hint": "Sag {{character_name}}, dass du eine Pause brauchst!"
+            "choices": [
+                "Ich brauche eine Pause",
+                "Ich schaffe das alles",
+                "Das ist nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass du eine Pause brauchst!",
+            "images": [
+                "images/scenarios/de-emot-010-1.jpg",
+                "images/scenarios/de-emot-010-2.jpg",
+                "images/scenarios/de-emot-010-3.jpg"
+            ]
         },
         {
             "id": "de-emot-011",
@@ -1311,8 +2165,16 @@
             "image": "images/scenarios/de-emot-011.svg",
             "description": "Du sollst gleich vor der Klasse sprechen und bist sehr nervös. Dein Herz klopft schnell. {{character_name}} fragt dich.",
             "targetPhrase": "Ich bin nervös",
-            "choices": ["Ich bin nervös", "Alles klar", "Ich bin mutig"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin nervös",
+                "Alles klar",
+                "Ich bin mutig"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-011-1.jpg",
+                "images/scenarios/de-emot-011-2.jpg"
+            ]
         },
         {
             "id": "de-emot-012",
@@ -1324,8 +2186,16 @@
             "image": "images/scenarios/de-emot-012.svg",
             "description": "Du vermisst jemanden sehr, der nicht da ist. Das macht dich traurig. {{character_name}} fragt dich.",
             "targetPhrase": "Ich vermisse jemanden",
-            "choices": ["Ich vermisse jemanden", "Alles gut", "Kein Problem"],
-            "hint": "Sag {{character_name}}, dass du jemanden vermisst!"
+            "choices": [
+                "Ich vermisse jemanden",
+                "Alles gut",
+                "Kein Problem"
+            ],
+            "hint": "Sag {{character_name}}, dass du jemanden vermisst!",
+            "images": [
+                "images/scenarios/de-emot-012-1.jpg",
+                "images/scenarios/de-emot-012-2.jpg"
+            ]
         },
         {
             "id": "de-emot-013",
@@ -1337,8 +2207,17 @@
             "image": "images/scenarios/de-emot-013.svg",
             "description": "Dein Geschwisterkind bekommt immer mehr Aufmerksamkeit als du. Das macht dich eifersüchtig. {{character_name}} fragt dich.",
             "targetPhrase": "Ich fühle mich manchmal eifersüchtig",
-            "choices": ["Ich fühle mich manchmal eifersüchtig", "Alles gut", "Das stört mich nicht"],
-            "hint": "Sei ehrlich zu {{character_name}}!"
+            "choices": [
+                "Ich fühle mich manchmal eifersüchtig",
+                "Alles gut",
+                "Das stört mich nicht"
+            ],
+            "hint": "Sei ehrlich zu {{character_name}}!",
+            "images": [
+                "images/scenarios/de-emot-013-1.jpg",
+                "images/scenarios/de-emot-013-2.jpg",
+                "images/scenarios/de-emot-013-3.jpg"
+            ]
         },
         {
             "id": "de-emot-014",
@@ -1350,8 +2229,16 @@
             "image": "images/scenarios/de-emot-014.svg",
             "description": "Du hast etwas Tolles geschafft und bist sehr stolz auf dich. Du möchtest es mit {{character_name}} teilen.",
             "targetPhrase": "Ich bin stolz auf mich",
-            "choices": ["Ich bin stolz auf mich", "Das war nichts Besonderes", "Alles normal"],
-            "hint": "Teile deinen Erfolg mit {{character_name}}!"
+            "choices": [
+                "Ich bin stolz auf mich",
+                "Das war nichts Besonderes",
+                "Alles normal"
+            ],
+            "hint": "Teile deinen Erfolg mit {{character_name}}!",
+            "images": [
+                "images/scenarios/de-emot-014-1.jpg",
+                "images/scenarios/de-emot-014-2.jpg"
+            ]
         },
         {
             "id": "de-emot-015",
@@ -1363,8 +2250,16 @@
             "image": "images/scenarios/de-emot-015.svg",
             "description": "Du fühlst dich verwirrt und weißt nicht was du fühlen sollst. {{character_name}} fragt dich, wie es dir geht.",
             "targetPhrase": "Ich bin verwirrt",
-            "choices": ["Ich bin verwirrt", "Alles klar", "Kein Problem"],
-            "hint": "Sag {{character_name}}, dass du verwirrt bist!"
+            "choices": [
+                "Ich bin verwirrt",
+                "Alles klar",
+                "Kein Problem"
+            ],
+            "hint": "Sag {{character_name}}, dass du verwirrt bist!",
+            "images": [
+                "images/scenarios/de-emot-015-1.jpg",
+                "images/scenarios/de-emot-015-2.jpg"
+            ]
         },
         {
             "id": "de-emot-016",
@@ -1376,8 +2271,16 @@
             "image": "images/scenarios/de-emot-016.svg",
             "description": "Du langweilst dich sehr und weißt nicht was du machen sollst. {{character_name}} fragt dich.",
             "targetPhrase": "Ich langweile mich",
-            "choices": ["Ich langweile mich", "Ich bin beschäftigt", "Alles super"],
-            "hint": "Sag {{character_name}}, dass du dich langweilst!"
+            "choices": [
+                "Ich langweile mich",
+                "Ich bin beschäftigt",
+                "Alles super"
+            ],
+            "hint": "Sag {{character_name}}, dass du dich langweilst!",
+            "images": [
+                "images/scenarios/de-emot-016-1.jpg",
+                "images/scenarios/de-emot-016-2.jpg"
+            ]
         },
         {
             "id": "de-emot-017",
@@ -1389,8 +2292,16 @@
             "image": "images/scenarios/de-emot-017.svg",
             "description": "Du fühlst dich einsam, auch wenn Leute um dich herum sind. Das ist ein komisches Gefühl. {{character_name}} kommt zu dir.",
             "targetPhrase": "Ich fühle mich einsam",
-            "choices": ["Ich fühle mich einsam", "Alles gut", "Kein Problem"],
-            "hint": "Sag {{character_name}}, wie du dich wirklich fühlst!"
+            "choices": [
+                "Ich fühle mich einsam",
+                "Alles gut",
+                "Kein Problem"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich wirklich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-017-1.jpg",
+                "images/scenarios/de-emot-017-2.jpg"
+            ]
         },
         {
             "id": "de-emot-018",
@@ -1402,8 +2313,16 @@
             "image": "images/scenarios/de-emot-018.svg",
             "description": "Du machst dir sehr viele Sorgen darüber, was in der Zukunft passieren könnte. {{character_name}} fragt, warum du so still bist.",
             "targetPhrase": "Ich mache mir Sorgen",
-            "choices": ["Ich mache mir Sorgen", "Alles wird gut", "Das ist normal"],
-            "hint": "Sag {{character_name}}, was dich beschäftigt!"
+            "choices": [
+                "Ich mache mir Sorgen",
+                "Alles wird gut",
+                "Das ist normal"
+            ],
+            "hint": "Sag {{character_name}}, was dich beschäftigt!",
+            "images": [
+                "images/scenarios/de-emot-018-1.jpg",
+                "images/scenarios/de-emot-018-2.jpg"
+            ]
         },
         {
             "id": "de-emot-019",
@@ -1415,8 +2334,16 @@
             "image": "images/scenarios/de-emot-019.svg",
             "description": "Dir ist etwas Peinliches passiert und dein Gesicht wird rot. Du möchtest im Erdboden versinken. {{character_name}} fragt, was los ist.",
             "targetPhrase": "Das war mir peinlich",
-            "choices": ["Das war mir peinlich", "Das war gar nicht peinlich", "Alles gut"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Das war mir peinlich",
+                "Das war gar nicht peinlich",
+                "Alles gut"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-019-1.jpg",
+                "images/scenarios/de-emot-019-2.jpg"
+            ]
         },
         {
             "id": "de-emot-020",
@@ -1428,8 +2355,16 @@
             "image": "images/scenarios/de-emot-020.svg",
             "description": "Du hast so viele Gefühle auf einmal, dass du nicht mehr weißt was du fühlen sollst. {{character_name}} fragt dich.",
             "targetPhrase": "Ich weiß nicht wie ich mich fühle",
-            "choices": ["Ich weiß nicht wie ich mich fühle", "Alles klar", "Ich bin okay"],
-            "hint": "Sei ehrlich zu {{character_name}}!"
+            "choices": [
+                "Ich weiß nicht wie ich mich fühle",
+                "Alles klar",
+                "Ich bin okay"
+            ],
+            "hint": "Sei ehrlich zu {{character_name}}!",
+            "images": [
+                "images/scenarios/de-emot-020-1.jpg",
+                "images/scenarios/de-emot-020-2.jpg"
+            ]
         },
         {
             "id": "de-emot-021",
@@ -1441,8 +2376,16 @@
             "image": "images/scenarios/de-emot-021.svg",
             "description": "Morgen ist etwas Besonderes und du kannst vor Aufregung nicht schlafen. {{character_name}} fragt warum du noch wach bist.",
             "targetPhrase": "Ich bin zu aufgeregt zum Schlafen",
-            "choices": ["Ich bin zu aufgeregt zum Schlafen", "Ich bin nicht aufgeregt", "Alles normal"],
-            "hint": "Sag {{character_name}}, warum du nicht schlafen kannst!"
+            "choices": [
+                "Ich bin zu aufgeregt zum Schlafen",
+                "Ich bin nicht aufgeregt",
+                "Alles normal"
+            ],
+            "hint": "Sag {{character_name}}, warum du nicht schlafen kannst!",
+            "images": [
+                "images/scenarios/de-emot-021-1.jpg",
+                "images/scenarios/de-emot-021-2.jpg"
+            ]
         },
         {
             "id": "de-emot-022",
@@ -1454,8 +2397,17 @@
             "image": "images/scenarios/de-emot-022.svg",
             "description": "Dein Haustier ist krank oder gestorben. Du bist sehr traurig darüber. {{character_name}} fragt, was los ist.",
             "targetPhrase": "Ich bin traurig wegen meines Haustieres",
-            "choices": ["Ich bin traurig wegen meines Haustieres", "Alles gut", "Das macht nichts"],
-            "hint": "Sag {{character_name}}, warum du traurig bist!"
+            "choices": [
+                "Ich bin traurig wegen meines Haustieres",
+                "Alles gut",
+                "Das macht nichts"
+            ],
+            "hint": "Sag {{character_name}}, warum du traurig bist!",
+            "images": [
+                "images/scenarios/de-emot-022-1.jpg",
+                "images/scenarios/de-emot-022-2.jpg",
+                "images/scenarios/de-emot-022-3.jpg"
+            ]
         },
         {
             "id": "de-emot-023",
@@ -1467,8 +2419,16 @@
             "image": "images/scenarios/de-emot-023.svg",
             "description": "Du bist wütend auf dich selbst, weil du einen Fehler gemacht hast. {{character_name}} fragt, was los ist.",
             "targetPhrase": "Ich bin wütend auf mich",
-            "choices": ["Ich bin wütend auf mich", "Alles gut", "Der Fehler war nicht so schlimm"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin wütend auf mich",
+                "Alles gut",
+                "Der Fehler war nicht so schlimm"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-023-1.jpg",
+                "images/scenarios/de-emot-023-2.jpg"
+            ]
         },
         {
             "id": "de-emot-024",
@@ -1480,8 +2440,16 @@
             "image": "images/scenarios/de-emot-024.svg",
             "description": "Du möchtest etwas Neues ausprobieren, aber bist zu schüchtern dafür. {{character_name}} ermutigt dich.",
             "targetPhrase": "Ich bin ein bisschen schüchtern",
-            "choices": ["Ich bin ein bisschen schüchtern", "Ich bin gar nicht schüchtern", "Das will ich nicht"],
-            "hint": "Sag {{character_name}}, wie du dich fühlst!"
+            "choices": [
+                "Ich bin ein bisschen schüchtern",
+                "Ich bin gar nicht schüchtern",
+                "Das will ich nicht"
+            ],
+            "hint": "Sag {{character_name}}, wie du dich fühlst!",
+            "images": [
+                "images/scenarios/de-emot-024-1.jpg",
+                "images/scenarios/de-emot-024-2.jpg"
+            ]
         },
         {
             "id": "de-emot-025",
@@ -1493,8 +2461,16 @@
             "image": "images/scenarios/de-emot-025.svg",
             "description": "Du versuchst etwas zu lernen, aber es klappt einfach nicht. Du bist total frustriert. {{character_name}} fragt dich.",
             "targetPhrase": "Das frustriert mich",
-            "choices": ["Das frustriert mich", "Ich lerne das schnell", "Das ist einfach"],
-            "hint": "Sag {{character_name}}, dass du frustriert bist!"
+            "choices": [
+                "Das frustriert mich",
+                "Ich lerne das schnell",
+                "Das ist einfach"
+            ],
+            "hint": "Sag {{character_name}}, dass du frustriert bist!",
+            "images": [
+                "images/scenarios/de-emot-025-1.jpg",
+                "images/scenarios/de-emot-025-2.jpg"
+            ]
         },
         {
             "id": "de-emot-026",
@@ -1506,8 +2482,17 @@
             "image": "images/scenarios/de-emot-026.svg",
             "description": "Etwas, worauf du dich sehr gefreut hast, klappt nicht. Du bist enttäuscht. {{character_name}} fragt dich.",
             "targetPhrase": "Ich bin enttäuscht",
-            "choices": ["Ich bin enttäuscht", "Das macht nichts", "Alles gut"],
-            "hint": "Sag {{character_name}}, dass du enttäuscht bist!"
+            "choices": [
+                "Ich bin enttäuscht",
+                "Das macht nichts",
+                "Alles gut"
+            ],
+            "hint": "Sag {{character_name}}, dass du enttäuscht bist!",
+            "images": [
+                "images/scenarios/de-emot-026-1.jpg",
+                "images/scenarios/de-emot-026-2.jpg",
+                "images/scenarios/de-emot-026-3.jpg"
+            ]
         },
         {
             "id": "de-emot-027",
@@ -1519,8 +2504,16 @@
             "image": "images/scenarios/de-emot-027.svg",
             "description": "Es ist etwas Unerwartetes passiert und du bist sehr überrascht. {{character_name}} fragt dich.",
             "targetPhrase": "Das hat mich überrascht",
-            "choices": ["Das hat mich überrascht", "Das war normal", "Ich wusste das"],
-            "hint": "Sag {{character_name}}, dass du überrascht bist!"
+            "choices": [
+                "Das hat mich überrascht",
+                "Das war normal",
+                "Ich wusste das"
+            ],
+            "hint": "Sag {{character_name}}, dass du überrascht bist!",
+            "images": [
+                "images/scenarios/de-emot-027-1.jpg",
+                "images/scenarios/de-emot-027-2.jpg"
+            ]
         },
         {
             "id": "de-emot-028",
@@ -1532,8 +2525,16 @@
             "image": "images/scenarios/de-emot-028.svg",
             "description": "Jemand hat etwas Nettes für dich getan. Du möchtest dich bedanken. {{character_name}} ist die Person.",
             "targetPhrase": "Vielen Dank",
-            "choices": ["Vielen Dank", "Das war selbstverständlich", "Ich brauche das nicht"],
-            "hint": "Bedanke dich bei {{character_name}}!"
+            "choices": [
+                "Vielen Dank",
+                "Das war selbstverständlich",
+                "Ich brauche das nicht"
+            ],
+            "hint": "Bedanke dich bei {{character_name}}!",
+            "images": [
+                "images/scenarios/de-emot-028-1.jpg",
+                "images/scenarios/de-emot-028-2.jpg"
+            ]
         },
         {
             "id": "de-emot-029",
@@ -1545,8 +2546,16 @@
             "image": "images/scenarios/de-emot-029.svg",
             "description": "Du hast so viele starke Gefühle gehabt, dass du jetzt komplett erschöpft bist. {{character_name}} fragt wie es dir geht.",
             "targetPhrase": "Ich brauche Ruhe",
-            "choices": ["Ich brauche Ruhe", "Alles gut", "Ich mache weiter"],
-            "hint": "Sag {{character_name}}, dass du Ruhe brauchst!"
+            "choices": [
+                "Ich brauche Ruhe",
+                "Alles gut",
+                "Ich mache weiter"
+            ],
+            "hint": "Sag {{character_name}}, dass du Ruhe brauchst!",
+            "images": [
+                "images/scenarios/de-emot-029-1.jpg",
+                "images/scenarios/de-emot-029-2.jpg"
+            ]
         },
         {
             "id": "de-emot-030",
@@ -1558,8 +2567,16 @@
             "image": "images/scenarios/de-emot-030.svg",
             "description": "Du bist auf einem Ausflug oder Schulausflug und hast Heimweh. Du vermisst zu Hause sehr. {{character_name}} fragt dich.",
             "targetPhrase": "Ich habe Heimweh",
-            "choices": ["Ich habe Heimweh", "Alles gut", "Ich vermisse nichts"],
-            "hint": "Sag {{character_name}}, dass du Heimweh hast!"
+            "choices": [
+                "Ich habe Heimweh",
+                "Alles gut",
+                "Ich vermisse nichts"
+            ],
+            "hint": "Sag {{character_name}}, dass du Heimweh hast!",
+            "images": [
+                "images/scenarios/de-emot-030-1.jpg",
+                "images/scenarios/de-emot-030-2.jpg"
+            ]
         }
     ]
 }

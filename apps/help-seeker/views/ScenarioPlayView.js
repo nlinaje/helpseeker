@@ -24,7 +24,23 @@ const template = /* html */`
         <template v-else>
             <!-- Scenario description card -->
             <div class="card scenario-description-card">
-                <div v-if="scenario.image" class="scenario-illustration">
+                <!-- Multi-panel storyboard (AI-generated images) -->
+                <div
+                    v-if="scenario.images && scenario.images.length > 0"
+                    class="scenario-storyboard"
+                    :class="'panels-' + scenario.images.length"
+                >
+                    <img
+                        v-for="(src, i) in scenario.images"
+                        :key="i"
+                        :src="src"
+                        :alt="scenario.title + ' – Bild ' + (i + 1)"
+                        class="storyboard-panel"
+                        @error="onPanelError($event, scenario.image)"
+                    />
+                </div>
+                <!-- Fallback SVG illustration -->
+                <div v-else-if="scenario.image" class="scenario-illustration">
                     <img :src="scenario.image" :alt="scenario.title" />
                 </div>
                 <div class="character-row">
@@ -289,6 +305,10 @@ export default {
             speechError.value  = ''
         }
 
+        function onPanelError(event, fallbackSrc) {
+            if (fallbackSrc) event.target.src = fallbackSrc
+        }
+
         function goBack() {
             if (isRecording.value) {
                 try { speech.stopRecording('', 'german') } catch (_) {}
@@ -315,6 +335,7 @@ export default {
             selectChoice,
             loadModel,
             toggleRecording,
+            onPanelError,
             switchMode,
             goBack,
         }

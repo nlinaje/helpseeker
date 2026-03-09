@@ -1173,6 +1173,28 @@ h2.section-title {
     background: #22c55e;
 }
 
+/* ── Scenario storyboard (AI-generated panels) ───────────────────────────── */
+.scenario-storyboard {
+    display: grid;
+    gap: 3px;
+    margin-bottom: 12px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: rgba(255,255,255,0.08);
+}
+.scenario-storyboard.panels-1 { grid-template-columns: 1fr; }
+.scenario-storyboard.panels-2 { grid-template-columns: 1fr 1fr; }
+.scenario-storyboard.panels-3 { grid-template-columns: 1fr 1fr 1fr; }
+.scenario-storyboard.panels-4 { grid-template-columns: 1fr 1fr; }
+
+.storyboard-panel {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    background: rgba(255,255,255,0.06);
+}
+
 /* ── Color Match game ────────────────────────────────────────────────────── */
 .colormatch-target {
     text-align: center;

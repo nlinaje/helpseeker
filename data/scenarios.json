@@ -9,7 +9,7 @@
             "title": "Zu hoch",
             "emoji": "📚",
             "image": "images/scenarios/de-phys-001.svg",
-            "description": "Dein Lieblingsbuch liegt ganz oben im Regal — du kommst nicht dran. {{character_name}} steht neben dir.",
+            "description": "Dein Lieblingsbuch liegt ganz oben im Regal — du kommst nicht dran.",
             "targetPhrase": "Ich brauche Hilfe",
             "choices": ["Ich brauche Hilfe", "Das ist egal", "Ich gehe weg"],
             "hint": "Du brauchst Hilfe von {{character_name}}!"
@@ -295,7 +295,7 @@
             "title": "Durst",
             "emoji": "💧",
             "image": "images/scenarios/de-phys-023.svg",
-            "description": "Du hast sehr großen Durst. Dein Mund ist ganz trocken. {{character_name}} steht neben dir.",
+            "description": "Du hast sehr großen Durst. Dein Mund ist ganz trocken.",
             "targetPhrase": "Ich habe Durst",
             "choices": ["Ich habe Durst", "Kein Problem", "Ich brauche nichts"],
             "hint": "Sag {{character_name}}, dass du Durst hast!"
@@ -321,7 +321,7 @@
             "title": "Zu warm",
             "emoji": "🔥",
             "image": "images/scenarios/de-phys-025.svg",
-            "description": "Dir ist sehr warm. Du schwitzt und möchtest ein Fenster öffnen. {{character_name}} steht neben dir.",
+            "description": "Dir ist sehr warm. Du schwitzt und möchtest ein Fenster öffnen.",
             "targetPhrase": "Mir ist zu warm",
             "choices": ["Mir ist zu warm", "Mir ist kalt", "Alles passt"],
             "hint": "Sag {{character_name}}, dass dir zu warm ist!"
@@ -399,7 +399,7 @@
             "title": "Aufgabe unklar",
             "emoji": "❓",
             "image": "images/scenarios/de-acad-001.svg",
-            "description": "Du verstehst die Aufgabe nicht. Du weißt nicht, was du tun sollst. {{character_name}} steht neben dir.",
+            "description": "Du verstehst die Aufgabe nicht. Du weißt nicht, was du tun sollst.",
             "targetPhrase": "Ich verstehe das nicht",
             "choices": ["Ich verstehe das nicht", "Das ist einfach", "Ich mache es selbst"],
             "hint": "Sag {{character_name}}, dass du Hilfe brauchst!"

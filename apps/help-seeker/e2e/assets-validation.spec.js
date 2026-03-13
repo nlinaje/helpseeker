@@ -80,3 +80,36 @@ test('no 404 responses when loading scenario with images', async ({ page }) => {
 
   expect(imageFailures).toHaveLength(0);
 });
+
+test('all de-acad-001 through de-acad-006 have complete images', async ({ page }) => {
+  // Verify these specific scenarios have all their images
+  const scenariosToCheck = [
+    { id: 'de-acad-001', expectedImages: 2 },
+    { id: 'de-acad-002', expectedImages: 1 },
+    { id: 'de-acad-003', expectedImages: 2 },
+    { id: 'de-acad-004', expectedImages: 2 },
+    { id: 'de-acad-005', expectedImages: 2 },
+    { id: 'de-acad-006', expectedImages: 3 },
+  ];
+
+  const scenariosPath = 'data/scenarios.json';
+  const scenariosData = JSON.parse(require('fs').readFileSync(scenariosPath, 'utf-8'));
+
+  for (const scenario of scenariosToCheck) {
+    const found = scenariosData.scenarios.find(s => s.id === scenario.id);
+    expect(found, `Scenario ${scenario.id} should exist`).toBeTruthy();
+
+    const imageCount = found.images?.length || 0;
+    expect(imageCount).toBe(scenario.expectedImages,
+      `${scenario.id} should have ${scenario.expectedImages} image(s), found ${imageCount}`);
+
+    // Verify each image file exists
+    if (found.images) {
+      for (const imagePath of found.images) {
+        const fullPath = require('path').join(process.cwd(), imagePath);
+        const exists = require('fs').existsSync(fullPath);
+        expect(exists, `Image file ${imagePath} should exist`).toBe(true);
+      }
+    }
+  }
+});

@@ -5,3 +5,12 @@ pwa-test/key.pem
 # Python
 __pycache__/
 *.pyc
+
+# Node/npm
+node_modules/
+package-lock.json
+
+# Playwright
+test-results/
+playwright-report/
+.playwright/

@@ -1,0 +1,20 @@
+{
+  "name": "help-seeker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "validate:scenarios": "node scripts/validate-scenarios.js",
+    "validate:scenarios:fix": "node scripts/validate-scenarios.js --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

@@ -1189,8 +1189,8 @@ h2.section-title {
 
 .storyboard-panel {
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+    aspect-ratio: auto;
+    object-fit: contain;
     display: block;
     background: rgba(255,255,255,0.06);
 }

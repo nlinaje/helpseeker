@@ -86,11 +86,13 @@ export default {
 
         function goToScenarios() {
             store.lastAttempt = null
+            // Keep selectedCategory in store so ScenarioListView restores it
             router.push('/scenarios')
         }
 
         function goToReward() {
             store.lastAttempt = null
+            // Keep selectedCategory so user returns to same category after reward
             router.push('/reward')
         }
 

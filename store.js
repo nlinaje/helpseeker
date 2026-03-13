@@ -12,4 +12,7 @@ export const store = reactive({
 
     // Result carried into CelebrationView
     lastAttempt: null,  // { scenarioId, mode, score, text }
+
+    // Currently selected category (persisted while in scenario play)
+    selectedCategory: null,
 })

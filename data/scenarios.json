@@ -682,8 +682,7 @@
             ],
             "hint": "Bitte {{character_name}} um einen Radiergummi!",
             "images": [
-                "images/scenarios/de-acad-002-1.jpg",
-                "images/scenarios/de-acad-002-2.jpg"
+                "images/scenarios/de-acad-002-1.jpg"
             ]
         },
         {

@@ -121,6 +121,10 @@ export default {
                 const res  = await fetch('./data/scenarios.json')
                 const data = await res.json()
                 scenarios.value = data.scenarios
+                // Restore selected category from store if it exists (e.g., returning from celebration)
+                if (store.selectedCategory) {
+                    selectedCategory.value = store.selectedCategory
+                }
             } catch (err) {
                 console.error('Failed to load scenarios:', err)
             } finally {
@@ -146,13 +150,16 @@ export default {
 
         function openCategory(catId) {
             selectedCategory.value = catId
+            store.selectedCategory = catId
         }
 
         function handleBack() {
             if (selectedCategory.value) {
                 selectedCategory.value = null
+                store.selectedCategory = null
             } else {
                 store.currentProfile = null
+                store.selectedCategory = null
                 router.push('/')
             }
         }

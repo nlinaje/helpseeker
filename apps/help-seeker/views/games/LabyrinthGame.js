@@ -65,34 +65,51 @@ const template = /* html */`
             </div>
         </div>
 
-        <div class="labyrinth-container">
-            <div class="labyrinth-grid" :style="{ gridTemplateColumns: \`repeat(\${mazeWidth}, 1fr)\` }">
+        <div class="labyrinth-container" style="display: flex; justify-content: center; margin: 20px 0;">
+            <div class="labyrinth-grid" :style="{
+                display: 'grid',
+                gridTemplateColumns: \`repeat(\${mazeWidth}, 1fr)\`,
+                gap: '2px',
+                padding: '10px',
+                backgroundColor: '#f3f4f6',
+                borderRadius: '8px',
+                maxWidth: '400px',
+            }">
                 <div
                     v-for="(cell, idx) in flatMaze"
                     :key="idx"
                     class="labyrinth-cell"
-                    :class="{
-                        'cell-wall': cell === 1,
-                        'cell-path': cell === 0,
-                        'cell-player': playerPos === idx,
-                        'cell-goal': goalPos === idx,
+                    :style="{
+                        width: '100%',
+                        aspectRatio: '1',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: cell === 1 ? '#374151' : '#ffffff',
+                        borderRadius: '4px',
+                        fontSize: '20px',
+                        fontWeight: 'bold',
+                        border: (playerPos === idx || goalPos === idx) ? '2px solid #3b82f6' : '1px solid #e5e7eb',
                     }"
                     :aria-label="cellLabel(idx)"
                 >
-                    <span v-if="playerPos === idx" class="cell-emoji">◎</span>
-                    <span v-else-if="goalPos === idx" class="cell-emoji">★</span>
+                    <span v-if="playerPos === idx">◎</span>
+                    <span v-else-if="goalPos === idx">★</span>
                 </div>
             </div>
         </div>
 
-        <div class="labyrinth-controls">
-            <button class="dir-btn up" @click="move('up')" aria-label="Nach oben">⬆️</button>
-            <div style="display: flex; gap: 8px;">
-                <button class="dir-btn left" @click="move('left')" aria-label="Nach links">⬅️</button>
-                <button class="dir-btn down" @click="move('down')" aria-label="Nach unten">⬇️</button>
-                <button class="dir-btn right" @click="move('right')" aria-label="Nach rechts">➡️</button>
+        <div class="labyrinth-controls" style="text-align: center; margin-top: 24px;">
+            <div style="font-size: 12px; color: #6b7280; margin-bottom: 12px;">Nutze die Pfeiltasten oder klicke die Knöpfe:</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <button class="dir-btn up" @click="move('up')" style="font-size: 24px; padding: 8px 16px; cursor: pointer;">⬆️</button>
+                <div style="display: flex; gap: 8px; justify-content: center;">
+                    <button class="dir-btn left" @click="move('left')" style="font-size: 24px; padding: 8px 16px; cursor: pointer;">⬅️</button>
+                    <button class="dir-btn down" @click="move('down')" style="font-size: 24px; padding: 8px 16px; cursor: pointer;">⬇️</button>
+                    <button class="dir-btn right" @click="move('right')" style="font-size: 24px; padding: 8px 16px; cursor: pointer;">➡️</button>
+                </div>
             </div>
-            <button class="btn btn-secondary" @click="restart" style="margin-top: 12px;">Neu mischen</button>
+            <button class="btn btn-secondary" @click="restart" style="margin-top: 16px;">Neu mischen</button>
         </div>
 
     </div>
@@ -106,6 +123,15 @@ export default {
         const router = useRouter()
 
         if (!store.currentProfile) { router.replace('/'); return {} }
+
+        // Keyboard event handler
+        function handleKeydown(e) {
+            if (e.key === 'ArrowUp') { e.preventDefault(); move('up') }
+            else if (e.key === 'ArrowDown') { e.preventDefault(); move('down') }
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); move('left') }
+            else if (e.key === 'ArrowRight') { e.preventDefault(); move('right') }
+        }
+        window.addEventListener('keydown', handleKeydown)
 
         const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
         const config = DIFFICULTY_CONFIG[difficulty]
@@ -160,6 +186,7 @@ export default {
         }
 
         function goBack() {
+            window.removeEventListener('keydown', handleKeydown)
             router.push('/reward')
         }
 

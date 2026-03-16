@@ -133,7 +133,7 @@ export default {
             clearInterval(tickInterval)
             visible.value = false
             hit.value++
-            if (hit.value >= TOTAL) {
+            if (hit.value >= itemCount) {
                 gameOver.value = true
             } else {
                 setTimeout(startRound, 500)

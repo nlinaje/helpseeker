@@ -1,6 +1,11 @@
 import { defineComponent } from './vue.js'
+import DevPanel from './components/DevPanel.js'
 
 export default defineComponent({
     name: 'App',
-    template: `<router-view />`,
+    components: { DevPanel },
+    template: `
+        <router-view />
+        <DevPanel />
+    `,
 })

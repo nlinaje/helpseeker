@@ -1,7 +1,7 @@
 // Network-first strategy: always tries to get fresh content,
 // falls back to cache when offline. Bump CACHE_NAME to force full refresh.
 
-const CACHE_NAME = 'helpseeker-v6'
+const CACHE_NAME = 'helpseeker-v7'
 
 const APP_SHELL = [
     './',

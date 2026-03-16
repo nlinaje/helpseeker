@@ -21,7 +21,11 @@ const WORDS = [
     { word: 'SCHUH', emoji: '👞', hint: 'Schuh' },
     // 6-letter words
     { word: 'ORANGE', emoji: '🍊', hint: 'Orange' },
-    { word: 'EICHHORNCHEN', emoji: '🐿️', hint: 'Eichhörnchen' },
+    { word: 'BUTTER', emoji: '🧈', hint: 'Butter' },
+    { word: 'KARATE', emoji: '🥋', hint: 'Karate' },
+    { word: 'TURNEN', emoji: '🤸', hint: 'Turnen' },
+    { word: 'SCHULE', emoji: '🏫', hint: 'Schule' },
+    { word: 'ZAHLEN', emoji: '🔢', hint: 'Zahlen' },
 ]
 
 const DIFFICULTY_CONFIG = {
@@ -63,7 +67,7 @@ const template = /* html */`
         </div>
 
         <div class="word-emoji">{{ current.emoji }}</div>
-        <div class="word-hint">{{ current.hint }}</div>
+        <div v-if="difficulty !== 'hard'" class="word-hint">{{ current.hint }}</div>
 
         <!-- Answer slots -->
         <div class="word-slots">
@@ -164,6 +168,6 @@ export default {
 
         function goBack() { router.push('/reward') }
 
-        return { idx, current, won, roundComplete, roundWrong, tapLetter, clearWord, restart, goBack, roundCount }
+        return { idx, current, won, roundComplete, roundWrong, tapLetter, clearWord, restart, goBack, roundCount, difficulty }
     },
 }

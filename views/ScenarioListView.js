@@ -2,6 +2,7 @@ import { ref, computed, onMounted } from '../vue.js'
 import { useRouter } from '../vue-router.js'
 import { store } from '../store.js'
 import { characterEmoji } from '../characters.js'
+import { filterScenariosByAvailability } from '../services/scenarios.js'
 
 const CATEGORIES = [
     { id: 'physical',  label: 'Körperlich', emoji: '🏃', color: '#f97316', bg: '#fff7ed' },
@@ -135,12 +136,13 @@ export default {
         const profileEmoji = characterEmoji(store.currentProfile?.character)
 
         function scenariosInCategory(catId) {
-            return scenarios.value.filter(s => s.category === catId)
+            const filtered = filterScenariosByAvailability(scenarios.value)
+            return filtered.filter(s => s.category === catId)
         }
 
         const filteredScenarios = computed(() =>
             selectedCategory.value
-                ? scenarios.value.filter(s => s.category === selectedCategory.value)
+                ? filterScenariosByAvailability(scenarios.value).filter(s => s.category === selectedCategory.value)
                 : []
         )
 

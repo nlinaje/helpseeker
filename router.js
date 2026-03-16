@@ -20,12 +20,14 @@ import AlphaGame               from './views/games/AlphaGame.js'
 import MathGame                from './views/games/MathGame.js'
 import SpeedTapGame            from './views/games/SpeedTapGame.js'
 import LabyrinthGame           from './views/games/LabyrinthGame.js'
+import ScenarioManagementView  from './views/ScenarioManagementView.js'
 
 const routes = [
     { path: '/',              component: HomeView,             name: 'home'           },
     { path: '/profile/new',   component: ProfileCreateView,    name: 'newProfile'     },
-    { path: '/scenarios',     component: ScenarioListView,     name: 'scenarios'      },
-    { path: '/scenario/:id',  component: ScenarioPlayView,     name: 'play'           },
+    { path: '/scenarios',          component: ScenarioListView,        name: 'scenarios'              },
+    { path: '/scenarios/manage',   component: ScenarioManagementView,  name: 'scenarioManagement'     },
+    { path: '/scenario/:id',       component: ScenarioPlayView,        name: 'play'                  },
     { path: '/celebrate',     component: CelebrationView,      name: 'celebrate'      },
     { path: '/therapist',     component: TherapistOverviewView, name: 'therapist'     },
     { path: '/therapist/:id', component: TherapistChildView,   name: 'therapistChild' },

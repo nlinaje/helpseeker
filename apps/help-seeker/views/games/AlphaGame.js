@@ -2,11 +2,12 @@ import { ref, computed } from '../../vue.js'
 import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
-const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+const LETTERS_ALL = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
 
 const COLORS = [
     '#ef4444', '#f97316', '#eab308', '#22c55e', '#06b6d4',
     '#3b82f6', '#8b5cf6', '#ec4899', '#14b8a6', '#f59e0b',
+    '#059669', '#d946ef', '#0ea5e9',
 ]
 
 const POSITIONS = [
@@ -20,11 +21,21 @@ const POSITIONS = [
     { left: '78%', top: '52%' },
     { left: '16%', top: '76%' },
     { left: '58%', top: '75%' },
+    { left: '85%', top: '76%' },
+    { left: '32%', top: '10%' },
+    { left: '12%', top: '44%' },
 ]
 
-function buildLetters() {
-    const positions = [...POSITIONS].sort(() => Math.random() - 0.5)
-    return LETTERS.map((ch, i) => ({
+const DIFFICULTY_CONFIG = {
+    easy: { letterCount: 5 },
+    medium: { letterCount: 10 },
+    hard: { letterCount: 13 },
+}
+
+function buildLetters(letterCount) {
+    const letters = LETTERS_ALL.slice(0, letterCount)
+    const positions = [...POSITIONS].slice(0, letterCount).sort(() => Math.random() - 0.5)
+    return letters.map((ch, i) => ({
         ch,
         color:    COLORS[i],
         left:     positions[i].left,
@@ -98,16 +109,20 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const allLetters = LETTERS
-        const letters    = ref(buildLetters())
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const letterCount = config.letterCount
+        const allLetters = LETTERS_ALL.slice(0, letterCount)
+
+        const letters    = ref(buildLetters(letterCount))
         const nextIdx    = ref(0)
 
-        const won        = computed(() => nextIdx.value >= LETTERS.length)
-        const nextLetter = computed(() => LETTERS[nextIdx.value] ?? '✓')
+        const won        = computed(() => nextIdx.value >= letterCount)
+        const nextLetter = computed(() => allLetters[nextIdx.value] ?? '✓')
 
         function tapLetter(l) {
             if (l.tapped || won.value) return
-            if (l.ch === LETTERS[nextIdx.value]) {
+            if (l.ch === allLetters[nextIdx.value]) {
                 l.tapped = true
                 nextIdx.value++
             } else {
@@ -117,7 +132,7 @@ export default {
         }
 
         function restart() {
-            letters.value = buildLetters()
+            letters.value = buildLetters(letterCount)
             nextIdx.value = 0
         }
 

@@ -2,16 +2,22 @@ import { ref, computed } from '../../vue.js'
 import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
-const COLORS = [
+const COLORS_ALL = [
     { id: 'r', hex: '#ef4444', label: 'Rot'   },
     { id: 'g', hex: '#22c55e', label: 'Grün'  },
     { id: 'b', hex: '#3b82f6', label: 'Blau'  },
     { id: 'y', hex: '#eab308', label: 'Gelb'  },
+    { id: 'p', hex: '#8b5cf6', label: 'Lila'  },
+    { id: 'o', hex: '#f97316', label: 'Orange' },
 ]
 
-function randomId() { return COLORS[Math.floor(Math.random() * 4)].id }
+const DIFFICULTY_CONFIG = {
+    easy: { winRound: 4, colorCount: 4 },
+    medium: { winRound: 8, colorCount: 4 },
+    hard: { winRound: 12, colorCount: 6 },
+}
 
-const WIN_ROUND = 6  // win after completing sequence of length 6
+function randomId(colors) { return colors[Math.floor(Math.random() * colors.length)].id }
 
 const template = /* html */`
 <div class="view simon-view">
@@ -61,9 +67,12 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const simonColors = COLORS
-        const winRound    = WIN_ROUND
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const winRound = config.winRound
+        const colorCount = config.colorCount
 
+        const simonColors = COLORS_ALL.slice(0, colorCount)
         const sequence    = ref([])
         const round       = ref(1)
         const phase       = ref('showing')   // 'showing' | 'input' | 'wrong'
@@ -101,7 +110,7 @@ export default {
         }
 
         function nextRound() {
-            const seq = [...sequence.value, randomId()]
+            const seq = [...sequence.value, randomId(simonColors)]
             sequence.value = seq
             playSequence(seq)
         }
@@ -114,7 +123,7 @@ export default {
                 inputIdx.value++
                 if (inputIdx.value >= sequence.value.length) {
                     // Completed round
-                    if (round.value >= WIN_ROUND) {
+                    if (round.value >= winRound) {
                         won.value = true
                     } else {
                         round.value++

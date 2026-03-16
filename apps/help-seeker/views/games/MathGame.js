@@ -2,22 +2,55 @@ import { ref, computed } from '../../vue.js'
 import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
-function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
-
-function buildRound() {
-    const a   = Math.floor(Math.random() * 5) + 1   // 1–5
-    const b   = Math.floor(Math.random() * 5) + 1   // 1–5
-    const ans = a + b                                 // 2–10
-    const wrong = new Set()
-    while (wrong.size < 2) {
-        const d = ans + Math.floor(Math.random() * 5) - 2
-        if (d > 0 && d <= 12 && d !== ans) wrong.add(d)
-    }
-    return { a, b, ans, options: shuffle([ans, ...[...wrong]]) }
+const DIFFICULTY_CONFIG = {
+    easy: { maxNum: 3, operations: ['+'], roundCount: 6 },
+    medium: { maxNum: 5, operations: ['+', '-'], roundCount: 8 },
+    hard: { maxNum: 100, operations: ['+', '-', '×', '÷'], roundCount: 8 },
 }
 
-function buildAllRounds() {
-    return Array.from({ length: 8 }, buildRound)
+function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
+
+function buildRound(maxNum, operations) {
+    const op = operations[Math.floor(Math.random() * operations.length)]
+    let a, b, ans, maxAns
+
+    if (op === '+') {
+        a = Math.floor(Math.random() * maxNum) + 1
+        b = Math.floor(Math.random() * maxNum) + 1
+        ans = a + b
+        maxAns = maxNum * 2 + 2
+    } else if (op === '-') {
+        a = Math.floor(Math.random() * maxNum) + 5
+        b = Math.floor(Math.random() * (a - 1)) + 1
+        ans = a - b
+        maxAns = maxNum + 2
+    } else if (op === '×') {
+        a = Math.floor(Math.random() * Math.min(maxNum, 20)) + 1
+        b = Math.floor(Math.random() * Math.min(maxNum, 20)) + 1
+        ans = a * b
+        maxAns = Math.min(maxNum, 20) * Math.min(maxNum, 20) + 10
+    } else if (op === '÷') {
+        b = Math.floor(Math.random() * Math.min(maxNum, 12)) + 1
+        ans = Math.floor(Math.random() * Math.min(maxNum, 12)) + 1
+        a = ans * b
+        maxAns = Math.min(maxNum, 12) + 2
+    }
+
+    const wrong = new Set()
+    while (wrong.size < 2) {
+        let d
+        if (op === '×' || op === '÷') {
+            d = ans + Math.floor(Math.random() * 10) - 4
+        } else {
+            d = ans + Math.floor(Math.random() * 5) - 2
+        }
+        if (d > 0 && d <= maxAns && d !== ans) wrong.add(d)
+    }
+    return { a, b, ans, op, options: shuffle([ans, ...[...wrong]]) }
+}
+
+function buildAllRounds(maxNum, operations, roundCount) {
+    return Array.from({ length: roundCount }, () => buildRound(maxNum, operations))
 }
 
 const template = /* html */`
@@ -27,7 +60,7 @@ const template = /* html */`
         <header class="view-header">
             <button class="btn-back" @click="goBack" aria-label="Zurück">← Zurück</button>
             <h1>➕ Mathe-Spaß</h1>
-            <span class="memory-moves">{{ Math.min(idx + 1, 8) }}/8</span>
+            <span class="memory-moves">{{ Math.min(idx + 1, roundCount) }}/{{ roundCount }}</span>
         </header>
 
         <div v-if="won" class="win-overlay card">
@@ -41,7 +74,7 @@ const template = /* html */`
         </div>
 
         <div class="math-problem card">
-            <div class="math-equation">{{ current.a }} + {{ current.b }} = ?</div>
+            <div class="math-equation">{{ current.a }} {{ current.op }} {{ current.b }} = ?</div>
         </div>
 
         <div class="math-options">
@@ -59,7 +92,7 @@ const template = /* html */`
         </div>
 
         <div class="bubble-progress" style="margin-top: 24px;">
-            <span v-for="n in 8" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
+            <span v-for="n in roundCount" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
         </div>
 
     </div>
@@ -72,13 +105,19 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const rounds   = ref(buildAllRounds())
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const maxNum = config.maxNum
+        const operations = config.operations
+        const roundCount = config.roundCount
+
+        const rounds   = ref(buildAllRounds(maxNum, operations, roundCount))
         const idx      = ref(0)
         const chosen   = ref(null)
         const answered = ref(false)
 
         const current = computed(() => rounds.value[Math.min(idx.value, rounds.value.length - 1)])
-        const won     = computed(() => idx.value >= 8)
+        const won     = computed(() => idx.value >= roundCount)
 
         function pick(opt) {
             if (answered.value || won.value) return
@@ -92,7 +131,7 @@ export default {
         }
 
         function restart() {
-            rounds.value = buildAllRounds()
+            rounds.value = buildAllRounds(maxNum, operations, roundCount)
             idx.value = 0
             chosen.value = null
             answered.value = false
@@ -100,6 +139,6 @@ export default {
 
         function goBack() { router.push('/reward') }
 
-        return { idx, chosen, answered, current, won, pick, restart, goBack }
+        return { idx, chosen, answered, current, won, pick, restart, goBack, roundCount }
     },
 }

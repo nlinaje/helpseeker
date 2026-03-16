@@ -13,15 +13,22 @@ const PAIRS = [
     { animal: '🦋', food: '🌺', label: 'Blüte' },
 ]
 
+const DIFFICULTY_CONFIG = {
+    easy: { animalCount: 3 },
+    medium: { animalCount: 5 },
+    hard: { animalCount: 7 },
+}
+
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
 
-function buildRound(pair) {
-    const distractors = shuffle(PAIRS.filter(p => p.food !== pair.food)).slice(0, 3).map(p => p.food)
+function buildRound(pair, availablePairs) {
+    const distractors = shuffle(availablePairs.filter(p => p.food !== pair.food)).slice(0, 3).map(p => p.food)
     return { ...pair, options: shuffle([pair.food, ...distractors]) }
 }
 
-function buildAllRounds() {
-    return shuffle(PAIRS).map(buildRound)
+function buildAllRounds(animalCount) {
+    const selectedPairs = shuffle(PAIRS).slice(0, animalCount)
+    return selectedPairs.map(pair => buildRound(pair, selectedPairs))
 }
 
 const template = /* html */`
@@ -31,7 +38,7 @@ const template = /* html */`
         <header class="view-header">
             <button class="btn-back" @click="goBack" aria-label="Zurück">← Zurück</button>
             <h1>🍽️ Tier-Essen</h1>
-            <span class="memory-moves">{{ Math.min(idx + 1, 8) }}/8</span>
+            <span class="memory-moves">{{ Math.min(idx + 1, animalCount) }}/{{ animalCount }}</span>
         </header>
 
         <div v-if="won" class="win-overlay card">
@@ -62,7 +69,7 @@ const template = /* html */`
         </div>
 
         <div class="bubble-progress" style="margin-top: 20px;">
-            <span v-for="n in 8" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
+            <span v-for="n in animalCount" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
         </div>
 
     </div>
@@ -75,13 +82,17 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const rounds   = ref(buildAllRounds())
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const animalCount = config.animalCount
+
+        const rounds   = ref(buildAllRounds(animalCount))
         const idx      = ref(0)
         const chosen   = ref(null)
         const answered = ref(false)
 
         const current = computed(() => rounds.value[Math.min(idx.value, rounds.value.length - 1)])
-        const won     = computed(() => idx.value >= 8)
+        const won     = computed(() => idx.value >= animalCount)
 
         function pick(opt) {
             if (answered.value || won.value) return
@@ -95,7 +106,7 @@ export default {
         }
 
         function restart() {
-            rounds.value = buildAllRounds()
+            rounds.value = buildAllRounds(animalCount)
             idx.value = 0
             chosen.value = null
             answered.value = false
@@ -103,6 +114,6 @@ export default {
 
         function goBack() { router.push('/reward') }
 
-        return { idx, chosen, answered, current, won, pick, restart, goBack }
+        return { idx, chosen, answered, current, won, pick, restart, goBack, animalCount }
     },
 }

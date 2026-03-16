@@ -2,7 +2,13 @@ import { ref, computed } from '../../vue.js'
 import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
-const EMOJIS = ['🌈', '⭐', '🎉', '🎈', '🍭', '🌺', '🦋', '🚀']
+const EMOJIS = ['🌈', '⭐', '🎉', '🎈', '🍭', '🌺', '🦋', '🚀', '🐶', '🌸']
+
+const DIFFICULTY_CONFIG = {
+    easy: { pairsCount: 6 },
+    medium: { pairsCount: 8 },
+    hard: { pairsCount: 10 },
+}
 
 function shuffle(arr) {
     const a = [...arr]
@@ -13,8 +19,9 @@ function shuffle(arr) {
     return a
 }
 
-function buildDeck() {
-    return shuffle([...EMOJIS, ...EMOJIS]).map((emoji, i) => ({
+function buildDeck(pairsCount) {
+    const selectedEmojis = EMOJIS.slice(0, pairsCount)
+    return shuffle([...selectedEmojis, ...selectedEmojis]).map((emoji, i) => ({
         id: i,
         emoji,
         flipped:  false,
@@ -82,13 +89,17 @@ export default {
 
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const cards    = ref(buildDeck())
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const pairsCount = config.pairsCount
+
+        const cards    = ref(buildDeck(pairsCount))
         const moves    = ref(0)
         const checking = ref(false)
         let   firstId  = null
 
         const matchedCount = computed(() => cards.value.filter(c => c.matched).length)
-        const won          = computed(() => matchedCount.value === EMOJIS.length * 2)
+        const won          = computed(() => matchedCount.value === pairsCount * 2)
 
         function flip(card) {
             if (checking.value)   return
@@ -124,7 +135,7 @@ export default {
         }
 
         function restart() {
-            cards.value    = buildDeck()
+            cards.value    = buildDeck(pairsCount)
             moves.value    = 0
             checking.value = false
             firstId        = null

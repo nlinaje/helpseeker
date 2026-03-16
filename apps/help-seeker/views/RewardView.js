@@ -91,7 +91,8 @@ export default {
 
         function playGame(game) {
             if (totalStars.value < game.starsRequired || !game.route) return
-            router.push(game.route)
+            const difficulty = store.currentProfile.gameDifficulty || 'medium'
+            router.push(game.route + '?difficulty=' + difficulty)
         }
 
         function goBack() {

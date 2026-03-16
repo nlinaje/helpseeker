@@ -3,6 +3,7 @@ import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
 const WORDS = [
+    // 4-letter words
     { word: 'HAUS', emoji: '🏠', hint: 'Haus' },
     { word: 'BAUM', emoji: '🌳', hint: 'Baum' },
     { word: 'AUTO', emoji: '🚗', hint: 'Auto' },
@@ -11,7 +12,23 @@ const WORDS = [
     { word: 'HUND', emoji: '🐕', hint: 'Hund' },
     { word: 'BOOT', emoji: '⛵', hint: 'Boot' },
     { word: 'MOND', emoji: '🌙', hint: 'Mond' },
+    // 5-letter words
+    { word: 'BLUME', emoji: '🌸', hint: 'Blume' },
+    { word: 'FISCH', emoji: '🐟', hint: 'Fisch' },
+    { word: 'APFEL', emoji: '🍎', hint: 'Apfel' },
+    { word: 'PIZZA', emoji: '🍕', hint: 'Pizza' },
+    { word: 'MUSIK', emoji: '🎵', hint: 'Musik' },
+    { word: 'SCHUH', emoji: '👞', hint: 'Schuh' },
+    // 6-letter words
+    { word: 'ORANGE', emoji: '🍊', hint: 'Orange' },
+    { word: 'EICHHORNCHEN', emoji: '🐿️', hint: 'Eichhörnchen' },
 ]
+
+const DIFFICULTY_CONFIG = {
+    easy: { wordLength: 4, roundCount: 6 },
+    medium: { wordLength: 5, roundCount: 8 },
+    hard: { wordLength: 6, roundCount: 8 },
+}
 
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
 
@@ -20,8 +37,9 @@ function buildRound(entry) {
     return { ...entry, letters, typed: [] }
 }
 
-function buildAllRounds() {
-    return shuffle(WORDS).map(buildRound)
+function buildAllRounds(wordLength, roundCount) {
+    const filtered = WORDS.filter(w => w.word.length === wordLength)
+    return shuffle(filtered).slice(0, roundCount).map(buildRound)
 }
 
 const template = /* html */`
@@ -31,7 +49,7 @@ const template = /* html */`
         <header class="view-header">
             <button class="btn-back" @click="goBack" aria-label="Zurück">← Zurück</button>
             <h1>🔤 Wort-Puzzle</h1>
-            <span class="memory-moves">{{ Math.min(idx + 1, 8) }}/8</span>
+            <span class="memory-moves">{{ Math.min(idx + 1, roundCount) }}/{{ roundCount }}</span>
         </header>
 
         <div v-if="won" class="win-overlay card">
@@ -80,7 +98,7 @@ const template = /* html */`
         </div>
 
         <div class="bubble-progress" style="margin-top: 16px;">
-            <span v-for="n in 8" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
+            <span v-for="n in roundCount" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
         </div>
 
     </div>
@@ -93,13 +111,18 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const rounds       = ref(buildAllRounds())
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const wordLength = config.wordLength
+        const roundCount = config.roundCount
+
+        const rounds       = ref(buildAllRounds(wordLength, roundCount))
         const idx          = ref(0)
         const roundComplete = ref(false)
         const roundWrong    = ref(false)
 
         const current = computed(() => rounds.value[Math.min(idx.value, rounds.value.length - 1)])
-        const won     = computed(() => idx.value >= 8)
+        const won     = computed(() => idx.value >= roundCount)
 
         function tapLetter(letter) {
             if (letter.used || roundComplete.value || won.value) return
@@ -133,7 +156,7 @@ export default {
         }
 
         function restart() {
-            rounds.value = buildAllRounds()
+            rounds.value = buildAllRounds(wordLength, roundCount)
             idx.value = 0
             roundComplete.value = false
             roundWrong.value = false
@@ -141,6 +164,6 @@ export default {
 
         function goBack() { router.push('/reward') }
 
-        return { idx, current, won, roundComplete, roundWrong, tapLetter, clearWord, restart, goBack }
+        return { idx, current, won, roundComplete, roundWrong, tapLetter, clearWord, restart, goBack, roundCount }
     },
 }

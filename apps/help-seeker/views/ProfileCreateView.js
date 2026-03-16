@@ -51,6 +51,42 @@ const template = /* html */`
             </div>
         </div>
 
+        <div class="card">
+            <label class="form-label">Spiel-Schwierigkeit</label>
+            <div class="difficulty-selector">
+                <button
+                    class="difficulty-option"
+                    :class="{ selected: selectedDifficulty === 'easy' }"
+                    @click="selectedDifficulty = 'easy'"
+                    aria-label="Einfach auswählen"
+                    :aria-pressed="selectedDifficulty === 'easy'"
+                >
+                    <span class="difficulty-emoji">🟢</span>
+                    <span class="difficulty-label">Einfach</span>
+                </button>
+                <button
+                    class="difficulty-option"
+                    :class="{ selected: selectedDifficulty === 'medium' }"
+                    @click="selectedDifficulty = 'medium'"
+                    aria-label="Normal auswählen"
+                    :aria-pressed="selectedDifficulty === 'medium'"
+                >
+                    <span class="difficulty-emoji">🟡</span>
+                    <span class="difficulty-label">Normal</span>
+                </button>
+                <button
+                    class="difficulty-option"
+                    :class="{ selected: selectedDifficulty === 'hard' }"
+                    @click="selectedDifficulty = 'hard'"
+                    aria-label="Schwer auswählen"
+                    :aria-pressed="selectedDifficulty === 'hard'"
+                >
+                    <span class="difficulty-emoji">🔴</span>
+                    <span class="difficulty-label">Schwer</span>
+                </button>
+            </div>
+        </div>
+
         <div v-if="error" style="background: var(--color-error-light); color: var(--color-error);
             border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 12px;
             font-weight: 600;">
@@ -76,6 +112,7 @@ export default {
         const router = useRouter()
         const name = ref('')
         const selectedCharacter = ref(null)
+        const selectedDifficulty = ref('medium')
         const saving = ref(false)
         const error = ref('')
 
@@ -92,6 +129,7 @@ export default {
                     id: crypto.randomUUID(),
                     name: name.value.trim(),
                     character: selectedCharacter.value,
+                    gameDifficulty: selectedDifficulty.value,
                     createdAt: new Date().toISOString(),
                 }
                 await db.saveProfile(profile)
@@ -112,6 +150,7 @@ export default {
         return {
             name,
             selectedCharacter,
+            selectedDifficulty,
             saving,
             error,
             canCreate,

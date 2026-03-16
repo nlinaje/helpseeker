@@ -2,23 +2,56 @@ import { ref, computed } from '../../vue.js'
 import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
-// Two categories: Tiere (animals) and Essen (food)
+// Categories: Tiere (animals), Essen (food), Farben (colors), Fahrzeuge (vehicles)
 const ITEMS = [
+    // Tiere
     { emoji: '🐶', cat: 'tier',  label: 'Hund'     },
     { emoji: '🐱', cat: 'tier',  label: 'Katze'    },
     { emoji: '🐸', cat: 'tier',  label: 'Frosch'   },
     { emoji: '🦁', cat: 'tier',  label: 'Löwe'     },
     { emoji: '🐧', cat: 'tier',  label: 'Pinguin'  },
     { emoji: '🦊', cat: 'tier',  label: 'Fuchs'    },
+    // Essen
     { emoji: '🍎', cat: 'essen', label: 'Apfel'    },
     { emoji: '🍕', cat: 'essen', label: 'Pizza'    },
     { emoji: '🍦', cat: 'essen', label: 'Eis'      },
     { emoji: '🥕', cat: 'essen', label: 'Karotte'  },
     { emoji: '🍰', cat: 'essen', label: 'Kuchen'   },
     { emoji: '🍓', cat: 'essen', label: 'Erdbeere' },
+    // Farben
+    { emoji: '🔴', cat: 'farbe', label: 'Rot'      },
+    { emoji: '🔵', cat: 'farbe', label: 'Blau'     },
+    { emoji: '🟢', cat: 'farbe', label: 'Grün'     },
+    { emoji: '🟡', cat: 'farbe', label: 'Gelb'     },
+    { emoji: '🟣', cat: 'farbe', label: 'Lila'     },
+    { emoji: '🟠', cat: 'farbe', label: 'Orange'   },
+    // Fahrzeuge
+    { emoji: '🚗', cat: 'auto',  label: 'Auto'     },
+    { emoji: '🚕', cat: 'auto',  label: 'Taxi'     },
+    { emoji: '🚙', cat: 'auto',  label: 'Jeep'     },
+    { emoji: '🚌', cat: 'auto',  label: 'Bus'      },
+]
+
+const DIFFICULTY_CONFIG = {
+    easy: { categoryCount: 2, itemCount: 6 },
+    medium: { categoryCount: 3, itemCount: 9 },
+    hard: { categoryCount: 4, itemCount: 12 },
+}
+
+const CATEGORIES = [
+    { id: 'tier', label: 'Tier', emoji: '🐾' },
+    { id: 'essen', label: 'Essen', emoji: '🍽️' },
+    { id: 'farbe', label: 'Farbe', emoji: '🎨' },
+    { id: 'auto', label: 'Fahrzeug', emoji: '🚗' },
 ]
 
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
+
+function buildRound(categoryCount, itemCount) {
+    const catIds = CATEGORIES.slice(0, categoryCount).map(c => c.id)
+    const filtered = ITEMS.filter(i => catIds.includes(i.cat))
+    return shuffle(filtered).slice(0, itemCount)
+}
 
 const template = /* html */`
 <div class="view sortgame-view">
@@ -45,23 +78,16 @@ const template = /* html */`
 
         <div class="sort-categories" v-if="!won">
             <button
+                v-for="cat in activeCategories"
+                :key="cat.id"
                 class="sort-cat-btn"
                 :class="{
-                    'opt-correct': answered && current.cat === 'tier',
-                    'opt-wrong':   answered && chose === 'tier' && current.cat !== 'tier',
+                    'opt-correct': answered && current.cat === cat.id,
+                    'opt-wrong':   answered && chose === cat.id && current.cat !== cat.id,
                 }"
-                @click="sort('tier')"
-                aria-label="Tier"
-            >🐾<br>Tier</button>
-            <button
-                class="sort-cat-btn"
-                :class="{
-                    'opt-correct': answered && current.cat === 'essen',
-                    'opt-wrong':   answered && chose === 'essen' && current.cat !== 'essen',
-                }"
-                @click="sort('essen')"
-                aria-label="Essen"
-            >🍽️<br>Essen</button>
+                @click="sort(cat.id)"
+                :aria-label="cat.label"
+            >{{ cat.emoji }}<br>{{ cat.label }}</button>
         </div>
 
         <div class="bubble-progress" style="margin-top: 20px;">
@@ -78,8 +104,14 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const total  = ITEMS.length
-        const queue  = ref(shuffle(ITEMS))
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const categoryCount = config.categoryCount
+        const itemCount = config.itemCount
+
+        const activeCategories = CATEGORIES.slice(0, categoryCount)
+        const total = itemCount
+        const queue = ref(buildRound(categoryCount, itemCount))
         const idx    = ref(0)
         const chose  = ref(null)
         const answered  = ref(false)
@@ -101,7 +133,7 @@ export default {
         }
 
         function restart() {
-            queue.value = shuffle(ITEMS)
+            queue.value = buildRound(categoryCount, itemCount)
             idx.value = 0
             chose.value = null
             answered.value = false
@@ -110,6 +142,6 @@ export default {
 
         function goBack() { router.push('/reward') }
 
-        return { total, queue, idx, chose, answered, correctCount, current, won, sort, restart, goBack }
+        return { total, queue, idx, chose, answered, correctCount, current, won, sort, restart, goBack, activeCategories }
     },
 }

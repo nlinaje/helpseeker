@@ -3,8 +3,13 @@ import { useRouter } from '../../vue-router.js'
 import { store } from '../../store.js'
 
 const TARGETS = ['🌟', '🎈', '🍭', '🦋', '🚀', '🌈', '🎉', '⚡', '🍀', '💎']
-const TOTAL   = 10
 const LIVES   = 3
+
+const DIFFICULTY_CONFIG = {
+    easy: { itemCount: 8, baseTime: 3000 },
+    medium: { itemCount: 10, baseTime: 2000 },
+    hard: { itemCount: 12, baseTime: 1000 },
+}
 
 function randomPos() {
     return {
@@ -70,7 +75,12 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const total    = TOTAL
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const itemCount = config.itemCount
+        const baseTime = config.baseTime
+
+        const total    = itemCount
         const maxLives = LIVES
 
         const hit      = ref(0)
@@ -82,13 +92,13 @@ export default {
         const timerPct = ref(100)
         const gameOver = ref(false)
 
-        const won = computed(() => hit.value >= TOTAL)
+        const won = computed(() => hit.value >= itemCount)
 
         let tickInterval = null
         let expireTimer  = null
 
-        // Time window decreases from 2000ms → 1200ms over 10 rounds
-        function roundDuration() { return 2000 - round.value * 80 }
+        // Time window decreases based on difficulty
+        function roundDuration() { return Math.max(baseTime - round.value * 50, baseTime * 0.5) }
 
         function startRound() {
             if (gameOver.value) return

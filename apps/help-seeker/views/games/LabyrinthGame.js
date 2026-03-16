@@ -85,11 +85,13 @@ const template = /* html */`
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        backgroundColor: cell === 1 ? '#374151' : '#ffffff',
+                        backgroundColor: playerPos === idx ? '#fbbf24' : goalPos === idx ? '#10b981' : cell === 1 ? '#374151' : '#ffffff',
                         borderRadius: '4px',
-                        fontSize: '20px',
+                        fontSize: playerPos === idx || goalPos === idx ? '28px' : '20px',
                         fontWeight: 'bold',
-                        border: (playerPos === idx || goalPos === idx) ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+                        border: playerPos === idx ? '3px solid #f59e0b' : goalPos === idx ? '3px solid #059669' : '1px solid #e5e7eb',
+                        boxShadow: playerPos === idx ? '0 0 12px rgba(245, 158, 11, 0.6)' : goalPos === idx ? '0 0 12px rgba(16, 185, 129, 0.6)' : 'none',
+                        transition: 'all 0.2s',
                     }"
                     :aria-label="cellLabel(idx)"
                 >

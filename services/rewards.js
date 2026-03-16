@@ -124,4 +124,13 @@ export const GAMES = [
         route: '/games/speedtap',
         color: '#b45309',
     },
+    {
+        id: 'labyrinth',
+        title: 'Labyrinth-Abenteuer',
+        emoji: '🌀',
+        description: 'Finde deinen Weg durch das Labyrinth!',
+        starsRequired: 110,
+        route: '/games/labyrinth',
+        color: '#6f46c6',
+    },
 ]

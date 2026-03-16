@@ -14,17 +14,28 @@ const POSITIONS = [
     { left: '78%', top: '52%' },
     { left: '16%', top: '76%' },
     { left: '58%', top: '75%' },
+    { left: '85%', top: '76%' },
+    { left: '32%', top: '10%' },
+    { left: '12%', top: '44%' },
+    { left: '62%', top: '38%' },
 ]
 
 const COLORS = [
     '#ef4444', '#f97316', '#eab308', '#22c55e', '#06b6d4',
     '#3b82f6', '#8b5cf6', '#ec4899', '#14b8a6', '#f59e0b',
+    '#059669', '#d946ef', '#0ea5e9', '#84cc16',
 ]
 
-function buildBubbles() {
+const DIFFICULTY_CONFIG = {
+    easy: { bubbleCount: 6 },
+    medium: { bubbleCount: 10 },
+    hard: { bubbleCount: 14 },
+}
+
+function buildBubbles(bubbleCount) {
     // Shuffle positions so numbers appear in random spots each game
-    const positions = [...POSITIONS].sort(() => Math.random() - 0.5)
-    return Array.from({ length: 10 }, (_, i) => ({
+    const positions = [...POSITIONS].slice(0, bubbleCount).sort(() => Math.random() - 0.5)
+    return Array.from({ length: bubbleCount }, (_, i) => ({
         number:   i + 1,
         popped:   false,
         wrong:    false,
@@ -87,7 +98,7 @@ const template = /* html */`
         <!-- Progress dots -->
         <div class="bubble-progress">
             <span
-                v-for="n in 10"
+                v-for="n in bubbleCount"
                 :key="n"
                 class="bubble-dot"
                 :class="{ popped: n < nextNumber }"
@@ -106,10 +117,14 @@ export default {
 
         if (!store.currentProfile) { router.replace('/'); return {} }
 
-        const bubbles    = ref(buildBubbles())
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const bubbleCount = config.bubbleCount
+
+        const bubbles    = ref(buildBubbles(bubbleCount))
         const nextNumber = ref(1)
 
-        const won       = computed(() => nextNumber.value > 10)
+        const won       = computed(() => nextNumber.value > bubbleCount)
         const nextColor = computed(() => {
             const b = bubbles.value.find(b => b.number === nextNumber.value)
             return b?.color ?? '#6d28d9'
@@ -129,7 +144,7 @@ export default {
         }
 
         function restart() {
-            bubbles.value    = buildBubbles()
+            bubbles.value    = buildBubbles(bubbleCount)
             nextNumber.value = 1
         }
 
@@ -137,6 +152,6 @@ export default {
             router.push('/reward')
         }
 
-        return { bubbles, nextNumber, nextColor, won, popBubble, restart, goBack }
+        return { bubbles, nextNumber, nextColor, won, popBubble, restart, goBack, bubbleCount }
     },
 }

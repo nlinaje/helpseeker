@@ -19,6 +19,7 @@ import SortGame                from './views/games/SortGame.js'
 import AlphaGame               from './views/games/AlphaGame.js'
 import MathGame                from './views/games/MathGame.js'
 import SpeedTapGame            from './views/games/SpeedTapGame.js'
+import LabyrinthGame           from './views/games/LabyrinthGame.js'
 
 const routes = [
     { path: '/',              component: HomeView,             name: 'home'           },
@@ -41,6 +42,7 @@ const routes = [
     { path: '/games/alpha',      component: AlphaGame,      name: 'alphaGame'      },
     { path: '/games/math',       component: MathGame,       name: 'mathGame'       },
     { path: '/games/speedtap',   component: SpeedTapGame,   name: 'speedTapGame'   },
+    { path: '/games/labyrinth',  component: LabyrinthGame,  name: 'labyrinthGame'  },
     // Catch-all → home
     { path: '/:pathMatch(.*)*', redirect: '/' },
 ]

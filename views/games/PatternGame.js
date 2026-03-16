@@ -13,14 +13,23 @@ const PALETTE = [
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
 function randomColor() { return PALETTE[Math.floor(Math.random() * PALETTE.length)] }
 
+const DIFFICULTY_CONFIG = {
+    easy: { minLength: 2, maxLength: 3, roundCount: 6 },
+    medium: { minLength: 3, maxLength: 5, roundCount: 8 },
+    hard: { minLength: 4, maxLength: 6, roundCount: 8 },
+}
+
 function buildRound(length) {
     const pattern = Array.from({ length }, randomColor)
     return { pattern, answer: Array(length).fill(null), length }
 }
 
-function buildAllRounds() {
-    // 8 rounds with pattern lengths 3, 3, 4, 4, 4, 4, 5, 5
-    return [3, 3, 4, 4, 4, 4, 5, 5].map(buildRound)
+function buildAllRounds(minLength, maxLength, roundCount) {
+    const lengths = []
+    for (let i = 0; i < roundCount; i++) {
+        lengths.push(minLength + Math.floor((maxLength - minLength) * i / roundCount))
+    }
+    return lengths.map(buildRound)
 }
 
 const template = /* html */`
@@ -83,7 +92,7 @@ const template = /* html */`
         </div>
 
         <div class="bubble-progress" style="margin-top: 20px;">
-            <span v-for="n in 8" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
+            <span v-for="n in roundCount" :key="n" class="bubble-dot" :class="{ popped: n <= idx }"></span>
         </div>
 
     </div>
@@ -96,14 +105,20 @@ export default {
         const router = useRouter()
         if (!store.currentProfile) { router.replace('/'); return {} }
 
+        const difficulty = router.currentRoute.value.query.difficulty || store.currentProfile?.gameDifficulty || 'medium'
+        const config = DIFFICULTY_CONFIG[difficulty]
+        const minLength = config.minLength
+        const maxLength = config.maxLength
+        const roundCount = config.roundCount
+
         const palette       = PALETTE
-        const rounds        = ref(buildAllRounds())
+        const rounds        = ref(buildAllRounds(minLength, maxLength, roundCount))
         const idx           = ref(0)
         const roundComplete = ref(false)
         const roundWrong    = ref(false)
 
         const current = computed(() => rounds.value[Math.min(idx.value, rounds.value.length - 1)])
-        const won     = computed(() => idx.value >= 8)
+        const won     = computed(() => idx.value >= roundCount)
 
         function paintColor(color) {
             if (roundComplete.value || won.value) return
@@ -140,7 +155,7 @@ export default {
         }
 
         function restart() {
-            rounds.value = buildAllRounds()
+            rounds.value = buildAllRounds(minLength, maxLength, roundCount)
             idx.value = 0
             roundComplete.value = false
             roundWrong.value = false
@@ -148,6 +163,6 @@ export default {
 
         function goBack() { router.push('/reward') }
 
-        return { palette, idx, current, won, roundComplete, roundWrong, paintColor, clearSlot, restart, goBack }
+        return { palette, idx, current, won, roundComplete, roundWrong, paintColor, clearSlot, restart, goBack, roundCount }
     },
 }

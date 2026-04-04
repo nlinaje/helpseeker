@@ -101,9 +101,14 @@ const template = /* html */`
         </div>
     </div>
 
-    <button class="btn btn-primary expl-done-btn" @click="$emit('done')" aria-label="Zur Aufgabe zurück">
-        ✓ Zur Aufgabe zurück
-    </button>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+        <button class="btn btn-secondary" @click="replay" aria-label="Animation nochmal abspielen">
+            🔄 Nochmal ansehen
+        </button>
+        <button class="btn btn-primary" @click="$emit('done')" aria-label="Zur Aufgabe zurück">
+            ✓ Zur Aufgabe zurück
+        </button>
+    </div>
 
 </div>
 `
@@ -131,7 +136,8 @@ export default {
             return ex.a + 1
         }
 
-        onMounted(() => {
+        function startAnimation() {
+            clearInterval(timer)
             animStep.value = 0
             const max = totalSteps()
             let step = 0
@@ -139,9 +145,14 @@ export default {
                 step++
                 animStep.value = step
                 if (step >= max) clearInterval(timer)
-            }, 700)
-        })
+            }, 1200)
+        }
 
+        function replay() {
+            startAnimation()
+        }
+
+        onMounted(startAnimation)
         onUnmounted(() => clearInterval(timer))
 
         // For subtract: tokens with index > result get crossed out, one by one
@@ -152,6 +163,6 @@ export default {
             return animStep.value >= removedIndex
         }
 
-        return { animStep, op, isCrossed }
+        return { animStep, op, isCrossed, replay }
     },
 }

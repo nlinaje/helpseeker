@@ -760,8 +760,8 @@ export function generateExercise(template) {
         b = rand(1, a - 1)
         result = a - b
     } else if (template.operation === 'multiply') {
-        a = rand(1, 9)
-        b = rand(1, 9)
+        a = rand(2, 9)
+        b = rand(2, 9)
         result = a * b
     } else {
         // divide — pick from valid integer pairs

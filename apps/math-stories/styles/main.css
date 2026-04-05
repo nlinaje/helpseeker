@@ -332,6 +332,11 @@ button { cursor: pointer; border: none; font-family: inherit; font-size: 1rem; }
     filter: grayscale(1) !important;
 }
 
+.token-leaving {
+    opacity: 0 !important;
+    transform: scale(0.3) translateY(-10px) !important;
+}
+
 /* Multiply rows */
 .multiply-row {
     opacity: 0;

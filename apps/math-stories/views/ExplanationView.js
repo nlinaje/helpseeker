@@ -78,19 +78,35 @@ const template = /* html */`
     <!-- ── DIVIDE ────────────────────────────────────────────── -->
     <div v-else-if="op === 'divide'" class="anim-area">
         <div class="anim-label-sm">
-            {{ exercise.a }} {{ exercise.template.emoji }} gleichmäßig auf {{ exercise.b }} Gruppen verteilen:
+            Alle {{ exercise.a }} {{ exercise.template.emoji }} warten noch:
         </div>
 
+        <!-- Pool: tokens disappear one by one as they are distributed -->
+        <div class="token-row divide-pool">
+            <span
+                v-for="i in exercise.a"
+                :key="'pool' + i"
+                class="token"
+                :class="{ 'token-leaving': animStep >= i }"
+            >{{ exercise.template.emoji }}</span>
+        </div>
+
+        <div class="anim-plus-label" style="text-align: center; margin: 10px 0;">
+            ↓ werden verteilt ↓
+        </div>
+
+        <!-- Groups: tokens arrive in round-robin order -->
+        <!-- token for group g, slot s arrives at step (s-1)*b + g -->
         <div class="divide-groups">
             <div v-for="g in exercise.b" :key="g" class="divide-group">
                 <div class="group-label">Gruppe {{ g }}</div>
-                <div class="token-row">
+                <div class="token-row" style="justify-content: center;">
                     <span
-                        v-for="item in exercise.result"
-                        :key="item"
+                        v-for="slot in exercise.result"
+                        :key="slot"
                         class="token"
-                        :class="{ 'anim-token-in token-new': animStep >= (g - 1) * exercise.result + item }"
-                        :style="animStep < (g - 1) * exercise.result + item ? 'opacity:0' : ''"
+                        :class="{ 'anim-token-in token-new': animStep >= (slot - 1) * exercise.b + g }"
+                        :style="animStep < (slot - 1) * exercise.b + g ? 'opacity:0' : ''"
                     >{{ exercise.template.emoji }}</span>
                 </div>
             </div>

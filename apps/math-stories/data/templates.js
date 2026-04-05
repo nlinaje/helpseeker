@@ -560,12 +560,16 @@ export const TEMPLATES = [
 
     // ══════════════════════════════════════════════════════════════
     // DIVIDE (25 templates)
+    // groupLabel:       shown in animation box headers (e.g. "Freund 1")
+    // groupResultPrefix: used in result sentence "X bekommt N emoji"
     // ══════════════════════════════════════════════════════════════
     {
         id: 'div-01',
         operation: 'divide',
         emoji: '🍪',
         story: '{{name}} hat {{a}} Kekse und möchte sie gleichmäßig auf {{b}} Freunde verteilen. Wie viele Kekse bekommt jeder Freund?',
+        groupLabel: 'Freund',
+        groupResultPrefix: 'Jeder Freund',
         divPairs: DIV_PAIRS,
     },
     {
@@ -573,6 +577,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍎',
         story: '{{name}} hat {{a}} Äpfel und legt sie gleichmäßig in {{b}} Körbe. Wie viele Äpfel liegen in jedem Korb?',
+        groupLabel: 'Korb',
+        groupResultPrefix: 'Jeder Korb',
         divPairs: DIV_PAIRS,
     },
     {
@@ -580,6 +586,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍬',
         story: '{{name}} hat {{a}} Bonbons und teilt sie gerecht unter {{b}} Geschwister auf. Wie viele Bonbons bekommt jedes Geschwisterkind?',
+        groupLabel: 'Kind',
+        groupResultPrefix: 'Jedes Kind',
         divPairs: DIV_PAIRS,
     },
     {
@@ -587,6 +595,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🎨',
         story: '{{name}} verteilt {{a}} Buntstifte gleichmäßig auf {{b}} Kinder. Wie viele Buntstifte bekommt jedes Kind?',
+        groupLabel: 'Kind',
+        groupResultPrefix: 'Jedes Kind',
         divPairs: DIV_PAIRS,
     },
     {
@@ -594,6 +604,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '📚',
         story: '{{name}} sortiert {{a}} Bücher gleichmäßig in {{b}} Regale. Wie viele Bücher stehen in jedem Regal?',
+        groupLabel: 'Regal',
+        groupResultPrefix: 'Jedes Regal',
         divPairs: DIV_PAIRS,
     },
     {
@@ -601,6 +613,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🌸',
         story: '{{name}} hat {{a}} Blumen und stellt sie gleichmäßig in {{b}} Vasen. Wie viele Blumen sind in jeder Vase?',
+        groupLabel: 'Vase',
+        groupResultPrefix: 'Jede Vase',
         divPairs: DIV_PAIRS,
     },
     {
@@ -608,6 +622,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🪙',
         story: '{{name}} hat {{a}} Münzen und legt sie gleichmäßig in {{b}} Dosen. Wie viele Münzen sind in jeder Dose?',
+        groupLabel: 'Dose',
+        groupResultPrefix: 'Jede Dose',
         divPairs: DIV_PAIRS,
     },
     {
@@ -615,6 +631,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🥚',
         story: '{{name}} legt {{a}} Eier gleichmäßig in {{b}} Körbe. Wie viele Eier liegen in jedem Korb?',
+        groupLabel: 'Korb',
+        groupResultPrefix: 'Jeder Korb',
         divPairs: DIV_PAIRS,
     },
     {
@@ -622,6 +640,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🚗',
         story: '{{name}} verteilt {{a}} Spielzeugautos gleichmäßig in {{b}} Kisten. Wie viele Autos kommen in jede Kiste?',
+        groupLabel: 'Kiste',
+        groupResultPrefix: 'Jede Kiste',
         divPairs: DIV_PAIRS,
     },
     {
@@ -629,6 +649,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍒',
         story: '{{name}} hat {{a}} Kirschen und verteilt sie gleichmäßig auf {{b}} Schüsseln. Wie viele Kirschen sind in jeder Schüssel?',
+        groupLabel: 'Schüssel',
+        groupResultPrefix: 'Jede Schüssel',
         divPairs: DIV_PAIRS,
     },
     {
@@ -636,6 +658,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🔵',
         story: '{{name}} hat {{a}} Murmeln und steckt sie gleichmäßig in {{b}} Säcke. Wie viele Murmeln sind in jedem Sack?',
+        groupLabel: 'Sack',
+        groupResultPrefix: 'Jeder Sack',
         divPairs: DIV_PAIRS,
     },
     {
@@ -643,6 +667,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '📎',
         story: '{{name}} hat {{a}} Aufkleber und klebt sie gleichmäßig auf {{b}} Seiten. Wie viele Aufkleber sind auf jeder Seite?',
+        groupLabel: 'Seite',
+        groupResultPrefix: 'Jede Seite',
         divPairs: DIV_PAIRS,
     },
     {
@@ -650,6 +676,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🥕',
         story: '{{name}} hat {{a}} Karotten und legt sie gleichmäßig vor {{b}} Hasen. Wie viele Karotten bekommt jeder Hase?',
+        groupLabel: 'Hase',
+        groupResultPrefix: 'Jeder Hase',
         divPairs: DIV_PAIRS,
     },
     {
@@ -657,6 +685,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍓',
         story: '{{name}} hat {{a}} Erdbeeren und verteilt sie gleichmäßig auf {{b}} Kinder. Wie viele Erdbeeren bekommt jedes Kind?',
+        groupLabel: 'Kind',
+        groupResultPrefix: 'Jedes Kind',
         divPairs: DIV_PAIRS,
     },
     {
@@ -664,6 +694,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🎈',
         story: '{{name}} hat {{a}} Luftballons und bindet sie gleichmäßig an {{b}} Stühle. Wie viele Luftballons hängen an jedem Stuhl?',
+        groupLabel: 'Stuhl',
+        groupResultPrefix: 'Jeder Stuhl',
         divPairs: DIV_PAIRS,
     },
     {
@@ -671,6 +703,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍩',
         story: '{{name}} hat {{a}} Donuts und legt sie gleichmäßig auf {{b}} Teller. Wie viele Donuts sind auf jedem Teller?',
+        groupLabel: 'Teller',
+        groupResultPrefix: 'Jeder Teller',
         divPairs: DIV_PAIRS,
     },
     {
@@ -678,6 +712,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🌟',
         story: '{{name}} hat {{a}} Sterne gesammelt und klebt sie gleichmäßig auf {{b}} Bilder. Wie viele Sterne sind auf jedem Bild?',
+        groupLabel: 'Bild',
+        groupResultPrefix: 'Jedes Bild',
         divPairs: DIV_PAIRS,
     },
     {
@@ -685,13 +721,17 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍌',
         story: '{{name}} hat {{a}} Bananen und legt sie gleichmäßig in {{b}} Körbe. Wie viele Bananen sind in jedem Korb?',
+        groupLabel: 'Korb',
+        groupResultPrefix: 'Jeder Korb',
         divPairs: DIV_PAIRS,
     },
     {
         id: 'div-19',
         operation: 'divide',
         emoji: '🧩',
-        story: '{{name}} hat {{a}} Puzzleteile und verteilt sie gleichmäßig auf {{b}} Gruppen. Wie viele Teile bekommt jede Gruppe?',
+        story: '{{name}} hat {{a}} Puzzleteile und verteilt sie gleichmäßig auf {{b}} Stapel. Wie viele Teile liegen auf jedem Stapel?',
+        groupLabel: 'Stapel',
+        groupResultPrefix: 'Jeder Stapel',
         divPairs: DIV_PAIRS,
     },
     {
@@ -699,6 +739,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🐟',
         story: '{{name}} hat {{a}} Fische und setzt sie gleichmäßig in {{b}} Aquarien. Wie viele Fische sind in jedem Aquarium?',
+        groupLabel: 'Aquarium',
+        groupResultPrefix: 'Jedes Aquarium',
         divPairs: DIV_PAIRS,
     },
     {
@@ -706,6 +748,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🏆',
         story: '{{name}} verteilt {{a}} Punkte gleichmäßig auf {{b}} Runden. Wie viele Punkte gibt es pro Runde?',
+        groupLabel: 'Runde',
+        groupResultPrefix: 'Jede Runde',
         divPairs: DIV_PAIRS,
     },
     {
@@ -713,6 +757,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍡',
         story: '{{name}} hat {{a}} Gummibärchen und verteilt sie gleichmäßig auf {{b}} Kinder. Wie viele Gummibärchen bekommt jedes Kind?',
+        groupLabel: 'Kind',
+        groupResultPrefix: 'Jedes Kind',
         divPairs: DIV_PAIRS,
     },
     {
@@ -720,6 +766,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '📚',
         story: '{{name}} sortiert {{a}} Hefte gleichmäßig in {{b}} Fächer. Wie viele Hefte kommen in jedes Fach?',
+        groupLabel: 'Fach',
+        groupResultPrefix: 'Jedes Fach',
         divPairs: DIV_PAIRS,
     },
     {
@@ -727,6 +775,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🌸',
         story: '{{name}} pflückt {{a}} Blumen und bindet sie zu {{b}} gleich großen Sträußen. Wie viele Blumen hat jeder Strauß?',
+        groupLabel: 'Strauß',
+        groupResultPrefix: 'Jeder Strauß',
         divPairs: DIV_PAIRS,
     },
     {
@@ -734,6 +784,8 @@ export const TEMPLATES = [
         operation: 'divide',
         emoji: '🍎',
         story: '{{name}} hat {{a}} Äpfel und verteilt sie gleichmäßig auf {{b}} Freunde. Wie viele Äpfel bekommt jeder Freund?',
+        groupLabel: 'Freund',
+        groupResultPrefix: 'Jeder Freund',
         divPairs: DIV_PAIRS,
     },
 ]

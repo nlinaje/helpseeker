@@ -260,6 +260,22 @@ button { cursor: pointer; border: none; font-family: inherit; font-size: 1rem; }
 .feedback-text.correct-text { color: var(--color-success); }
 .feedback-text.wrong-text   { color: var(--color-error); }
 
+/* ── Add animation boxes ─────────────────────────────────────────── */
+.add-source-box {
+    background: var(--color-primary-bg);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border: 2px solid var(--color-border);
+}
+
+.add-total-box {
+    background: var(--color-success-light);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    border: 2px solid var(--color-success);
+}
+
 /* ── Explanation panel ───────────────────────────────────────────── */
 .explanation-panel { padding: 20px; }
 

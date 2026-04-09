@@ -120,7 +120,7 @@ export default {
         if (!document.getElementById('task-animations')) {
             const style = document.createElement('style');
             style.id = 'task-animations';
-            style.innerHTML = \`
+            style.innerHTML = `
                 @keyframes popIn {
                     0% { transform: scale(0); opacity: 0; }
                     80% { transform: scale(1.2); opacity: 1; }
@@ -147,7 +147,7 @@ export default {
                     40%, 60% { transform: scaleX(-1) translate(-10px, 10px) scale(1.2); opacity: 0.8; }
                     100% { transform: scaleX(-1) translate(-30px, 30px) scale(1.5); opacity: 0; }
                 }
-            \`;
+            `;
             document.head.appendChild(style);
         }
     },

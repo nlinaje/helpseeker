@@ -54,7 +54,10 @@ export default {
                         <div v-else-if="currentStep.animationType !== 'custom-blow' && currentStep.animationType !== 'emoji-pinch'" 
                              :key="'anim-'+currentStepIndex" 
                              class="anim-element" 
-                             style="font-size: 5rem; animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;">
+                             :style="{
+                                 fontSize: '5rem',
+                                 animation: getEmojiAnimation(currentStep.animationType)
+                             }">
                             {{ currentStep.emoji }}
                         </div>
 
@@ -142,6 +145,23 @@ export default {
                     0% { transform: translateX(50px); opacity: 0; }
                     100% { transform: translateX(0); opacity: 1; }
                 }
+                @keyframes emojiBounce {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-20px); }
+                }
+                @keyframes emojiShake {
+                    0%, 100% { transform: translateX(0); }
+                    25% { transform: translateX(-10px); }
+                    75% { transform: translateX(10px); }
+                }
+                @keyframes emojiRotate {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                @keyframes emojiSlide {
+                    0% { transform: translateX(-100px); opacity: 0; }
+                    100% { transform: translateX(0); opacity: 1; }
+                }
                 @keyframes pinch {
                     0%, 100% { transform: translate(-30%, -30%) scale(1.2); opacity: 0.5; }
                     50% { transform: translate(-50%, -50%) scale(0.9); opacity: 1; }
@@ -176,6 +196,22 @@ export default {
                     return 'animation: imageSlideIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;';
                 default:
                     return 'animation: popIn 0.5s ease-out forwards;';
+            }
+        },
+        getEmojiAnimation(animationType) {
+            switch(animationType) {
+                case 'emoji-bounce':
+                    return 'emojiBounce 1s infinite ease-in-out';
+                case 'emoji-shake':
+                    return 'emojiShake 0.5s infinite ease-in-out';
+                case 'emoji-rotate':
+                    return 'emojiRotate 2s infinite linear';
+                case 'emoji-slide':
+                    return 'emojiSlide 0.5s ease-out forwards';
+                case 'pop-in':
+                    return 'popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
+                default:
+                    return 'popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
             }
         },
         nextStep() {

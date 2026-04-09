@@ -40,10 +40,18 @@ export default {
                     </p>
 
                     <!-- Animation Container -->
-                    <div class="animation-stage" style="height: 150px; width: 100%; position: relative; display: flex; justify-content: center; align-items: center;">
+                    <div class="animation-stage" style="min-height: 150px; width: 100%; position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                         
-                        <!-- Generic Step Anim -->
-                        <div v-if="currentStep.animationType !== 'custom-blow' && currentStep.animationType !== 'emoji-pinch'" 
+                        <!-- Image Step Anim -->
+                        <div v-if="currentStep.image" :key="'img-'+currentStepIndex" 
+                             style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                            <img :src="currentStep.image" 
+                                 :style="getImageStyle(currentStep.animationType)"
+                                 style="max-width: 100%; max-height: 300px; border-radius: 12px; object-fit: contain; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                        </div>
+
+                        <!-- Generic Emoji Step Anim -->
+                        <div v-else-if="currentStep.animationType !== 'custom-blow' && currentStep.animationType !== 'emoji-pinch'" 
                              :key="'anim-'+currentStepIndex" 
                              class="anim-element" 
                              style="font-size: 5rem; animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;">
@@ -126,6 +134,14 @@ export default {
                     80% { transform: scale(1.2); opacity: 1; }
                     100% { transform: scale(1); opacity: 1; }
                 }
+                @keyframes imageZoom {
+                    0% { transform: scale(0.8); opacity: 0; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+                @keyframes imageSlideIn {
+                    0% { transform: translateX(50px); opacity: 0; }
+                    100% { transform: translateX(0); opacity: 1; }
+                }
                 @keyframes pinch {
                     0%, 100% { transform: translate(-30%, -30%) scale(1.2); opacity: 0.5; }
                     50% { transform: translate(-50%, -50%) scale(0.9); opacity: 1; }
@@ -152,6 +168,16 @@ export default {
         }
     },
     methods: {
+        getImageStyle(animationType) {
+            switch(animationType) {
+                case 'image-zoom':
+                    return 'animation: imageZoom 0.6s ease-out forwards;';
+                case 'image-slide-in':
+                    return 'animation: imageSlideIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;';
+                default:
+                    return 'animation: popIn 0.5s ease-out forwards;';
+            }
+        },
         nextStep() {
             if (this.currentStepIndex < this.task.steps.length - 1) {
                 this.currentStepIndex++;

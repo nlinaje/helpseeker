@@ -25,26 +25,32 @@ export const TASKS = [
             {
                 id: 'step-1',
                 instruction: 'Nimm ein Taschentuch.',
-                animationType: 'emoji-bounce',
-                emoji: '🧻'
+                animationType: 'image-zoom',
+                image: 'assets/blow-nose/step1.png'
             },
             {
                 id: 'step-2',
                 instruction: 'Halte es an die Nase.',
-                animationType: 'emoji-fade',
-                emoji: '👃'
+                animationType: 'image-zoom',
+                image: 'assets/blow-nose/step2.png'
             },
             {
                 id: 'step-3',
                 instruction: 'Drücke mit dem Daumen und dem Zeigefinger leicht zusammen.',
-                animationType: 'emoji-pinch',
-                emoji: '🤏'
+                animationType: 'image-zoom',
+                image: 'assets/blow-nose/step3.png'
             },
             {
                 id: 'step-4',
                 instruction: 'Puste kräftig durch die Nase, damit der Schleim im Tuch bleibt!',
-                animationType: 'custom-blow',
-                emoji: '💨'
+                animationType: 'image-slide-in',
+                image: 'assets/blow-nose/step4.png'
+            },
+            {
+                id: 'step-5',
+                instruction: 'Sieh mal! Durch das Pusten wird die Nase wieder frei und sauber.',
+                animationType: 'image-zoom',
+                image: 'assets/blow-nose/step5.png'
             }
         ]
     },
